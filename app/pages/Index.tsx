@@ -1,4 +1,28 @@
+import HorizontalScroller from "./ScrollVelocity";
+type partner = {
+  name: string;
+  logo: string;
+};
+
 export default function Index() {
+  const images: partner[] = [
+    {
+      name: "Brand 1",
+      logo: "assets/brand-image1.webp",
+    },
+    {
+      name: "Brand 2",
+      logo: "assets/brand-image-2.webp",
+    },
+    {
+      name: "Brand 3",
+      logo: "assets/brand-image-3.webp",
+    },
+    {
+      name: "Brand 4",
+      logo: "assets/brand-image-4.webp",
+    },
+  ];
   return (
     <div className="min-h-screen bg-brand-bg font-sans ">
       {/* Hero Section */}
@@ -40,11 +64,8 @@ export default function Index() {
               Pricing
             </button>
           </div>
-          <button className="color-button-animation type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-            <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-              {" "}
-              Get in touch
-            </span>
+          <button className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+            Get in touch
           </button>
         </nav>
 
@@ -62,17 +83,11 @@ export default function Index() {
 
           {/* CTA Buttons */}
           <div className="flex items-center justify-center gap-5 mb-16">
-            <button className="color-button-animation type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-              <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-                {" "}
-                Book a Free Demo
-              </span>
+            <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+              Book a Free Demo
             </button>
-            <button className="color-button-animation2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-              <span className="btn-txt2 nav-links-in-inventory-management-get-in-touch">
-                {" "}
-                See How It Works
-              </span>
+            <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+              See How It Works
             </button>
           </div>
 
@@ -137,31 +152,25 @@ export default function Index() {
             Trusted by 10+ industrial companies
           </p>
 
-          <div className="flex items-center justify-center gap-10 overflow-hidden">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/57c149c12ff6951545faf28baf5c1cd33bf70700?width=334"
-              alt="Partner Logo"
-              className="h-10 opacity-60 hover:opacity-100 transition-opacity"
-            />
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/bd412a6ad9730950604557c2d67451eb647a1e25?width=330"
-              alt="Partner Logo"
-              className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-            />
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/4070f495746e3d07af97f1179a6789c04e1aa208?width=398"
-              alt="Partner Logo"
-              className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-            />
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/bd412a6ad9730950604557c2d67451eb647a1e25?width=330"
-              alt="Partner Logo"
-              className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-            />
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/57c149c12ff6951545faf28baf5c1cd33bf70700?width=334"
-              alt="Partner Logo"
-              className="h-10 opacity-60 hover:opacity-100 transition-opacity"
+          <div className="flex items-center justify-center gap-10 overflow-hidden relative z-3 ">
+            <HorizontalScroller
+              data={[images]}
+              isHoverable={false}
+              renderCard={(partner: partner, index) => (
+                <div
+                  key={index}
+                  className={`w-[200px]  flex flex-col justify-center items-center gap-4`}
+                  style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
+                >
+                  <div key={index} className="flex items-center">
+                    <img
+                      src={partner.logo}
+                      className="w-[160px]"
+                      alt={partner.name}
+                    />
+                  </div>
+                </div>
+              )}
             />
           </div>
         </div>
@@ -376,15 +385,13 @@ export default function Index() {
 
       {/* Benefits Section */}
       <section className="relative py-24 bg-brand-bg overflow-hidden why-manufactures-love-us-in-inventory-management">
-        
-
         <div className="relative z-10 max-w-7xl mx-auto px-16">
           <h2 className="text-[52px] spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-16">
             Why Manufacturers Love Us
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/7ee5157db6b7ec831e86c98fc0368357a6b9317f?width=200"
                 alt="24/7 Access"
@@ -399,7 +406,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/d80c39b668e98fb0b84dc62ef7caf0557296bf0e?width=184"
                 alt="Customizable Workflows"
@@ -416,7 +423,7 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/f80ad848148d690cbae95bdff1f382fae9408928?width=226"
                 alt="Actionable Insights"
@@ -430,7 +437,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/9c436a79a4cf8819b022e1004f47acc80448027e?width=196"
                 alt="Seamless Integrations"
@@ -445,7 +452,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4]  p-8">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/4d61a11c01efe02e2d63ba80e5c5046ecff547cf?width=190"
                 alt="Instant Alerts"
@@ -476,7 +483,7 @@ export default function Index() {
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/71620871a37119a89a1dca36ee5ea552166cb54b?width=848"
                 alt="Customer Testimonial"
-                className="w-full rounded-2xl shadow-[8px_8px_0_0_#772BF2]"
+                className="w-full rounded-2xl"
               />
             </div>
 
@@ -554,11 +561,9 @@ export default function Index() {
                 core inventory tools.
               </p>
 
-              <button className="color-button-animation2 type2 w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
-                <span className="btn-txt2 nav-links-in-inventory-management-get-in-touch">
-                  {" "}
-                  Get Basic
-                </span>
+              <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
+                {" "}
+                Get Basic
               </button>
             </div>
 
@@ -574,11 +579,8 @@ export default function Index() {
                 streamline every production stage.
               </p>
 
-              <button className="color-button-animation type1 w-full px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-                <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-                  {" "}
-                  Get Pro
-                </span>
+              <button className="button w-full nav-links-in-inventory-management-get-in-touch px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+                Get Pro
               </button>
             </div>
 
@@ -594,11 +596,8 @@ export default function Index() {
                 and system integrations built for scale.
               </p>
 
-              <button className="color-button-animation2 type2 w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
-                <span className="btn-txt2 nav-links-in-inventory-management-get-in-touch">
-                  {" "}
-                  Get Enterprise
-                </span>
+              <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
+                Get Enterprise
               </button>
             </div>
           </div>
@@ -607,8 +606,6 @@ export default function Index() {
 
       {/* CTA Section */}
       <section className="relative z-1 py-20 mx-16 mb-24 bg-brand-purple rounded-[32px] overflow-hidden  everything-you-need-text-in-inventory-management">
-        
-
         <div className="relative z-10 text-center max-w-3xl mx-auto px-8">
           <h2 className="text-[52px] text-[#F5F9F5] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-bg tracking-[-1.04px] mb-6">
             Ready to take control of Your Inventory?
@@ -619,18 +616,12 @@ export default function Index() {
           </p>
 
           <div className="flex items-center justify-center gap-6 mb-8">
-            <button className="color-button-animation2 type2 px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
-              <span className="btn-txt2 nav-links-in-inventory-management-get-in-touch">
-                {" "}
-                Book a Free Demo
-              </span>
+            <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+              Book a Free Demo
             </button>
 
-            <button className="color-button-animation type1 px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
-              <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-                {" "}
-                Start a Free Trial
-              </span>
+            <button className="button type1 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
+              Start a Free Trial
             </button>
           </div>
 
@@ -662,7 +653,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="relative py-20 bg-brand-bg overflow-hidden pb-8 footer-section-background-image-in-inventory-management pt-[25%] -mt-[25%]" >
+      <footer className="relative py-20 bg-brand-bg overflow-hidden pb-8 footer-section-background-image-in-inventory-management pt-[25%] -mt-[25%]">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[728px] h-[706px] -left-[400px] top-0">
             <div className="w-full h-full rounded-full bg-brand-pink/80 blur-[273px]" />
