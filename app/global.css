@@ -1,0 +1,599 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Sequel Sans Book";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Body.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Medium";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Medium Disp.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Random Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Roman Disp.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Roman Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Roman Disp.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Light Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Light Disp.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+@font-face {
+  font-family: "Sequel Sans Bold Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Bold Disp.otf")
+    format("opentype");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Bold Head";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Bold Head.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Book Head";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Head.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Book Display";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Book Disp.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@font-face {
+  font-family: "Sequel Sans Medium Head";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Medium Head.woff2")
+    format("woff2");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+@font-face {
+  font-family: "Sequel Sans Semi Bold Disp";
+  src: url("/assets/font/Sequel Sans OTF/Sequel Sans Semi Bold Disp.otf")
+    format("opentype");
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 14%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-family-sequel-sans-book: "Sequel Sans Book", sans-serif;
+    --font-family-sequel-sans-book-display: "Sequel Sans Book Display";
+    --font-family-sequel-sans-medium: "Sequel Sans Medium", sans-serif;
+    --font-family-sequel-sans-random-display: "Sequel Sans Random Display";
+    --font-family-sequel-sans-roman-display: "Sequel Sans Roman Display";
+    --font-family-sequel-sans-light-display: "Sequel Sans Light Display";
+    --font-family-sequel-sans-bold-head: "Sequel Sans Bold Head", sans-serif;
+    --font-family-sequel-sans-book-head: "Sequel Sans Book Head", sans-serif;
+    --font-family-sequel-sans-medium-head: "Sequel Sans Medium Head", sans-serif;
+    --font-family-sequel-sans-bold-display: "Sequel Sans Bold Display";
+    --font-family-sequel-sans-semi-bold-display: "Sequel Sans Semi Bold Disp";
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+.nav-links-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.nav-links-in-inventory-management:hover {
+  background: #e6e0ed;
+}
+
+.nav-links-in-inventory-management-get-in-touch {
+  font-family: var(--font-family-sequel-sans-bold-display);
+  font-weight: 425;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by Gaurav-WebDev */
+.color-button-animation {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  background: #772bf2;
+  color: #f5f9f5;
+}
+.color-button-animation2 {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  background: white;
+  color: #0a0f0a;
+  border: 1.5px solid #0a0f0a;
+}
+
+.btn-txt {
+  z-index: 2;
+  letter-spacing: 0;
+  position: relative;
+}
+.btn-txt2 {
+  z-index: 2;
+  letter-spacing: 0;
+  position: relative;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(0); /* start small and centered at bottom */
+  transform-origin: bottom center; /* grow upward */
+  transition: all 0.5s ease-in-out;
+  background-color: #f5f9f5;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  border: 1.5px solid #0a0f0a;
+  z-index: 1;
+}
+.type2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(0); /* start small and centered at bottom */
+  transform-origin: bottom center; /* grow upward */
+  transition: all 0.5s ease-in-out;
+  background-color: #772bf2;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 100%;
+  border: 1.5px solid transparent;
+  width: 100%;
+  z-index: 1;
+}
+
+.color-button-animation:hover {
+  color: #0a0f0a;
+  border: 1.5px solid #f5f9f5;
+}
+.color-button-animation2:hover {
+  color: #f5f9f5;
+  border: 1.5px solid transparent;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+.type2:hover::after {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+.heading-section-title-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 500;
+  font-size: 5.25rem;
+  line-height: 6.5rem;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.subtext-section-title-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #0a0f0a;
+}
+
+.trust-indecation-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 1.5rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.spradesheet-usage-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+  font-size: 3.25rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.spradesheet-usage-subtext-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+  letter-spacing: 0%;
+  color: #0a0f0a;
+}
+
+.spradesheet-usage-card-title-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #0a0f0a;
+}
+
+.spradesheet-usage-card-subtext-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #0a0f0a;
+}
+
+.factory-floor-text-heading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 500;
+  font-size: 3.25rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.system-usage-card-title-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+  font-size: 1.75rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: left;
+}
+
+.row-materials-tracking-heading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.row-materials-tracking-subtext-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.row-materials-options-tracking-heading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.how-it-works-subtext-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 410;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.why-manufacturers-love-us-header-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+  font-size: 1.75rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.why-manufacturers-love-us-subheader-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 410;
+  font-size: 1.125rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.transformes-how-we-manage-production-subheader-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-roman-display);
+  font-weight: 410;
+  font-size: 1.25rem;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.slider-subheader-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 410;
+  font-size: 1.375rem;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.slider-subheader-in-inventory-management span {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+}
+
+.plan-name-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.5rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.plan-heading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-bold-display);
+  font-weight: 425;
+  font-size: 1.75rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.plan-subheading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.subhading-ready-to-take-control-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.bullets-ready-to-take-control-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.footer-section-description-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.125rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.footer-subtext-heading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-weight: 420;
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.footer-subtext-subhading-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.copyright-text-in-inventory-management {
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-weight: 405;
+  font-size: 0.875rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.hero-section-in-inventory-management {
+  background-image: url("/assets/Hero\ Section\ with\ low\ opacity\ grid.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.everything-you-need-text-in-inventory-management {
+  background-image: url("/assets/Key Features section.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background-image-for-dashboard-image-in-inventory-management {
+  background-image: url("/assets/You make the products. Our system manages the process..webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.why-manufactures-love-us-in-inventory-management{
+  background-image: url("/assets/why manufacturing gradient background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-section-background-image-in-inventory-management{
+  background-image: url("/assets/Footer section.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
