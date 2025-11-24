@@ -194,10 +194,15 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <img
+              src="assets/still-using-spradesheets-3-section-icon.svg"
+              className="absolute -right-[4rem] -top-[4rem]"
+              alt=""
+            />
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/1d722ebae5985c6a408a1001ca2cc744ff9e2d00?width=200"
+                src="assets/missed-reorders-cause-production-delays.webp"
                 alt="Production Delays"
                 className="w-[100px] h-[89px] mb-6"
               />
@@ -212,7 +217,7 @@ export default function Index() {
 
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/76373f439ca2320533d7eb3a548f324db4bc2f6d?width=176"
+                src="assets/manual-stock-traking-leads-to-costly-errors.webp"
                 alt="Costly Errors"
                 className="w-[88px] h-[88px] mb-6"
               />
@@ -227,7 +232,7 @@ export default function Index() {
 
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/284b7de34534ce4f8f7caa4ef6ac9409a3bc3e41?width=178"
+                src="assets/no-visibility-ito-row-material-movement.webp"
                 alt="No Visibility"
                 className="w-[89px] h-[90px] mb-6"
               />
@@ -260,7 +265,7 @@ export default function Index() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-16">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 relative">
             <h2
               style={{ color: "#F5F9F5" }}
               className="text-[52px] leading-[62.4px] font-['Sequel_Sans'] factory-floor-text-heading-in-inventory-management font-normal text-brand-bg tracking-[-1.04px] mb-4"
@@ -268,6 +273,11 @@ export default function Index() {
               Everything you need to run a <br />
               smooth factory floor
             </h2>
+            <img
+              className="absolute -bottom-[2.5rem] right-[12rem]"
+              src="assets/everything-you-need-to-run-section-area.svg"
+              alt="everything-you-need-to-run-section-area"
+            />
           </div>
 
           <div className="bg-[#FFF] rounded-[32px] overflow-hidden">
@@ -278,11 +288,8 @@ export default function Index() {
                     You make the products. Our system manages the process.
                   </h3>
 
-                  <button className="color-button-animation type1 px-7 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-12">
-                    <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-                      {" "}
-                      Explore more
-                    </span>
+                  <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+                    Explore more
                   </button>
                 </div>
 
@@ -347,14 +354,17 @@ export default function Index() {
             from raw material purchase to production dispatch
           </p>
 
-          <button className="color-button-animation type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-16 hover:bg-brand-purple/90 transition-colors">
-            <span className="btn-txt nav-links-in-inventory-management-get-in-touch">
-              {" "}
-              Schedule a Live Demo
-            </span>
+          <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-16 hover:bg-brand-purple/90 transition-colors">
+            Schedule a Live Demo
           </button>
 
           <div className="relative max-w-[1110px] mx-auto">
+            <img
+              src="assets/see-how-it-works-section-icon.svg"
+              className="absolute -top-4 -right-[6rem]"
+              alt=""
+            />
+
             <div className="rounded-lg border-2 border-brand-dark bg-white shadow-[8px_8px_0_0_#000] overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-3 bg-brand-bg border-b-2 border-brand-dark rounded-t-lg">
                 <div className="w-3 h-3 rounded-full bg-[#FF6259]" />
@@ -363,7 +373,7 @@ export default function Index() {
               </div>
               <div className="relative aspect-video bg-gray-100">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/cc6e77daf4baa0742b4640012d9700e0ee62b920?width=2258"
+                  src="assets/see-how-it-works-main-image.webp"
                   alt="Video Thumbnail"
                   className="w-full h-full object-cover"
                 />
@@ -386,6 +396,11 @@ export default function Index() {
       {/* Benefits Section */}
       <section className="relative py-24 bg-brand-bg overflow-hidden why-manufactures-love-us-in-inventory-management">
         <div className="relative z-10 max-w-7xl mx-auto px-16">
+          <img
+            src="assets/why-manufacturers-love-us-love-icon.svg"
+            className="absolute -top-6 right-[20%] w-[70px] h-[70px]"
+            alt=""
+          />
           <h2 className="text-[52px] spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-16">
             Why Manufacturers Love Us
           </h2>
@@ -393,7 +408,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/7ee5157db6b7ec831e86c98fc0368357a6b9317f?width=200"
+                src="assets/24x7-access-icon.webp"
                 alt="24/7 Access"
                 className="w-[100px] h-[102px] mb-6"
               />
@@ -408,7 +423,7 @@ export default function Index() {
 
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/d80c39b668e98fb0b84dc62ef7caf0557296bf0e?width=184"
+                src="assets/customizable-workflows-icon.webp"
                 alt="Customizable Workflows"
                 className="w-[92px] h-[102px] mb-6"
               />
@@ -425,7 +440,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/f80ad848148d690cbae95bdff1f382fae9408928?width=226"
+                src="assets/actionaable-insights-icon.webp"
                 alt="Actionable Insights"
                 className="w-[113px] h-[102px] mb-6"
               />
@@ -439,7 +454,7 @@ export default function Index() {
 
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/9c436a79a4cf8819b022e1004f47acc80448027e?width=196"
+                src="assets/seamless-integraations-icon.webp"
                 alt="Seamless Integrations"
                 className="w-[98px] h-[102px] mb-6"
               />
@@ -452,9 +467,9 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4]  p-8">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000]  p-8">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/4d61a11c01efe02e2d63ba80e5c5046ecff547cf?width=190"
+                src="assets/instent-alert-icon.webp"
                 alt="Instant Alerts"
                 className="w-[95px] h-[102px] mb-6"
               />
@@ -473,15 +488,18 @@ export default function Index() {
       {/* Testimonial Section */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-7xl mx-auto px-16">
-          <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-16">
-            Trusted by Leading <br />
-            Manufacturers Across India
-          </h2>
+          <div className="flex justify-between items-center mb-16">
+            <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] ">
+              Trusted by Leading <br />
+              Manufacturers Across India
+            </h2>
+            <img className="w-[124px] h-[124px] " src="assets/trusted-by-leading-manufacturers-across-india-icon.svg" alt="" />
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/71620871a37119a89a1dca36ee5ea552166cb54b?width=848"
+                src="assets/space-luggage-main-image.webp"
                 alt="Customer Testimonial"
                 className="w-full rounded-2xl"
               />
@@ -503,7 +521,7 @@ export default function Index() {
               </p>
               <div className="flex items-center justify-between gap-4 mb-8">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/9dfc6f03aa74d6fa7374006fdc51f06d29240b29?width=372"
+                  src="assets/space-luggage-icon.svg"
                   alt="Space Luggage Logo"
                   className="h-[55px]"
                 />
@@ -606,6 +624,7 @@ export default function Index() {
 
       {/* CTA Section */}
       <section className="relative z-1 py-20 mx-16 mb-24 bg-brand-purple rounded-[32px] overflow-hidden  everything-you-need-text-in-inventory-management">
+        <img src="assets/ready-to-take-control-of-your-inventory-left-icon.svg" className="absolute top-0" alt="" />
         <div className="relative z-10 text-center max-w-3xl mx-auto px-8">
           <h2 className="text-[52px] text-[#F5F9F5] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-bg tracking-[-1.04px] mb-6">
             Ready to take control of Your Inventory?
@@ -614,7 +633,7 @@ export default function Index() {
             Join manufacturers across India who trust our Inventory tool to
             streamline operations and cut costs
           </p>
-
+           <img src="assets/ready-to-take-control-of-your-inventory-right-logo.svg" className="absolute top-[50%] -right-[5rem]" alt="" />
           <div className="flex items-center justify-center gap-6 mb-8">
             <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
               Book a Free Demo
@@ -668,15 +687,11 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-4 mb-6 -mt-8">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/89a8604282445c4cdcdc8f82d66627c44f7d146f?width=246"
+                  src="assets/footer-thired-eye-logo.svg"
                   alt="Third Eye Logo"
-                  className="w-[123px] h-[123px]"
+                  className="w-[239px] h-[123px]"
                 />
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/50840716ed0ac8b140b1a02c3af49e580dd8b758?width=256"
-                  alt="Third Eye Text"
-                  className="h-[71px]"
-                />
+               
               </div>
               <p className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark leading-relaxed footer-section-description-in-inventory-management">
                 We build intelligent software tools that help businesses
