@@ -1,4 +1,11 @@
+import { useState } from "react";
 import HorizontalScroller from "./ScrollVelocity";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 type partner = {
   name: string;
   logo: string;
@@ -23,8 +30,267 @@ export default function Index() {
       logo: "assets/brand-image-4.webp",
     },
   ];
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contactNumber: "",
+    factoryType: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const [open, setOpen] = useState(false);
   return (
     <div className="min-h-screen bg-brand-bg font-sans ">
+      <Dialog open={open} onClose={setOpen} className="relative z-10">
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+        />
+
+        <div className="fixed max-w-[1208px] mx-auto bg-[#F5F9F5] inset-0 z-10 w-screen overflow-y-auto p-[24px] pb-[40px]">
+          <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
+            <div className="absolute top-6 right-6 z-10">
+              <button
+                className="w-10 h-10 md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
+                aria-label="Close"
+                onClick={() => setOpen(false)}
+              >
+                <img src="assets/close-icon-in-popup.svg" className="cursor-pointer" alt="" />
+              </button>
+            </div>
+
+            <div className="container mx-auto px-0 pt-7 ">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex justify-center  relative">
+                  <div className="absolute left-6 -top-5 hidden md:block">
+                    <img
+                      src="assets/ready-to-automate-your-factory-right-logo.webp"
+                      alt="Robot illustration"
+                      className="w-32 lg:w-[181px] h-auto transform -rotate-[10deg]"
+                    />
+                  </div>
+                  <h1 className="text-3xl ready-to-automate-your-factory-heading md:text-4xl lg:text-[52px] font-[420] leading-[120%] tracking-[-0.02em] text-brand-text text-center mb-8 md:mb-12 lg:mb-16">
+                    Ready to Automate <br /> Your Factory?
+                  </h1>
+
+                  <div className=" hidden lg:block">
+                    <svg
+                      width="47"
+                      height="45"
+                      viewBox="0 0 57 55"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_117_1359)">
+                        <path
+                          d="M23.7817 45.3332C23.6997 46.5596 26.5012 46.6664 35.7184 45.8266C45.4748 44.9311 47.5952 44.3762 47.1893 42.96C46.6073 41.0192 23.9651 43.3531 23.7817 45.3332Z"
+                          fill="#EC4B7B"
+                        />
+                        <path
+                          d="M16.3162 2.60838C12.66 2.62667 12.1928 3.25857 9.84483 11.3322C7.41106 19.6685 7.26189 21.2782 8.77934 21.8652C11.5352 22.9181 12.884 20.9178 16.4063 10.7572C19.0006 3.25944 19.0149 2.59484 16.3162 2.60838Z"
+                          fill="#EC4B7B"
+                        />
+                        <path
+                          d="M36.6279 15.0366C34.0012 15.0166 33.0466 15.5477 29.9626 18.7012C20.8497 28.0908 13.6019 34.0711 18.7158 34.0067C20.8032 33.9947 22.6758 32.4249 33.6972 21.798C39.7624 15.8945 40.142 15.0865 36.6279 15.0366Z"
+                          fill="#EC4B7B"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_117_1359">
+                          <rect
+                            width="47.1837"
+                            height="44.6812"
+                            fill="white"
+                            transform="translate(10.5689) rotate(13.6824)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[300px_1fr] lg:grid-cols-[300px_1fr] xl:grid-cols-[350px_1fr] gap-8 lg:gap-12 xl:gap-16">
+                  <div className="space-y-6 md:space-y-8">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
+                        <img src="assets/reach-out-to-us-popup-icon.svg" className="-mb-4" alt="" />
+                      </div>
+                      <div>
+                        <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
+                          Reach out to us
+                        </h2>
+                        <p className="text-lg md:text-xl font-[405] text-brand-text tracking-[-0.02em] popup-section-left-content-subtext">
+                          +91 8041479167
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="h-px bg-brand-text/10"></div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
+                        <img src="assets/email-with-us-popup-icon.svg" className="-mb-4" alt="" />
+                      </div>
+                      <div>
+                        <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
+                          Email us at
+                        </h2>
+                        <p className="text-lg md:text-xl font-[405] text-brand-text tracking-[-0.02em] popup-section-left-content-subtext">
+                          hi@thirdeyegfx.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="h-px bg-brand-text/10"></div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
+                        <img src="assets/our-office-popup-icon.svg" className="-mb-4" alt="" />
+                      </div>
+                      <div>
+                        <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
+                          Our office
+                        </h2>
+                        <p className="text-lg md:text-xl font-[405] text-brand-text tracking-[-0.02em] popup-section-left-content-subtext">
+                          4th Main Rd, Vijayanagar
+                          <br />
+                          Bangalore - 560040
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-brand-form rounded-2xl p-6 md:p-8 lg:p-10 bg-[#EAEDE0]">
+                    <p className="text-base font-[405] text-brand-text mb-8 leading-[140%] popup-section-right-content-subtext">
+                      Fill in the form below and we will get back to you as soon
+                      as possible.
+                    </p>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <label
+                            htmlFor="name"
+                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                          >
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="Enter your full name"
+                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="email"
+                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                          >
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="example@gmail.com"
+                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <label
+                            htmlFor="contactNumber"
+                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                          >
+                            Contact Number
+                          </label>
+                          <input
+                            type="tel"
+                            id="contactNumber"
+                            name="contactNumber"
+                            value={formData.contactNumber}
+                            onChange={handleChange}
+                            placeholder="+91 9876543210"
+                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="factoryType"
+                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                          >
+                            Type of factory
+                          </label>
+                          <input
+                            type="text"
+                            id="factoryType"
+                            name="factoryType"
+                            value={formData.factoryType}
+                            onChange={handleChange}
+                            placeholder="Clothing"
+                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="block text-base font-[415]  text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                        >
+                          Your Message
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Write your message here..."
+                          rows={5}
+                          className="w-full popup-section-right-content-subtext-input px-4 py-3.5 rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                        />
+                      </div>
+
+                      
+                      <button
+                        type="submit"
+                        className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  px-9 py-4 bg-brand-purple text-brand-bg rounded-full text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
+                      >
+                         Send Message
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Dialog>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-brand-bg overflow-hidden hero-section-in-inventory-management">
         {/* Background Blobs */}
@@ -64,7 +330,11 @@ export default function Index() {
               Pricing
             </button>
           </div>
-          <button className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
+          >
             Get in touch
           </button>
         </nav>

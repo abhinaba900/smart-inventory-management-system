@@ -350,7 +350,7 @@
   position: relative;
   color: #f5f9f5;
   border-radius: 34px;
-  
+
   background-color: #772bf2;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
@@ -681,4 +681,61 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.ready-to-automate-your-factory-heading {
+  color: #0a0f0a;
+  text-align: center;
+  font-family: var(--font-family-sequel-sans-medium);
+  font-size: 3.25rem;
+  font-style: normal;
+  font-weight: 420;
+  line-height: 120%; /* 62.4px */
+  letter-spacing: -1.04px;
+}
+
+.popup-section-left-content-heading {
+  color: #0a0f0a;
+  font-family: var(--font-family-sequel-sans-bold-display);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: 120%; /* 28.8px */
+}
+
+.popup-section-left-content-subtext {
+  color: #0a0f0a;
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 405;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+
+.popup-section-right-content-subtext {
+  color: #0a0f0a;
+  font-family: var(--font-family-sequel-sans-book-display);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 405;
+  line-height: 140%; /* 22.4px */
+}
+
+.popup-section-right-content-subtext-label {
+  color: #0a0f0a;
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 415;
+  line-height: 140%; /* 22.4px */
+}
+
+.popup-section-right-content-subtext-input::placeholder {
+  color: rgba(10, 15, 10, 0.2);
+  font-family: var(--font-family-sequel-sans-book);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 405;
+  line-height: 140%; /* 22.4px */
 }
