@@ -39,6 +39,8 @@ export default function Index() {
     message: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
@@ -62,7 +64,7 @@ export default function Index() {
           className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
-        <div className="fixed max-w-[1208px] mx-auto bg-[#F5F9F5] inset-0 z-10 w-screen overflow-y-auto p-[24px] pb-[40px]">
+        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[40px]">
           <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
             <div className="absolute top-6 right-6 z-10">
               <button
@@ -70,7 +72,11 @@ export default function Index() {
                 aria-label="Close"
                 onClick={() => setOpen(false)}
               >
-                <img src="assets/close-icon-in-popup.svg" className="cursor-pointer" alt="" />
+                <img
+                  src="assets/close-icon-in-popup.svg"
+                  className="cursor-pointer"
+                  alt=""
+                />
               </button>
             </div>
 
@@ -128,7 +134,11 @@ export default function Index() {
                   <div className="space-y-6 md:space-y-8">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
-                        <img src="assets/reach-out-to-us-popup-icon.svg" className="-mb-4" alt="" />
+                        <img
+                          src="assets/reach-out-to-us-popup-icon.svg"
+                          className="-mb-4"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
@@ -144,7 +154,11 @@ export default function Index() {
 
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
-                        <img src="assets/email-with-us-popup-icon.svg" className="-mb-4" alt="" />
+                        <img
+                          src="assets/email-with-us-popup-icon.svg"
+                          className="-mb-4"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
@@ -160,7 +174,11 @@ export default function Index() {
 
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
-                        <img src="assets/our-office-popup-icon.svg" className="-mb-4" alt="" />
+                        <img
+                          src="assets/our-office-popup-icon.svg"
+                          className="-mb-4"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <h2 className="text-xl md:text-2xl font-[420] text-brand-text mb-1 popup-section-left-content-heading">
@@ -175,115 +193,130 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <div className="bg-brand-form rounded-2xl p-6 md:p-8 lg:p-10 bg-[#EAEDE0]">
-                    <p className="text-base font-[405] text-brand-text mb-8 leading-[140%] popup-section-right-content-subtext">
-                      Fill in the form below and we will get back to you as soon
-                      as possible.
-                    </p>
-
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <label
-                            htmlFor="name"
-                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                          >
-                            Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Enter your full name"
-                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                          />
-                        </div>
-
-                        <div>
-                          <label
-                            htmlFor="email"
-                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                          >
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="example@gmail.com"
-                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <label
-                            htmlFor="contactNumber"
-                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                          >
-                            Contact Number
-                          </label>
-                          <input
-                            type="tel"
-                            id="contactNumber"
-                            name="contactNumber"
-                            value={formData.contactNumber}
-                            onChange={handleChange}
-                            placeholder="+91 9876543210"
-                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                          />
-                        </div>
-
-                        <div>
-                          <label
-                            htmlFor="factoryType"
-                            className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                          >
-                            Type of factory
-                          </label>
-                          <input
-                            type="text"
-                            id="factoryType"
-                            name="factoryType"
-                            value={formData.factoryType}
-                            onChange={handleChange}
-                            placeholder="Clothing"
-                            className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="message"
-                          className="block text-base font-[415]  text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                        >
-                          Your Message
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          placeholder="Write your message here..."
-                          rows={5}
-                          className="w-full popup-section-right-content-subtext-input px-4 py-3.5 rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                  <div className="bg-brand-form rounded-2xl p-6 md:p-8 lg:p-10 bg-[#EAEDE0] h-[600px]">
+                    {isSubmitted ? (
+                      <div className="flex flex-col justify-center items-center w-full h-full">
+                        <img
+                          src="assets/after-submit-the-form-icon.svg"
+                          alt="after submit logo"
+                          className="mb-[28px]"
                         />
+                        <p className="mb-[28px] success-massage-after-submiting-popup">Your message has been sent!</p>
+                        <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+                          See How It Works
+                        </button>
                       </div>
+                    ) : (
+                      <>
+                        <p className="text-base font-[405] text-brand-text mb-8 leading-[140%] popup-section-right-content-subtext">
+                          Fill in the form below and we will get back to you as
+                          soon as possible.
+                        </p>
 
-                      
-                      <button
-                        type="submit"
-                        className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  px-9 py-4 bg-brand-purple text-brand-bg rounded-full text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
-                      >
-                         Send Message
-                      </button>
-                    </form>
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                              <label
+                                htmlFor="name"
+                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                              >
+                                Name
+                              </label>
+                              <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="Enter your full name"
+                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                              />
+                            </div>
+
+                            <div>
+                              <label
+                                htmlFor="email"
+                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                              >
+                                Email Address
+                              </label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="example@gmail.com"
+                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                              <label
+                                htmlFor="contactNumber"
+                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                              >
+                                Contact Number
+                              </label>
+                              <input
+                                type="tel"
+                                id="contactNumber"
+                                name="contactNumber"
+                                value={formData.contactNumber}
+                                onChange={handleChange}
+                                placeholder="+91 9876543210"
+                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                              />
+                            </div>
+
+                            <div>
+                              <label
+                                htmlFor="factoryType"
+                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                              >
+                                Type of factory
+                              </label>
+                              <input
+                                type="text"
+                                id="factoryType"
+                                name="factoryType"
+                                value={formData.factoryType}
+                                onChange={handleChange}
+                                placeholder="Clothing"
+                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                              />
+                            </div>
+                          </div>
+
+                          <div>
+                            <label
+                              htmlFor="message"
+                              className="block text-base font-[415]  text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                            >
+                              Your Message
+                            </label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              value={formData.message}
+                              onChange={handleChange}
+                              placeholder="Write your message here..."
+                              rows={5}
+                              className="w-full popup-section-right-content-subtext-input px-4 py-3.5 rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                            />
+                          </div>
+
+                          <button
+                            type="submit"
+                            className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  px-9 py-4 bg-brand-purple text-brand-bg rounded-full text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
+                          >
+                            Send Message
+                          </button>
+                        </form>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -307,7 +340,7 @@ export default function Index() {
         <nav className="relative z-10 flex items-center justify-between px-16 py-6">
           <div className="flex items-center">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/e6045dfcb45ac6202f7cd2ffbeaae6982613594e?width=346"
+              src="assets/main-logo-navbar.webp"
               alt="Third Eye Logo"
               className="h-[60px] w-[173px]"
             />

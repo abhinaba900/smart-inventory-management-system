@@ -739,3 +739,12 @@
   font-weight: 405;
   line-height: 140%; /* 22.4px */
 }
+
+.success-massage-after-submiting-popup {
+  color: #0a0f0a;
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: 140%; /* 28px */
+}
