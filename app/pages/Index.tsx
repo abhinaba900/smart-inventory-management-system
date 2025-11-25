@@ -1,11 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import HorizontalScroller from "./ScrollVelocity";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
+import { Menu, X } from "lucide-react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 type partner = {
   name: string;
   logo: string;
@@ -40,6 +38,7 @@ export default function Index() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -201,7 +200,9 @@ export default function Index() {
                           alt="after submit logo"
                           className="mb-[28px]"
                         />
-                        <p className="mb-[28px] success-massage-after-submiting-popup">Your message has been sent!</p>
+                        <p className="mb-[28px] success-massage-after-submiting-popup">
+                          Your message has been sent!
+                        </p>
                         <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
                           See How It Works
                         </button>
@@ -337,39 +338,103 @@ export default function Index() {
         </div>
 
         {/* Navigation */}
-        <nav className="relative z-10 flex items-center justify-between px-16 py-6">
-          <div className="flex items-center">
+        <nav className="relative z-10 px-6 py-4 lg:px-16 lg:py-6 bg-brand-bg">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <img
-              src="assets/main-logo-navbar.webp"
+              src="/assets/main-logo-navbar.webp"
               alt="Third Eye Logo"
-              className="h-[60px] w-[173px]"
+              className="h-[50px] w-[150px] lg:h-[60px] lg:w-[173px]"
             />
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center gap-4">
+              {["Solution", "Features", "Benefits", "Customers", "Pricing"].map(
+                (label) => (
+                  <button
+                    key={label}
+                    className="px-5 py-2.5 rounded-full nav-links-in-inventory-management bg-brand-gray text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors"
+                  >
+                    {label}
+                  </button>
+                )
+              )}
+            </div>
+
+            {/* Desktop CTA */}
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              className="hidden lg:block nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
+            >
+              Get in touch
+            </button>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="lg:hidden text-brand-dark"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <X size={30} /> : <Menu size={30} />}
+            </button>
           </div>
 
-          <div className="flex items-center gap-4">
-            <button className="px-5 py-2.5 rounded-full nav-links-in-inventory-management bg-brand-gray text-brand-dark font-['Sequel_Sans'] text-base font-normal">
-              Solution
-            </button>
-            <button className="px-5 py-2.5 rounded-full nav-links-in-inventory-management text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors">
-              Features
-            </button>
-            <button className="px-5 py-2.5 rounded-full nav-links-in-inventory-management text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors">
-              Benefits
-            </button>
-            <button className="px-5 py-2.5 rounded-full nav-links-in-inventory-management text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors">
-              Customers
-            </button>
-            <button className="px-5 py-2.5 rounded-full nav-links-in-inventory-management text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors">
-              Pricing
-            </button>
-          </div>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
-          >
-            Get in touch
-          </button>
+          {/* Mobile Menu */}
+          <Dialog open={mobileOpen} onClose={setMobileOpen}>
+            <div
+              className="w-full fixed mx-auto bg-[#F5F9F5] inset-0 z-10 p-0 border-none shadow-xl rounded-2xl bg-brand-bg 
+               animate-in fade-in-0 zoom-in-95 duration-300"
+            >
+              <div className="flex justify-between items-center px-4 pt-[44px]">
+                <img
+                  src="/assets/main-logo-navbar.webp"
+                  alt="Third Eye Logo"
+                  className="h-[50px] w-[150px] lg:h-[60px] lg:w-[173px]"
+                />
+                <button
+                  className="w-10 h-10 md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
+                  aria-label="Close"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <img
+                    src="assets/close-icon-in-popup.svg"
+                    className="cursor-pointer"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <div className="flex flex-col gap-4 p-4 mt-4">
+                {[
+                  "Solution",
+                  "Features",
+                  "Benefits",
+                  "Customers",
+                  "Pricing",
+                ].map((label, index, arr) => (
+                  <button
+                    key={label}
+                    className={`w-full px-5 py-3 text-left font-['Sequel_Sans'] nav-links-in-inventory-management-get-in-touch text-base font-normal
+        text-brand-dark transition-colors
+        ${index !== arr.length - 1 ? "border-b border-brand-[rgba(10,15,10,0.1)] pb-4" : ""}
+      `}
+                  >
+                    {label}
+                  </button>
+                ))}
+
+                <button
+                  type="button"
+                  onClick={() => setOpen(true)}
+                  className=" mt-[8px] nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
+                >
+                  Get in touch
+                </button>
+                <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+                  Book a Free Demo
+                </button>
+              </div>
+            </div>
+          </Dialog>
         </nav>
 
         {/* Hero Content */}
