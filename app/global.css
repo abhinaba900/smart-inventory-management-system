@@ -901,6 +901,11 @@
     margin-bottom: 2rem;
   }
 
+  .background-image-for-dashboard-image-in-inventory-management{
+    padding-top: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
   .benifits-icon-in-inventory-management {
     width: 80px;
     height: 80px;
