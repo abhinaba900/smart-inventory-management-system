@@ -563,7 +563,7 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative problem-section-cards-holder-in-inventory-management">
             <img
               src="assets/still-using-spradesheets-3-section-icon.svg"
               className="absolute -right-[4rem] -top-[4rem] in-mobile-not-visible"
@@ -812,7 +812,7 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 actionaable-insights-section-in-inventory-management">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 actionaable-insights-section-in-inventory-management">
             <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="assets/actionaable-insights-icon.webp"
@@ -945,7 +945,7 @@ export default function Index() {
             Simple, transparent, and built for businesses of all sizes
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
             <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] p-8 flex flex-col justify-between pricing-cards-holder-in-inventory-management">
               <p className="text-2xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.48px] mb-6 plan-name-in-inventory-management">
                 Basic Plan
@@ -1071,7 +1071,7 @@ export default function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-16 footer-section-container-in-inventory-management">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-0 lg:gap-12 mb-16 footer-social-links-container-in-inventory-management">
-            <div>
+            <div className="footer-section-logo-and-paragraph-holder">
               <div className="flex items-center gap-4 mb-6 -mt-8 third-eye-logo-in-inventory-management">
                 <img
                   src="assets/footer-thired-eye-logo.svg"
