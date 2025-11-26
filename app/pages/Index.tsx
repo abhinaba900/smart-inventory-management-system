@@ -338,7 +338,7 @@ export default function Index() {
         </div>
 
         {/* Navigation */}
-        <nav className="relative z-10 px-6 py-4 lg:px-16 lg:py-6 bg-brand-bg">
+        <nav className="relative z-10 px-6 py-4 lg:px-16 lg:py-6 bg-brand-bg navbar-section-in-inventory-management">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <img

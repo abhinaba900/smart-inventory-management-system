@@ -1167,3 +1167,50 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .navbar-section-in-inventory-management,
+  .problem-section-content-holder-in-inventory-management,
+  .benfits-section-content-holder-in-inventory-management,
+  .video-section-content-holder-in-inventory-management,
+  .benefits-section-content-holder-in-inventory-management,
+  .testimonial-section-content-holder-in-inventory-management,
+  .pricing-section-content-holder-in-inventory-management,
+  .footer-section-container-in-inventory-management {
+    padding-inline: 1.5rem;
+  }
+
+  .everything-you-need-text-in-inventory-management {
+    margin-inline: 1.5rem;
+  }
+
+  .scroll-of-horizontal-in-inventory-management {
+    padding: 0;
+  }
+  .heading-section-title-in-inventory-management {
+    font-size: 3rem;
+    line-height: 120%;
+  }
+
+  .in-mobile-not-visible {
+    display: none;
+  }
+  .spradesheet-usage-text-in-inventory-management {
+    font-size: 2rem;
+    line-height: 120%;
+  }
+  .plan-heading-in-inventory-management,
+  .why-manufacturers-love-us-header-in-inventory-management {
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+
+  .contact-and-form-holder-in-popup-invite-in-inventory-management{
+    gap: 1rem;
+  }
+
+  .popup-content-holder-in-inventory-management{
+    width: 100%;
+    max-width: 100%;
+  }
+}
