@@ -749,7 +749,7 @@
   line-height: 140%; /* 28px */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .heading-section-title-in-inventory-management {
     font-size: 24px;
     line-height: 120%;
@@ -1112,5 +1112,58 @@
 
   .footer-copyright-in-inventory-management {
     padding-top: 1rem;
+  }
+
+  .popup-content-holder-in-inventory-management {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+
+  .contact-and-form-holder-in-popup-invite-in-inventory-management {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .ready-to-automate-your-factory-heading {
+    font-size: 24px;
+    line-height: 120%;
+    text-align: left;
+  }
+
+  .popup-heading-container-in-inventory-management {
+    justify-content: start;
+  }
+
+  .popup-section-left-content-holder-in-inventory-management {
+    padding-top: 28px;
+  }
+
+  .popup-section-close-button-in-inventory-management {
+    right: 0rem;
+    top: 2rem;
+  }
+
+  .popup-form-content-holder-in-inventory-management {
+    height: fit-content;
+  }
+
+  .popup-section-left-content-heading {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .popup-section-left-content-subtext {
+    font-size: 1rem;
+    line-height: 120%;
+  }
+
+  .popup-section-left-content-item-in-inventory-management {
+    margin-bottom: 0;
   }
 }

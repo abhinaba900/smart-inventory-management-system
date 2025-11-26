@@ -37,7 +37,7 @@ export default function Index() {
     message: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -63,11 +63,11 @@ export default function Index() {
           className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
-        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[40px]">
+        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[40px] popup-content-holder-in-inventory-management">
           <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
-            <div className="absolute top-6 right-6 z-10">
+            <div className="absolute top-6 right-6 z-10 popup-section-close-button-in-inventory-management">
               <button
-                className="w-10 h-10 md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
+                className="w-10 h-10  md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
                 aria-label="Close"
                 onClick={() => setOpen(false)}
               >
@@ -79,9 +79,9 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="container mx-auto px-0 pt-7 ">
+            <div className="container mx-auto px-0 pt-7 popup-section-left-content-holder-in-inventory-management">
               <div className="max-w-7xl mx-auto">
-                <div className="flex justify-center  relative">
+                <div className="flex justify-center  relative popup-heading-container-in-inventory-management">
                   <div className="absolute left-6 -top-5 hidden md:block">
                     <img
                       src="assets/ready-to-automate-your-factory-right-logo.webp"
@@ -129,9 +129,9 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-[300px_1fr] lg:grid-cols-[300px_1fr] xl:grid-cols-[350px_1fr] gap-8 lg:gap-12 xl:gap-16">
-                  <div className="space-y-6 md:space-y-8">
-                    <div className="flex items-start gap-4">
+                <div className="grid grid-cols-[300px_1fr] lg:grid-cols-[300px_1fr] xl:grid-cols-[350px_1fr] gap-8 lg:gap-12 xl:gap-16 contact-and-form-holder-in-popup-invite-in-inventory-management">
+                  <div className="space-y-[48px] md:space-y-8">
+                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
                         <img
                           src="assets/reach-out-to-us-popup-icon.svg"
@@ -151,7 +151,7 @@ export default function Index() {
 
                     <div className="h-px bg-brand-text/10"></div>
 
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
                         <img
                           src="assets/email-with-us-popup-icon.svg"
@@ -192,7 +192,7 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <div className="bg-brand-form rounded-2xl p-6 md:p-8 lg:p-10 bg-[#EAEDE0] h-[600px]">
+                  <div className="bg-brand-form rounded-2xl p-6 md:p-8 lg:p-10 bg-[#EAEDE0] h-[600px] popup-form-content-holder-in-inventory-management">
                     {isSubmitted ? (
                       <div className="flex flex-col justify-center items-center w-full h-full">
                         <img
