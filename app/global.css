@@ -748,3 +748,365 @@
   font-weight: 420;
   line-height: 140%; /* 28px */
 }
+
+@media (max-width: 768px) {
+  .heading-section-title-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .hero-section-parennt-in-inventory-management {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+
+  .hero-section-in-inventory-management {
+    height: 100%;
+    min-height: fit-content;
+  }
+
+  .in-mobile-not-visible {
+    display: none;
+  }
+
+  .button,
+  .button2 {
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+  }
+
+  .button-content-holder-in-inventory-management {
+    flex-direction: column;
+    margin-bottom: 52px;
+  }
+
+  .subtext-section-title-in-inventory-management {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 1rem;
+  }
+
+  .scroll-of-horizontal-in-inventory-management {
+    padding-inline: 0;
+  }
+
+  .horizontal-scroll-parent-in-inventory-management {
+    padding-block: 0;
+    padding-top: 42px;
+  }
+
+  .trust-indecation-in-inventory-management {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .problem-section-parent-in-inventory-management {
+    padding-block: 70px;
+  }
+
+  .problem-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .spradesheet-usage-text-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 12px;
+  }
+
+  .spradesheet-usage-subtext-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  .heading-and-subtext-content-holder-in-inventory-management {
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .benfits-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .everything-you-need-text-in-inventory-management {
+    padding-block: 48px;
+  }
+
+  .factory-floor-text-heading-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .heading-content-holder-in-inventory-management {
+    margin-bottom: 40px;
+  }
+
+  .productivity-card-content-holder-in-inventory-management {
+    padding: 1rem;
+  }
+  .system-usage-card-title-text-in-inventory-management {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 1rem;
+  }
+
+  .explore-more-in-features-section-in-inventory-management {
+    width: fit-content;
+  }
+  .video-section-parent-in-inventory-management {
+    padding-block: 70px;
+  }
+
+  .video-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .how-it-works-subtext-text-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .video-section-subtext-text-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 1rem;
+  }
+
+  .video-section-button-in-inventory-management {
+    margin-bottom: 40px !important;
+    width: fit-content;
+  }
+
+  .why-manufactures-love-us-in-inventory-management {
+    padding-block: 48px;
+  }
+
+  .benefits-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .why-manufacturers-love-us-header-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 2rem;
+  }
+
+  .benifits-icon-in-inventory-management {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+  }
+
+  .benifits-header-in-inventory-management {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 12px;
+  }
+
+  .why-manufacturers-love-us-subheader-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  .benifits-card-in-inventory-management {
+    padding: 24px;
+  }
+
+  .benifits-section-content-holder-in-inventory-management {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .actionaable-insights-section-in-inventory-management {
+    gap: 1rem;
+  }
+
+  .testimonial-section-in-inventory-management {
+    padding-block: 70px;
+  }
+
+  .testimonial-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .center-align-text {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .testimonial-header-in-inventory-management {
+    margin-bottom: 40px;
+  }
+
+  .img-and-content-holder-in-testimonial-in-inventory-management {
+    gap: 20px;
+  }
+
+  .testimonial-sub-header-in-inventory-management {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .transformes-how-we-manage-production-subheader-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 12px;
+  }
+
+  .slider-subheader-in-inventory-management {
+    font-size: 1rem;
+    line-height: 160%;
+    margin-bottom: 20px;
+  }
+  .icon-and-button-holder-in-testimonial-in-inventory-management {
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 0;
+  }
+
+  .testimonial-button-holder-in-inventory-management {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial-button-holder-in-inventory-management button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pricing-section-in-inventory-management {
+    padding-block: 70px;
+    padding-top: 0;
+  }
+
+  .pricing-section-content-holder-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .pricing-section-subheading-in-inventory-management {
+    margin-bottom: 32px;
+  }
+
+  .pricing-cards-holder-in-inventory-management {
+    padding: 24px;
+  }
+
+  .plan-name-in-inventory-management {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 9px;
+  }
+
+  .plan-heading-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  .plan-subheading-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 24px;
+  }
+
+  .cta-section-in-inventory-management {
+    margin-inline: 1rem;
+  }
+
+  .cta-section-title-in-inventory-management {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  .subhading-ready-to-take-control-in-inventory-management {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-bottom: 28px;
+  }
+
+  .cta-section-content-in-inventory-management {
+    padding-inline: 11px;
+  }
+
+  .cta-section-button-holder-in-inventory-management {
+    gap: 7px;
+    margin-bottom: 24px;
+  }
+
+  .cta-section-button-in-inventory-management {
+    padding: 12px 16px;
+  }
+
+  .cta-section-bullets-in-inventory-management {
+    font-size: 12px;
+    line-height: 140%;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .cta-section-bullets-in-inventory-management span {
+    text-align: left;
+  }
+
+  .cta-section-bullets-holder-in-inventory-management {
+    padding-inline: 2rem;
+  }
+
+  .footer-section-background-image-in-inventory-management {
+    padding-top: 16rem;
+    margin-top: -80%;
+  }
+
+  .footer-section-container-in-inventory-management {
+    padding-inline: 1rem;
+  }
+
+  .third-eye-logo-in-inventory-management img {
+    height: 115px;
+  }
+
+  .third-eye-logo-in-inventory-management {
+    margin-bottom: 5px;
+  }
+
+  .footer-section-description-in-inventory-management {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 28px;
+  }
+
+  .links-container-in-smart-inventory-management {
+    margin-bottom: 17px;
+  }
+
+  .footer-subtext-heading-in-inventory-management {
+    margin-bottom: 1rem;
+  }
+
+  .footer-subtext-list-text-in-inventory-management {
+    margin-bottom: 12px;
+  }
+
+  .links-container-in-smart-inventory-management-2{
+    margin-bottom: 28px;
+  }
+
+  .footer-social-links-container-in-inventory-management{
+    margin-bottom: 40px;
+  }
+
+  .footer-copyright-in-inventory-management{
+    padding-top: 1rem;
+  }
+}

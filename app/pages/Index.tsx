@@ -438,7 +438,7 @@ export default function Index() {
         </nav>
 
         {/* Hero Content */}
-        <div className="relative  max-w-[1312px] mx-auto px-16 pt-20 text-center">
+        <div className="relative  max-w-[1312px] mx-auto px-16 pt-20 text-center hero-section-parennt-in-inventory-management">
           <h1 className="text-[84px] heading-section-title-in-inventory-management leading-[110px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.68px] mb-6">
             Smart Inventory Management <br />
             for Smarter Manufacturing
@@ -450,7 +450,7 @@ export default function Index() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="relative flex items-center justify-center gap-5 mb-16">
+          <div className="relative flex items-center justify-center gap-5 mb-16 button-content-holder-in-inventory-management">
             <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               Book a Free Demo
             </button>
@@ -458,9 +458,10 @@ export default function Index() {
               See How It Works
             </button>
             <svg
-              className="absolute w-[157px] -bottom-[8rem] -right-[4rem]"
+              className="absolute w-[157px] -bottom-[8rem] -right-[4rem] in-mobile-not-visible"
               viewBox="0 0 157 123"
               fill="none"
+              
             >
               <path
                 fillRule="evenodd"
@@ -489,7 +490,7 @@ export default function Index() {
             </svg>
 
             <svg
-              className="absolute left-[6rem] h-[150px]"
+              className="absolute left-[6rem] h-[150px] in-mobile-not-visible"
               viewBox="0 0 246 169"
               fill="none"
             >
@@ -514,8 +515,8 @@ export default function Index() {
       </section>
 
       {/* Logo Carousel */}
-      <section className="py-16 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-16">
+      <section className="py-16 bg-brand-bg horizontal-scroll-parent-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16 scroll-of-horizontal-in-inventory-management">
           <p className="text-2xl font-['Sequel_Sans'] font-normal text-brand-dark text-center mb-12 trust-indecation-in-inventory-management">
             Trusted by 10+ industrial companies
           </p>
@@ -545,9 +546,9 @@ export default function Index() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+      <section className="py-20 bg-brand-bg problem-section-parent-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16 problem-section-content-holder-in-inventory-management">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16 heading-and-subtext-content-holder-in-inventory-management">
             <div>
               <h2 className="text-[52px] spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-8 -mt-3">
                 Still using spreadsheets to track inventory?
@@ -565,7 +566,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <img
               src="assets/still-using-spradesheets-3-section-icon.svg"
-              className="absolute -right-[4rem] -top-[4rem]"
+              className="absolute -right-[4rem] -top-[4rem] in-mobile-not-visible"
               alt=""
             />
             <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6">
@@ -632,8 +633,8 @@ export default function Index() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-16">
-          <div className="text-center mb-16 relative">
+        <div className="relative z-10 max-w-7xl mx-auto px-16 benfits-section-content-holder-in-inventory-management">
+          <div className="text-center mb-16 relative heading-content-holder-in-inventory-management">
             <h2
               style={{ color: "#F5F9F5" }}
               className="text-[52px] leading-[62.4px] font-['Sequel_Sans'] factory-floor-text-heading-in-inventory-management font-normal text-brand-bg tracking-[-1.04px] mb-4"
@@ -642,7 +643,7 @@ export default function Index() {
               smooth factory floor
             </h2>
             <img
-              className="absolute -bottom-[2.5rem] right-[12rem]"
+              className="absolute -bottom-[2.5rem] right-[12rem] in-mobile-not-visible"
               src="assets/everything-you-need-to-run-section-area.svg"
               alt="everything-you-need-to-run-section-area"
             />
@@ -650,19 +651,19 @@ export default function Index() {
 
           <div className="bg-[#FFF] rounded-[32px] overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5">
-              <div className="lg:col-span-2 p-8 flex flex-col justify-between">
+              <div className="lg:col-span-2 p-8 flex flex-col justify-between productivity-card-content-holder-in-inventory-management">
                 <div>
                   <h3 className="text-[28px] leading-[33.6px] system-usage-card-title-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.56px] mb-8">
                     You make the products. Our system manages the process.
                   </h3>
 
-                  <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+                  <button className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
                     Explore more
                   </button>
                 </div>
 
                 <div className="space-y-0 ">
-                  <div className="py-4 border-b border-brand-dark/10">
+                  <div className="py-4 border-b border-brand-dark/10 hidden lg:block">
                     <h4 className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark mb-1 row-materials-tracking-heading-in-inventory-management">
                       Raw Materials Tracking
                     </h4>
@@ -712,24 +713,30 @@ export default function Index() {
       </section>
 
       {/* Video Section */}
-      <section className="py-24 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-16 text-center">
-          <h2 className="text-[52px] spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-4">
+      <section className="py-24 bg-brand-bg video-section-parent-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16 text-center video-section-content-holder-in-inventory-management">
+          <h2 className="text-[52px] hidden lg:block spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-4">
             See How It Works
           </h2>
-          <p className="text-xl font-['Sequel_Sans'] how-it-works-subtext-text-in-inventory-management font-normal text-brand-dark mb-12 max-w-[646px] mx-auto">
+          <h2 className="text-[52px] block lg:hidden spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-4">
+            Still using spreadsheets to track inventory?
+          </h2>
+          <p className="hidden lg:block text-xl font-['Sequel_Sans'] how-it-works-subtext-text-in-inventory-management font-normal text-brand-dark mb-12 max-w-[646px] mx-auto">
             Watch how our software simplifies your entire inventory workflow,
             from raw material purchase to production dispatch
           </p>
+          <p className="text-xl block lg:hidden font-['Sequel_Sans'] video-section-subtext-text-in-inventory-management how-it-works-subtext-text-in-inventory-management font-normal text-brand-dark mb-12 max-w-[646px] mx-auto">
+            See how our software streamlines your workflow
+          </p>
 
-          <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-16 hover:bg-brand-purple/90 transition-colors">
+          <button className="button video-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-16 hover:bg-brand-purple/90 transition-colors">
             Schedule a Live Demo
           </button>
 
           <div className="relative max-w-[1110px] mx-auto">
             <img
               src="assets/see-how-it-works-section-icon.svg"
-              className="absolute -top-4 -right-[6rem]"
+              className="absolute -top-4 -right-[6rem] in-mobile-not-visible"
               alt=""
             />
 
@@ -763,24 +770,24 @@ export default function Index() {
 
       {/* Benefits Section */}
       <section className="relative py-24 bg-brand-bg overflow-hidden why-manufactures-love-us-in-inventory-management">
-        <div className="relative z-10 max-w-7xl mx-auto px-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-16  benefits-section-content-holder-in-inventory-management">
           <img
             src="assets/why-manufacturers-love-us-love-icon.svg"
-            className="absolute -top-6 right-[20%] w-[70px] h-[70px]"
+            className="absolute -top-6 right-[20%] w-[70px] h-[70px] in-mobile-not-visible"
             alt=""
           />
-          <h2 className="text-[52px] spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-16">
+          <h2 className="text-[52px] why-manufacturers-love-us-header-in-inventory-management spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-16">
             Why Manufacturers Love Us
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 benifits-section-content-holder-in-inventory-management">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="assets/24x7-access-icon.webp"
                 alt="24/7 Access"
-                className="w-[100px] h-[102px] mb-6"
+                className="w-[100px] h-[102px] mb-6 benifits-icon-in-inventory-management"
               />
-              <h3 className="text-[28px] leading-[33.6px] why-manufacturers-love-us-header-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.56px] mb-4">
+              <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] why-manufacturers-love-us-header-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 24/7 Access
               </h3>
               <p className="text-lg font-['Sequel_Sans'] font-normal why-manufacturers-love-us-subheader-in-inventory-management text-brand-dark leading-relaxed">
@@ -789,13 +796,13 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="assets/customizable-workflows-icon.webp"
                 alt="Customizable Workflows"
-                className="w-[92px] h-[102px] mb-6"
+                className="w-[92px] h-[102px] mb-6 benifits-icon-in-inventory-management"
               />
-              <h3 className="text-[28px] leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
+              <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 Customizable Workflows
               </h3>
               <p className="text-lg font-['Sequel_Sans'] why-manufacturers-love-us-subheader-in-inventory-management font-normal text-brand-dark leading-relaxed">
@@ -805,14 +812,14 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 actionaable-insights-section-in-inventory-management">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="assets/actionaable-insights-icon.webp"
                 alt="Actionable Insights"
-                className="w-[113px] h-[102px] mb-6"
+                className="w-[113px] h-[102px] mb-6 benifits-icon-in-inventory-management"
               />
-              <h3 className="text-[28px] leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
+              <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 Actionable Insights
               </h3>
               <p className="text-lg font-['Sequel_Sans'] why-manufacturers-love-us-subheader-in-inventory-management font-normal text-brand-dark leading-relaxed">
@@ -820,13 +827,13 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
               <img
                 src="assets/seamless-integraations-icon.webp"
                 alt="Seamless Integrations"
-                className="w-[98px] h-[102px] mb-6"
+                className="w-[98px] h-[102px] mb-6 benifits-icon-in-inventory-management"
               />
-              <h3 className="text-[28px] leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
+              <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 Seamless Integrations
               </h3>
               <p className="text-lg font-['Sequel_Sans'] font-normal why-manufacturers-love-us-subheader-in-inventory-management text-brand-dark leading-relaxed">
@@ -835,13 +842,13 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000]  p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000]  p-8">
               <img
                 src="assets/instent-alert-icon.webp"
                 alt="Instant Alerts"
-                className="w-[95px] h-[102px] mb-6"
+                className="w-[95px] h-[102px] mb-6 benifits-icon-in-inventory-management"
               />
-              <h3 className="text-[28px] leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
+              <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 Instant Alerts
               </h3>
               <p className="text-lg font-['Sequel_Sans'] why-manufacturers-love-us-subheader-in-inventory-management font-normal text-brand-dark leading-relaxed">
@@ -854,21 +861,21 @@ export default function Index() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-16">
-          <div className="flex justify-between items-center mb-16">
-            <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] ">
+      <section className="py-24 bg-brand-bg testimonial-section-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16 testimonial-section-content-holder-in-inventory-management">
+          <div className="flex justify-between items-center mb-16 testimonial-header-in-inventory-management">
+            <h2 className="text-[52px] center-align-text leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] ">
               Trusted by Leading <br />
               Manufacturers Across India
             </h2>
             <img
-              className="w-[124px] h-[124px] "
+              className="w-[124px] h-[124px] in-mobile-not-visible"
               src="assets/trusted-by-leading-manufacturers-across-india-icon.svg"
               alt=""
             />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center img-and-content-holder-in-testimonial-in-inventory-management">
             <div>
               <img
                 src="assets/space-luggage-main-image.webp"
@@ -878,7 +885,7 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="text-[28px] leading-[33.6px] why-manufacturers-love-us-header-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.56px] mb-6">
+              <h3 className="text-[28px] leading-[33.6px] testimonial-sub-header-in-inventory-management why-manufacturers-love-us-header-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.56px] mb-6">
                 They transformed how we manage production.
               </h3>
               <p className="text-xl font-['Sequel_Sans'] font-normal transformes-how-we-manage-production-subheader-in-inventory-management text-brand-dark leading-relaxed mb-8">
@@ -891,13 +898,13 @@ export default function Index() {
                 <span className="font-normal">Operations Head,</span> Space
                 Luggage
               </p>
-              <div className="flex items-center justify-between gap-4 mb-8">
+              <div className="flex items-center justify-between gap-4 mb-8 icon-and-button-holder-in-testimonial-in-inventory-management">
                 <img
                   src="assets/space-luggage-icon.svg"
                   alt="Space Luggage Logo"
                   className="h-[55px]"
                 />
-                <div className="flex gap-2">
+                <div className="flex gap-2 testimonial-button-holder-in-inventory-management">
                   <button className="w-16 h-16 rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path
@@ -928,18 +935,18 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-16">
+      <section className="py-24 bg-brand-bg pricing-section-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16 pricing-section-content-holder-in-inventory-management">
           <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-4">
             Choose a Plan <br />
             That Fits Your Factory
           </h2>
-          <p className="text-xl font-['Sequel_Sans'] font-normal text-brand-dark text-center transformes-how-we-manage-production-subheader-in-inventory-management mb-16">
+          <p className="text-xl font-['Sequel_Sans'] pricing-section-subheading-in-inventory-management font-normal text-brand-dark text-center transformes-how-we-manage-production-subheader-in-inventory-management mb-16">
             Simple, transparent, and built for businesses of all sizes
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] p-8 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+            <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] p-8 flex flex-col justify-between pricing-cards-holder-in-inventory-management">
               <p className="text-2xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.48px] mb-6 plan-name-in-inventory-management">
                 Basic Plan
               </p>
@@ -957,7 +964,7 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] p-8 flex flex-col justify-between">
+            <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] pricing-cards-holder-in-inventory-management p-8 flex flex-col justify-between">
               <p className="text-2xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.48px] plan-name-in-inventory-management mb-6">
                 Pro Plan
               </p>
@@ -974,7 +981,7 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="rounded-2xl border-[1.5px] border-brand-dark bg-[#EAEDE0] p-8 flex flex-col justify-between">
+            <div className="rounded-2xl border-[1.5px] border-brand-dark pricing-cards-holder-in-inventory-management bg-[#EAEDE0] p-8 flex flex-col justify-between">
               <p className="text-2xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.48px] mb-6 plan-name-in-inventory-management">
                 Enterprise Plan
               </p>
@@ -995,14 +1002,14 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-1 py-20 mx-16 mb-24 bg-brand-purple rounded-[32px] overflow-hidden  everything-you-need-text-in-inventory-management">
+      <section className="relative cta-section-in-inventory-management z-1 py-20 mx-16 mb-24 bg-brand-purple rounded-[32px] overflow-hidden  everything-you-need-text-in-inventory-management">
         <img
           src="assets/ready-to-take-control-of-your-inventory-left-icon.svg"
-          className="absolute top-0"
+          className="absolute top-0 in-mobile-not-visible"
           alt=""
         />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-8">
-          <h2 className="text-[52px] text-[#F5F9F5] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-bg tracking-[-1.04px] mb-6">
+        <div className="relative z-10 text-center max-w-3xl mx-auto px-8 cta-section-content-in-inventory-management">
+          <h2 className="text-[52px] cta-section-title-in-inventory-management text-[#F5F9F5] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-bg tracking-[-1.04px] mb-6">
             Ready to take control of Your Inventory?
           </h2>
           <p className="text-xl text-[#F5F9F5] font-['Sequel_Sans'] font-normal text-brand-bg mb-12 subhading-ready-to-take-control-in-inventory-management">
@@ -1011,21 +1018,21 @@ export default function Index() {
           </p>
           <img
             src="assets/ready-to-take-control-of-your-inventory-right-logo.svg"
-            className="absolute top-[50%] -right-[5rem]"
+            className="absolute top-[50%] -right-[5rem] in-mobile-not-visible"
             alt=""
           />
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+          <div className="flex items-center justify-center gap-6 mb-8 cta-section-button-holder-in-inventory-management">
+            <button className="button2 type2 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
               Book a Free Demo
             </button>
 
-            <button className="button type1 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
+            <button className="button type1 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
               Start a Free Trial
             </button>
           </div>
 
-          <div className="flex items-center justify-center gap-6 text-brand-bg">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-6 text-brand-bg cta-section-bullets-holder-in-inventory-management">
+            <div className="flex items-center gap-2 cta-section-bullets-in-inventory-management">
               <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
                 <path
                   d="M13.2524 19.4591C14.5777 18.9895 15.7792 18.2144 16.7954 17.2363C19.5934 15.1063 21.316 11.4172 20.4157 7.65441C20.8317 7.36123 21.2598 7.06192 21.7102 6.7521C21.9781 6.56761 22.0455 6.20171 21.8618 5.93456C21.6781 5.66741 21.3129 5.60004 21.0442 5.78299C20.7 6.01991 20.3735 6.24822 20.0502 6.47499C18.9818 3.5985 16.6394 1.05882 14.0056 0.299079C12.8164 -0.0429004 11.5108 -0.0807918 10.2134 0.13029C6.50669 -0.0779212 2.74549 2.07538 1.03899 5.43413C-0.767738 8.99037 -0.168605 13.6449 2.45083 16.6352C5.07026 19.6258 9.52996 20.7786 13.2524 19.4591ZM4.2909 5.0045C6.21155 2.14902 10.512 0.515207 13.6795 1.42893C16.0733 2.11978 18.1977 4.50885 19.0698 7.16833C18.2159 7.77688 17.4129 8.3598 16.6328 8.9276C15.3965 9.82704 14.1212 10.7548 12.64 11.7821L9.47016 8.61222C9.24051 8.38257 8.86849 8.38257 8.63884 8.61222C8.4092 8.84186 8.4092 9.21389 8.63884 9.44353L12.1555 12.9602C12.3549 13.1609 12.6718 13.1892 12.9041 13.0291C14.5721 11.8808 15.9714 10.8627 17.3248 9.87833C17.9876 9.39588 18.6622 8.90501 19.3731 8.39539C20.0717 12.4342 17.3435 16.3989 13.7002 17.5569C10.4416 18.5933 6.58812 17.3586 4.53739 14.6228C2.48666 11.8862 2.38332 7.84138 4.2909 5.0045Z"
@@ -1036,7 +1043,7 @@ export default function Index() {
                 No credit card required
               </span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 cta-section-bullets-in-inventory-management">
               <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
                 <path
                   d="M13.2524 19.4591C14.5777 18.9895 15.7792 18.2144 16.7954 17.2363C19.5934 15.1063 21.316 11.4172 20.4157 7.65441C20.8317 7.36123 21.2598 7.06192 21.7102 6.7521C21.9781 6.56761 22.0455 6.20171 21.8618 5.93456C21.6781 5.66741 21.3129 5.60004 21.0442 5.78299C20.7 6.01991 20.3735 6.24822 20.0502 6.47499C18.9818 3.5985 16.6394 1.05882 14.0056 0.299079C12.8164 -0.0429004 11.5108 -0.0807918 10.2134 0.13029C6.50669 -0.0779212 2.74549 2.07538 1.03899 5.43413C-0.767738 8.99037 -0.168605 13.6449 2.45083 16.6352C5.07026 19.6258 9.52996 20.7786 13.2524 19.4591ZM4.2909 5.0045C6.21155 2.14902 10.512 0.515207 13.6795 1.42893C16.0733 2.11978 18.1977 4.50885 19.0698 7.16833C18.2159 7.77688 17.4129 8.3598 16.6328 8.9276C15.3965 9.82704 14.1212 10.7548 12.64 11.7821L9.47016 8.61222C9.24051 8.38257 8.86849 8.38257 8.63884 8.61222C8.4092 8.84186 8.4092 9.21389 8.63884 9.44353L12.1555 12.9602C12.3549 13.1609 12.6718 13.1892 12.9041 13.0291C14.5721 11.8808 15.9714 10.8627 17.3248 9.87833C17.9876 9.39588 18.6622 8.90501 19.3731 8.39539C20.0717 12.4342 17.3435 16.3989 13.7002 17.5569C10.4416 18.5933 6.58812 17.3586 4.53739 14.6228C2.48666 11.8862 2.38332 7.84138 4.2909 5.0045Z"
@@ -1062,14 +1069,14 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-16 footer-section-container-in-inventory-management">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 lg:gap-12 mb-16 footer-social-links-container-in-inventory-management">
             <div>
-              <div className="flex items-center gap-4 mb-6 -mt-8">
+              <div className="flex items-center gap-4 mb-6 -mt-8 third-eye-logo-in-inventory-management">
                 <img
                   src="assets/footer-thired-eye-logo.svg"
                   alt="Third Eye Logo"
-                  className="w-[239px] h-[123px]"
+                  className="w-[239px] h-[123px] "
                 />
               </div>
               <p className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark leading-relaxed footer-section-description-in-inventory-management">
@@ -1079,31 +1086,31 @@ export default function Index() {
               </p>
             </div>
 
-            <div>
+            <div className="links-container-in-smart-inventory-management">
               <h4 className="text-xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.4px] mb-6 footer-subtext-heading-in-inventory-management">
                 Links
               </h4>
-              <ul className="space-y-4">
-                <li>
+              <ul className="space-y-4 footer-subtext-list-in-inventory-management">
+                <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
                   >
                     Features
                   </a>
                 </li>
-                <li>
+                <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
                   >
                     Pricing
                   </a>
                 </li>
-                <li>
+                <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="text-lg  font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
                   >
                     Demo
                   </a>
@@ -1111,7 +1118,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
-                    className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="text-lg  font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
                   >
                     Contact
                   </a>
@@ -1119,12 +1126,12 @@ export default function Index() {
               </ul>
             </div>
 
-            <div>
+            <div className="links-container-in-smart-inventory-management-2">
               <h4 className="text-xl font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-0.4px] mb-6 footer-subtext-heading-in-inventory-management">
                 Support
               </h4>
               <ul className="space-y-4">
-                <li className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
+                <li className="text-lg font-['Sequel_Sans'] footer-subtext-list-text-in-inventory-management font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
                   Email: hi@thirdeyegfx.com
                 </li>
                 <li className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
@@ -1138,7 +1145,7 @@ export default function Index() {
                 Social Links
               </h4>
               <ul className="space-y-4">
-                <li>
+                <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
                     className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline"
@@ -1210,7 +1217,7 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="border-t border-brand-dark/10 pt-8">
+          <div className="border-t border-brand-dark/10 pt-8 footer-copyright-in-inventory-management">
             <p className="text-sm font-['Sequel_Sans'] font-normal text-brand-dark/80 text-center copyright-text-in-inventory-management">
               Copyright © 2025 Third Eye. All rights reserved.
             </p>
