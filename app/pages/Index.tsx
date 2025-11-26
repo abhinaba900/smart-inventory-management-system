@@ -773,7 +773,7 @@ export default function Index() {
         <div className="relative z-10 max-w-7xl mx-auto px-16  benefits-section-content-holder-in-inventory-management">
           <img
             src="assets/why-manufacturers-love-us-love-icon.svg"
-            className="absolute -top-6 right-[20%] w-[70px] h-[70px] in-mobile-not-visible"
+            className="absolute -top-6 right-[20%] w-[70px] h-[70px] in-mobile-not-visible love-icon-in-why-manufacturers-love-us-in-inventory-management"
             alt=""
           />
           <h2 className="text-[52px] why-manufacturers-love-us-header-in-inventory-management spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-16">

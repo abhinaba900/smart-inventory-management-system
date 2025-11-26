@@ -455,10 +455,10 @@
 }
 
 .spradesheet-usage-text-in-inventory-management {
-  font-family: var(--font-family-sequel-sans-semi-bold-display);
-  font-weight: 420;
-  font-size: 3.25rem;
-  line-height: 120%;
+  font-family: var(--font-family-sequel-sans-semi-bold-display) !important;
+  font-weight: 420 !important;
+  font-size: 3.25rem !important;
+  line-height: 120% !important;
   letter-spacing: -2%;
 }
 
@@ -748,6 +748,8 @@
   font-weight: 420;
   line-height: 140%; /* 28px */
 }
+
+
 
 @media (max-width: 767px) {
   .heading-section-title-in-inventory-management {
@@ -1218,20 +1220,21 @@
     margin-inline: 1.5rem;
   }
 
-  .footer-social-links-container-in-inventory-management{
+  .footer-social-links-container-in-inventory-management {
     display: flex;
     gap: 2rem;
   }
-  .footer-social-links-container-in-inventory-management .footer-section-logo-and-paragraph-holder{
+  .footer-social-links-container-in-inventory-management
+    .footer-section-logo-and-paragraph-holder {
     width: 250px;
   }
 
-  .footer-subtext-subhading-in-inventory-management{
+  .footer-subtext-subhading-in-inventory-management {
     font-size: 14px;
     line-height: 140%;
   }
 
-  .footer-section-description-in-inventory-management{
+  .footer-section-description-in-inventory-management {
     font-size: 1rem;
     line-height: 140%;
   }
