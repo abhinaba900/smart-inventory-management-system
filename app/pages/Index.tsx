@@ -37,7 +37,7 @@ export default function Index() {
     message: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
