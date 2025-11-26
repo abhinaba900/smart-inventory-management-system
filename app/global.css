@@ -817,8 +817,8 @@
   }
 
   .spradesheet-usage-text-in-inventory-management {
-    font-size: 24px;
-    line-height: 120%;
+    font-size: 24px !important;
+    line-height: 120% !important;
     margin-bottom: 12px;
   }
 
@@ -1020,8 +1020,8 @@
   }
 
   .plan-heading-in-inventory-management {
-    font-size: 24px;
-    line-height: 120%;
+    font-size: 24px !important;
+    line-height: 120% !important;
     margin-bottom: 16px;
   }
 
@@ -1036,8 +1036,8 @@
   }
 
   .cta-section-title-in-inventory-management {
-    font-size: 24px;
-    line-height: 120%;
+    font-size: 24px !important;
+    line-height: 120% !important;
     margin-bottom: 16px;
   }
   .subhading-ready-to-take-control-in-inventory-management {
