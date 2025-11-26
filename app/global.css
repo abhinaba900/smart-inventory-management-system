@@ -777,8 +777,12 @@
   }
 
   .button-content-holder-in-inventory-management {
-    flex-direction: column;
     margin-bottom: 52px;
+    gap: 8px;
+  }
+
+  .button-content-holder-in-inventory-management button {
+    padding: 12px 16px;
   }
 
   .subtext-section-title-in-inventory-management {
@@ -1098,15 +1102,15 @@
     margin-bottom: 12px;
   }
 
-  .links-container-in-smart-inventory-management-2{
+  .links-container-in-smart-inventory-management-2 {
     margin-bottom: 28px;
   }
 
-  .footer-social-links-container-in-inventory-management{
+  .footer-social-links-container-in-inventory-management {
     margin-bottom: 40px;
   }
 
-  .footer-copyright-in-inventory-management{
+  .footer-copyright-in-inventory-management {
     padding-top: 1rem;
   }
 }
