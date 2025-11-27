@@ -1151,13 +1151,13 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark "
+                    className="flex social-icon-hover footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark "
                   >
                     <svg
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
-                      fill="none" 
+                      fill="none"
                       className="flex-shrink-0 animated-svg"
                     >
                       <rect
@@ -1182,7 +1182,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
-                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark"
+                    className="flex social-icon-hover footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark"
                   >
                     <svg
                       width="32"

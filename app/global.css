@@ -378,26 +378,26 @@
   color: white;
 }
 
-.footer-subtext-subhading-in-inventory-management {
+.social-icon-hover {
   transition: color 0.3s ease;
 }
 
-.footer-subtext-subhading-in-inventory-management svg rect,
-.footer-subtext-subhading-in-inventory-management svg path {
+.social-icon-hover svg rect,
+.social-icon-hover svg path {
   transition: all 0.3s ease;
 }
 
 /* 🔥 HOVER EFFECT */
-.footer-subtext-subhading-in-inventory-management:hover {
+.social-icon-hover:hover {
   color: #8b4dff; /* Purple text */
 }
 
-.footer-subtext-subhading-in-inventory-management:hover svg rect {
+.social-icon-hover:hover svg rect {
   stroke: #8b4dff; /* Purple border */
   fill: #8b4dff;   /* Purple background */
 }
 
-.footer-subtext-subhading-in-inventory-management:hover svg path {
+.social-icon-hover:hover svg path {
   fill: #ffffff; /* White LinkedIn icon */
 }
 
