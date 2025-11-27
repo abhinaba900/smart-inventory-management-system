@@ -338,7 +338,7 @@ export default function Index() {
         </div>
 
         {/* Navigation */}
-        <nav className="relative z-10 px-6 py-4 lg:px-16 lg:py-6 bg-brand-bg navbar-section-in-inventory-management">
+        <nav className="relative z-10 px-6 max-w-[1520px] mx-auto py-4 lg:px-16 lg:py-6 bg-brand-bg navbar-section-in-inventory-management">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <img
@@ -367,7 +367,7 @@ export default function Index() {
               onClick={() => setOpen(true)}
               className="hidden lg:block nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
             >
-              Get in touch
+              <span>Get in touch</span>
             </button>
 
             {/* Mobile Hamburger */}
@@ -431,10 +431,10 @@ export default function Index() {
                   onClick={() => setOpen(true)}
                   className=" mt-[8px] nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
                 >
-                  Get in touch
+                  <span>Get in touch</span>
                 </button>
                 <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
-                  Book a Free Demo
+                  <span>Book a Free Demo</span>
                 </button>
               </div>
             </div>
@@ -456,10 +456,10 @@ export default function Index() {
           {/* CTA Buttons */}
           <div className="relative flex items-center justify-center gap-5 mb-[5rem] button-content-holder-in-inventory-management">
             <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-              Book a Free Demo
+              <span>Book a Free Demo</span>
             </button>
             <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-              See How It Works
+              <span>See How It Works</span>
             </button>
             <svg
               className="absolute w-[157px] -bottom-[8rem] -right-[4rem] in-mobile-not-visible"
@@ -572,7 +572,7 @@ export default function Index() {
               className="absolute -right-[4rem] -top-[4rem] in-mobile-not-visible"
               alt=""
             />
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[4px_4px_0_0_#000]">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
               <img
                 src="assets/missed-reorders-cause-production-delays.webp"
                 alt="Production Delays"
@@ -587,7 +587,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[4px_4px_0_0_#000]">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
               <img
                 src="assets/manual-stock-traking-leads-to-costly-errors.webp"
                 alt="Costly Errors"
@@ -602,7 +602,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[4px_4px_0_0_#000]">
+            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
               <img
                 src="assets/no-visibility-ito-row-material-movement.webp"
                 alt="No Visibility"
@@ -661,7 +661,7 @@ export default function Index() {
                   </h3>
 
                   <button className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-                    Explore more
+                    <span>Explore more</span>
                   </button>
                 </div>
 
@@ -733,7 +733,7 @@ export default function Index() {
           </p>
 
           <button className="button video-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-[5rem] hover:bg-brand-purple/90 transition-colors">
-            Schedule a Live Demo
+            <span>Schedule a Live Demo</span>
           </button>
 
           <div className="relative max-w-[1110px] mx-auto">
@@ -755,7 +755,7 @@ export default function Index() {
                   alt="Video Thumbnail"
                   className="w-full h-full object-cover"
                 />
-                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full bg-brand-bg border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform">
+                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full bg-[#F5F9F5] border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform">
                   <svg width="32" height="37" viewBox="0 0 32 37" fill="none">
                     <path
                       fillRule="evenodd"
@@ -784,7 +784,7 @@ export default function Index() {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 benifits-section-content-holder-in-inventory-management">
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
               <img
                 src="assets/24x7-access-icon.webp"
                 alt="24/7 Access"
@@ -799,7 +799,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
               <img
                 src="assets/customizable-workflows-icon.webp"
                 alt="Customizable Workflows"
@@ -816,7 +816,7 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 actionaable-insights-section-in-inventory-management">
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
               <img
                 src="assets/actionaable-insights-icon.webp"
                 alt="Actionable Insights"
@@ -830,7 +830,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000] p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
               <img
                 src="assets/seamless-integraations-icon.webp"
                 alt="Seamless Integrations"
@@ -845,7 +845,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[4px_4px_0_0_#000]  p-8">
+            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000]  p-8">
               <img
                 src="assets/instent-alert-icon.webp"
                 alt="Instant Alerts"
@@ -939,7 +939,7 @@ export default function Index() {
 
       {/* Pricing Section */}
       <section className="py-24 bg-[#f5f9f5] pricing-section-in-inventory-management pt-10 pb-50">
-        <div className="max-w-7xl mx-auto px-16  pricing-section-content-holder-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-0 lg:px-8 2xl:px-0 pricing-section-content-holder-in-inventory-management">
           <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-4">
             Choose a Plan <br />
             That Fits Your Factory
@@ -963,7 +963,7 @@ export default function Index() {
 
               <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
                 {" "}
-                Get Basic
+                <span>Get Basic</span>
               </button>
             </div>
 
@@ -980,7 +980,7 @@ export default function Index() {
               </p>
 
               <button className="button w-full nav-links-in-inventory-management-get-in-touch px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-                Get Pro
+                <span>Get Pro</span>
               </button>
             </div>
 
@@ -997,7 +997,7 @@ export default function Index() {
               </p>
 
               <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
-                Get Enterprise
+                <span>Get Enterprise</span>
               </button>
             </div>
           </div>
@@ -1026,11 +1026,11 @@ export default function Index() {
           />
           <div className="flex items-center justify-center gap-6 mb-8 cta-section-button-holder-in-inventory-management">
             <button className="button2 type2 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
-              Book a Free Demo
+              <span>Book a Free Demo</span>
             </button>
 
             <button className="button type1 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
-              Start a Free Trial
+              <span>Start a Free Trial</span>
             </button>
           </div>
 
@@ -1097,7 +1097,7 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="underline-button text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark  footer-subtext-subhading-in-inventory-management"
                   >
                     Features
                   </a>
@@ -1105,7 +1105,7 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="underline-button text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Pricing
                   </a>
@@ -1113,7 +1113,7 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="text-lg  font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="underline-button text-lg  font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Demo
                   </a>
@@ -1121,7 +1121,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
-                    className="text-lg  font-['Sequel_Sans'] font-normal text-brand-dark hover:underline footer-subtext-subhading-in-inventory-management"
+                    className="underline-button text-lg  font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Contact
                   </a>
@@ -1134,10 +1134,10 @@ export default function Index() {
                 Support
               </h4>
               <ul className="space-y-4">
-                <li className="text-lg font-['Sequel_Sans'] footer-subtext-list-text-in-inventory-management font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
+                <li className="underline-button text-lg font-['Sequel_Sans'] footer-subtext-list-text-in-inventory-management font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
                   Email: hi@thirdeyegfx.com
                 </li>
-                <li className="text-lg font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
+                <li className="underline-button text-lg font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
                   Phone: +91 8041479167
                 </li>
               </ul>
@@ -1151,7 +1151,7 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline"
+                    className="underline-button flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark "
                   >
                     <svg
                       width="32"
@@ -1182,7 +1182,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
-                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark hover:underline"
+                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark underline-button"
                   >
                     <svg
                       width="32"
