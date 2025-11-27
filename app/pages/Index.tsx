@@ -4,6 +4,7 @@ import { useState } from "react";
 import HorizontalScroller from "./ScrollVelocity";
 import { Menu, X } from "lucide-react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import FeatureSwitcher from "@/components/ui/FeatureSwitcher";
 type partner = {
   name: string;
   logo: string;
@@ -652,7 +653,7 @@ export default function Index() {
             />
           </div>
 
-          <div className="bg-[#FFF] rounded-[32px] overflow-hidden">
+          {/* <div className="bg-[#FFFFFF] rounded-[32px] overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5">
               <div className="lg:col-span-2 p-8 flex flex-col justify-between productivity-card-content-holder-in-inventory-management">
                 <div>
@@ -711,7 +712,8 @@ export default function Index() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <FeatureSwitcher />
         </div>
       </section>
 
