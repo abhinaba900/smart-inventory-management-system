@@ -314,7 +314,7 @@ export default function Index() {
                             type="submit"
                             className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  px-9 py-4 bg-brand-purple text-brand-bg rounded-full text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
                           >
-                            Send Message
+                            <span>Send Message</span>
                           </button>
                         </form>
                       </>
