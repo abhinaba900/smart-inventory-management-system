@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 
 
 const page = () => (
-  <div>
+  <div className="bg-[#f5f9f5]">
     <TooltipProvider>
       <Toaster />
       <Sonner />

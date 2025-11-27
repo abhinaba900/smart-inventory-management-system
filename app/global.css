@@ -124,9 +124,7 @@
 @layer base {
   /**
    * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
+   */
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -260,96 +258,12 @@
   cursor: pointer;
 }
 
-/* From Uiverse.io by Gaurav-WebDev */
-/* .color-button-animation {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 30px;
-  transition: all 0.5s ease-in-out;
-  background: #772bf2;
-  color: #f5f9f5;
-}
-.color-button-animation2 {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 30px;
-  transition: all 0.5s ease-in-out;
-  background: white;
-  color: #0a0f0a;
-  border: 1.5px solid #0a0f0a;
-}
-
-.btn-txt {
-  z-index: 2;
-  letter-spacing: 0;
-  position: relative;
-}
-.btn-txt2 {
-  z-index: 2;
-  letter-spacing: 0;
-  position: relative;
-}
-
-.type1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) scale(0); 
-  transform-origin: bottom center; 
-  transition: all 0.5s ease-in-out;
-  background-color: #f5f9f5;
-  border-radius: 30px;
-  visibility: hidden;
-  height: 100%;
-  width: 100%;
-  border: 1.5px solid #0a0f0a;
-  z-index: 1;
-}
-.type2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) scale(0); 
-  transform-origin: bottom center; 
-  transition: all 0.5s ease-in-out;
-  background-color: #772bf2;
-  border-radius: 30px;
-  visibility: hidden;
-  height: 100%;
-  border: 1.5px solid transparent;
-  width: 100%;
-  z-index: 1;
-}
-
-.color-button-animation:hover {
-  color: #0a0f0a;
-  border: 1.5px solid #f5f9f5;
-}
-.color-button-animation2:hover {
-  color: #f5f9f5;
-  border: 1.5px solid transparent;
-}
-
-.type1:hover::after {
-  visibility: visible;
-  transform: translateX(-50%) scale(1);
-}
-.type2:hover::after {
-  visibility: visible;
-  transform: translateX(-50%) scale(1);
-} */
-
 /* button animation start */
-/* From Uiverse.io by gharsh11032000 */
 .button {
   cursor: pointer;
   position: relative;
   color: #f5f9f5;
-  border-radius: 34px;
+  border-radius: 2.125rem; /* 34px */
 
   background-color: #772bf2;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -360,8 +274,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  width: 100px;
-  height: 100px;
+  width: 6.25rem; /* 100px */
+  height: 6.25rem; /* 100px */
   margin: auto;
   border-radius: inherit;
   scale: 0;
@@ -387,9 +301,9 @@
 .button2 {
   cursor: pointer;
   position: relative;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   color: #0a0f0a;
-  border-radius: 34px;
+  border-radius: 2.125rem; /* 34px */
   background-color: white;
   border: 1.5px solid #0a0f0a;
   font-weight: 600;
@@ -402,8 +316,8 @@
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 100px;
-  height: 100px;
+  width: 6.25rem; /* 100px */
+  height: 6.25rem; /* 100px */
   border-radius: inherit;
   scale: 0;
   z-index: -1;
@@ -418,7 +332,6 @@
 
 .button2:hover {
   color: #f5f9f5;
-
   border: 1.5px solid transparent;
   scale: 1.1;
   box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
@@ -430,7 +343,7 @@
 
 .heading-section-title-in-inventory-management {
   font-family: var(--font-family-sequel-sans-semi-bold-display);
-  font-weight: 500;
+  font-weight: 420;
   font-size: 5.25rem;
   line-height: 6.5rem;
   letter-spacing: -2%;
@@ -439,7 +352,7 @@
 
 .subtext-section-title-in-inventory-management {
   font-family: var(--font-family-sequel-sans-random-display);
-  font-weight: 500;
+  font-weight: 410;
   font-size: 1.25rem;
   line-height: 140%;
   letter-spacing: 0%;
@@ -464,7 +377,7 @@
 
 .spradesheet-usage-subtext-in-inventory-management {
   font-family: var(--font-family-sequel-sans-book-display);
-  font-weight: 500;
+  font-weight: 405;
   font-size: 1.125rem;
   line-height: 1.8rem;
   letter-spacing: 0%;
@@ -483,7 +396,7 @@
 .spradesheet-usage-card-subtext-text-in-inventory-management {
   font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   line-height: 140%;
   letter-spacing: 0%;
   color: #0a0f0a;
@@ -491,7 +404,7 @@
 
 .factory-floor-text-heading-in-inventory-management {
   font-family: var(--font-family-sequel-sans-semi-bold-display);
-  font-weight: 500;
+  font-weight: 420;
   font-size: 3.25rem;
   line-height: 120%;
   letter-spacing: -2%;
@@ -517,7 +430,7 @@
 
 .row-materials-tracking-subtext-text-in-inventory-management {
   font-family: var(--font-family-sequel-sans-book-display);
-  font-weight: 500;
+  font-weight: 405;
   font-size: 1rem;
   line-height: 140%;
   letter-spacing: 0%;
@@ -538,6 +451,16 @@
   line-height: 140%;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.cta-section-bullets-in-inventory-management span {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 0.875rem; /* 14px */
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #f5f9f5;
 }
 
 .why-manufacturers-love-us-header-in-inventory-management {
@@ -690,70 +613,68 @@
   font-size: 3.25rem;
   font-style: normal;
   font-weight: 420;
-  line-height: 120%; /* 62.4px */
+  line-height: 120%;
   letter-spacing: -1.04px;
 }
 
 .popup-section-left-content-heading {
   color: #0a0f0a;
   font-family: var(--font-family-sequel-sans-bold-display);
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-style: normal;
   font-weight: 420;
-  line-height: 120%; /* 28.8px */
+  line-height: 120%;
 }
 
 .popup-section-left-content-subtext {
   color: #0a0f0a;
   font-family: var(--font-family-sequel-sans-book-display);
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   font-style: normal;
   font-weight: 405;
-  line-height: 120%; /* 24px */
+  line-height: 120%;
   letter-spacing: -0.4px;
 }
 
 .popup-section-right-content-subtext {
   color: #0a0f0a;
   font-family: var(--font-family-sequel-sans-book-display);
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-style: normal;
   font-weight: 405;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
 }
 
 .popup-section-right-content-subtext-label {
   color: #0a0f0a;
   font-family: var(--font-family-sequel-sans-semi-bold-display);
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-style: normal;
   font-weight: 415;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
 }
 
 .popup-section-right-content-subtext-input::placeholder {
   color: rgba(10, 15, 10, 0.2);
   font-family: var(--font-family-sequel-sans-book);
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-style: normal;
   font-weight: 405;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
 }
 
 .success-massage-after-submiting-popup {
   color: #0a0f0a;
   font-family: var(--font-family-sequel-sans-semi-bold-display);
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   font-style: normal;
   font-weight: 420;
-  line-height: 140%; /* 28px */
+  line-height: 140%;
 }
-
-
 
 @media (max-width: 767px) {
   .heading-section-title-in-inventory-management {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     line-height: 120%;
   }
 
@@ -773,22 +694,22 @@
 
   .button,
   .button2 {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1rem; /* 16px */
     width: 100%;
   }
 
   .button-content-holder-in-inventory-management {
-    margin-bottom: 52px;
-    gap: 8px;
+    margin-bottom: 3.25rem; /* 52px */
+    gap: 0.5rem; /* 8px */
   }
 
   .button-content-holder-in-inventory-management button {
-    padding: 12px 16px;
+    padding: 0.75rem 1rem; /* 12px 16px */
   }
 
   .subtext-section-title-in-inventory-management {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     line-height: 140%;
     margin-bottom: 1rem;
   }
@@ -799,17 +720,17 @@
 
   .horizontal-scroll-parent-in-inventory-management {
     padding-block: 0;
-    padding-top: 42px;
+    padding-top: 2.625rem; /* 42px */
   }
 
   .trust-indecation-in-inventory-management {
-    margin-bottom: 24px;
-    font-size: 20px;
+    margin-bottom: 1.5rem; /* 24px */
+    font-size: 1.25rem; /* 20px */
     line-height: 140%;
   }
 
   .problem-section-parent-in-inventory-management {
-    padding-block: 70px;
+    padding-block: 4.375rem; /* 70px */
   }
 
   .problem-section-content-holder-in-inventory-management {
@@ -817,9 +738,9 @@
   }
 
   .spradesheet-usage-text-in-inventory-management {
-    font-size: 24px !important;
+    font-size: 1.5rem !important; /* 24px */
     line-height: 120% !important;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem; /* 12px */
   }
 
   .spradesheet-usage-subtext-in-inventory-management {
@@ -837,25 +758,25 @@
   }
 
   .everything-you-need-text-in-inventory-management {
-    padding-block: 48px;
+    padding-block: 3rem; /* 48px */
   }
 
   .factory-floor-text-heading-in-inventory-management {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     line-height: 120%;
     text-align: left;
     margin-bottom: 0;
   }
 
   .heading-content-holder-in-inventory-management {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* 40px */
   }
 
   .productivity-card-content-holder-in-inventory-management {
     padding: 1rem;
   }
   .system-usage-card-title-text-in-inventory-management {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     line-height: 120%;
     margin-bottom: 1rem;
   }
@@ -864,7 +785,7 @@
     width: fit-content;
   }
   .video-section-parent-in-inventory-management {
-    padding-block: 70px;
+    padding-block: 4.375rem; /* 70px */
   }
 
   .video-section-content-holder-in-inventory-management {
@@ -872,7 +793,7 @@
   }
 
   .how-it-works-subtext-text-in-inventory-management {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     line-height: 120%;
   }
 
@@ -883,12 +804,12 @@
   }
 
   .video-section-button-in-inventory-management {
-    margin-bottom: 40px !important;
+    margin-bottom: 2.5rem !important; /* 40px */
     width: fit-content;
   }
 
   .why-manufactures-love-us-in-inventory-management {
-    padding-block: 48px;
+    padding-block: 3rem; /* 48px */
   }
 
   .benefits-section-content-holder-in-inventory-management {
@@ -896,26 +817,26 @@
   }
 
   .why-manufacturers-love-us-header-in-inventory-management {
-    font-size: 24px !important;
+    font-size: 1.5rem !important; /* 24px */
     line-height: 120% !important;
     margin-bottom: 2rem;
   }
 
-  .background-image-for-dashboard-image-in-inventory-management{
+  .background-image-for-dashboard-image-in-inventory-management {
     padding-top: 0.8rem;
     padding-left: 0.8rem;
   }
 
   .benifits-icon-in-inventory-management {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 12px;
+    width: 5rem; /* 80px */
+    height: 5rem; /* 80px */
+    margin-bottom: 0.75rem; /* 12px */
   }
 
   .benifits-header-in-inventory-management {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     line-height: 120%;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem; /* 12px */
   }
 
   .why-manufacturers-love-us-subheader-in-inventory-management {
@@ -924,7 +845,7 @@
   }
 
   .benifits-card-in-inventory-management {
-    padding: 24px;
+    padding: 1.5rem; /* 24px */
   }
 
   .benifits-section-content-holder-in-inventory-management {
@@ -937,7 +858,7 @@
   }
 
   .testimonial-section-in-inventory-management {
-    padding-block: 70px;
+    padding-block: 4.375rem; /* 70px */
   }
 
   .testimonial-section-content-holder-in-inventory-management {
@@ -951,29 +872,29 @@
   }
 
   .testimonial-header-in-inventory-management {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* 40px */
   }
 
   .img-and-content-holder-in-testimonial-in-inventory-management {
-    gap: 20px;
+    gap: 1.25rem; /* 20px */
   }
 
   .testimonial-sub-header-in-inventory-management {
-    margin-bottom: 12px;
-    font-size: 18px;
+    margin-bottom: 0.75rem; /* 12px */
+    font-size: 1.125rem; /* 18px */
     line-height: 120%;
   }
 
   .transformes-how-we-manage-production-subheader-in-inventory-management {
     font-size: 1rem;
     line-height: 140%;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem; /* 12px */
   }
 
   .slider-subheader-in-inventory-management {
     font-size: 1rem;
     line-height: 160%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
   }
   .icon-and-button-holder-in-testimonial-in-inventory-management {
     flex-direction: column;
@@ -992,12 +913,12 @@
   }
 
   .testimonial-button-holder-in-inventory-management button {
-    width: 44px;
-    height: 44px;
+    width: 2.75rem; /* 44px */
+    height: 2.75rem; /* 44px */
   }
 
   .pricing-section-in-inventory-management {
-    padding-block: 70px;
+    padding-block: 4.375rem; /* 70px */
     padding-top: 0;
   }
 
@@ -1006,29 +927,29 @@
   }
 
   .pricing-section-subheading-in-inventory-management {
-    margin-bottom: 32px;
+    margin-bottom: 2rem; /* 32px */
   }
 
   .pricing-cards-holder-in-inventory-management {
-    padding: 24px;
+    padding: 1.5rem; /* 24px */
   }
 
   .plan-name-in-inventory-management {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     line-height: 120%;
-    margin-bottom: 9px;
+    margin-bottom: 0.56rem; /* 9px */
   }
 
   .plan-heading-in-inventory-management {
-    font-size: 24px !important;
+    font-size: 1.5rem !important; /* 24px */
     line-height: 120% !important;
-    margin-bottom: 16px;
+    margin-bottom: 1rem; /* 16px */
   }
 
   .plan-subheading-in-inventory-management {
     font-size: 1rem;
     line-height: 140%;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem; /* 24px */
   }
 
   .cta-section-in-inventory-management {
@@ -1036,34 +957,34 @@
   }
 
   .cta-section-title-in-inventory-management {
-    font-size: 24px !important;
+    font-size: 1.5rem !important; /* 24px */
     line-height: 120% !important;
-    margin-bottom: 16px;
+    margin-bottom: 1rem; /* 16px */
   }
   .subhading-ready-to-take-control-in-inventory-management {
     font-size: 1rem;
     line-height: 140%;
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem; /* 28px */
   }
 
   .cta-section-content-in-inventory-management {
-    padding-inline: 11px;
+    padding-inline: 0.7rem; /* 11px */
   }
 
   .cta-section-button-holder-in-inventory-management {
-    gap: 7px;
-    margin-bottom: 24px;
+    gap: 0.45rem; /* 7px */
+    margin-bottom: 1.5rem; /* 24px */
   }
 
   .cta-section-button-in-inventory-management {
-    padding: 12px 16px;
+    padding: 0.75rem 1rem; /* 12px 16px */
   }
 
   .cta-section-bullets-in-inventory-management {
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
     line-height: 140%;
     align-items: start;
-    gap: 8px;
+    gap: 0.5rem; /* 8px */
   }
 
   .cta-section-bullets-in-inventory-management span {
@@ -1084,21 +1005,21 @@
   }
 
   .third-eye-logo-in-inventory-management img {
-    height: 115px;
+    height: 7.1875rem; /* 115px */
   }
 
   .third-eye-logo-in-inventory-management {
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem; /* 5px */
   }
 
   .footer-section-description-in-inventory-management {
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     line-height: 140%;
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem; /* 28px */
   }
 
   .links-container-in-smart-inventory-management {
-    margin-bottom: 17px;
+    margin-bottom: 1rem; /* 17px */
   }
 
   .footer-subtext-heading-in-inventory-management {
@@ -1106,15 +1027,15 @@
   }
 
   .footer-subtext-list-text-in-inventory-management {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem; /* 12px */
   }
 
   .links-container-in-smart-inventory-management-2 {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem; /* 28px */
   }
 
   .footer-social-links-container-in-inventory-management {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* 40px */
   }
 
   .footer-copyright-in-inventory-management {
@@ -1133,12 +1054,12 @@
   .contact-and-form-holder-in-popup-invite-in-inventory-management {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem; /* 24px */
     width: 100%;
   }
 
   .ready-to-automate-your-factory-heading {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     line-height: 120%;
     text-align: left;
   }
@@ -1148,7 +1069,7 @@
   }
 
   .popup-section-left-content-holder-in-inventory-management {
-    padding-top: 28px;
+    padding-top: 1.75rem; /* 28px */
   }
 
   .popup-section-close-button-in-inventory-management {
@@ -1161,7 +1082,7 @@
   }
 
   .popup-section-left-content-heading {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     line-height: 120%;
   }
 
@@ -1231,11 +1152,11 @@
   }
   .footer-social-links-container-in-inventory-management
     .footer-section-logo-and-paragraph-holder {
-    width: 250px;
+    width: 15.625rem; /* 250px */
   }
 
   .footer-subtext-subhading-in-inventory-management {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     line-height: 140%;
   }
 
