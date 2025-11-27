@@ -64,9 +64,9 @@ export default function Index() {
           className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
-        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[40px] popup-content-holder-in-inventory-management">
+        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[24px] popup-content-holder-in-inventory-management">
           <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
-            <div className="absolute top-6 right-6 z-10 popup-section-close-button-in-inventory-management">
+            <div className="absolute top-4 right-4 z-10 popup-section-close-button-in-inventory-management">
               <button
                 className="w-10 h-10  md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
                 aria-label="Close"
@@ -80,7 +80,7 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="container mx-auto px-0 pt-7 popup-section-left-content-holder-in-inventory-management">
+            <div className="container mx-auto px-0  popup-section-left-content-holder-in-inventory-management">
               <div className="max-w-7xl mx-auto">
                 <div className="flex justify-center  relative popup-heading-container-in-inventory-management">
                   <div className="absolute left-6 -top-5 hidden md:block">
@@ -459,11 +459,11 @@ export default function Index() {
             <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               <span>Book a Free Demo</span>
             </button>
-            <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+            <button className="button2 type2 px-9 py-4 nav-links-in-inventory-management-get-in-touch rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               <span>See How It Works</span>
             </button>
             <svg
-              className="absolute w-[157px] -bottom-[8rem] -right-[4rem] in-mobile-not-visible"
+              className="absolute w-[157px] -bottom-[8rem] -right-[4rem] in-mobile-not-visible desktop-hide-in-small-desktop"
               viewBox="0 0 157 123"
               fill="none"
             >
@@ -573,7 +573,12 @@ export default function Index() {
               className="absolute -right-[4rem] -top-[4rem] in-mobile-not-visible"
               alt=""
             />
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
+            <div
+              className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/missed-reorders-cause-production-delays.webp"
                 alt="Production Delays"
@@ -588,7 +593,12 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
+            <div
+              className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/manual-stock-traking-leads-to-costly-errors.webp"
                 alt="Costly Errors"
@@ -603,7 +613,12 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]">
+            <div
+              className="rounded-3xl border-[1.5px] border-brand-dark bg-brand-bg p-6 hover:shadow-[8px_8px_0_0_#000]"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/no-visibility-ito-row-material-movement.webp"
                 alt="No Visibility"
@@ -741,7 +756,7 @@ export default function Index() {
           <div className="relative max-w-[1110px] mx-auto">
             <img
               src="assets/see-how-it-works-section-icon.svg"
-              className="absolute -top-4 -right-[6rem] in-mobile-not-visible"
+              className="absolute -top-6 -right-[9rem] in-mobile-not-visible w-[120px] h-[120px] desktop-hide-in-small-desktop"
               alt=""
             />
 
@@ -757,15 +772,17 @@ export default function Index() {
                   alt="Video Thumbnail"
                   className="w-full h-full object-cover"
                 />
-                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full bg-[#F5F9F5] border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform">
-                  <svg width="32" height="37" viewBox="0 0 32 37" fill="none">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M30.1378 16.983L1.58664 0.237396C1.32554 0.0829958 1.02893 0.00112152 0.726837 0H0.721837C0.419459 0.00121443 0.122837 0.0830958 -0.138529 0.237496C-0.401695 0.389996 -0.620129 0.610896 -0.771529 0.877396C-0.922929 1.14396 -1.00179 1.44669 -1 1.75446V35.2453C-1.00121 35.5533 -0.922196 35.8561 -0.771129 36.1231C-0.620063 36.3901 -0.402329 36.6118 -0.139796 36.7658C0.122804 36.9198 0.420737 37.0006 0.723804 37C1.02687 36.9994 1.32454 36.9175 1.58654 36.7624L30.1378 20.0168C30.3999 19.8631 30.6176 19.642 30.769 19.3757C30.9203 19.1094 31 18.8074 31 18.4999C31 18.1924 30.9203 17.8903 30.769 17.6241C30.6176 17.3578 30.3999 17.1367 30.1378 16.983Z"
-                      fill="#772BF2"
-                    />
-                  </svg>
+                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                  <div className="circle-button w-[120px] h-[120px] rounded-full bg-[#F5F9F5] border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform ">
+                    <svg width="32" height="37" viewBox="0 0 32 37" fill="none">
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M30.1378 16.983L1.58664 0.237396C1.32554 0.0829958 1.02893 0.00112152 0.726837 0H0.721837C0.419459 0.00121443 0.122837 0.0830958 -0.138529 0.237496C-0.401695 0.389996 -0.620129 0.610896 -0.771529 0.877396C-0.922929 1.14396 -1.00179 1.44669 -1 1.75446V35.2453C-1.00121 35.5533 -0.922196 35.8561 -0.771129 36.1231C-0.620063 36.3901 -0.402329 36.6118 -0.139796 36.7658C0.122804 36.9198 0.420737 37.0006 0.723804 37C1.02687 36.9994 1.32454 36.9175 1.58654 36.7624L30.1378 20.0168C30.3999 19.8631 30.6176 19.642 30.769 19.3757C30.9203 19.1094 31 18.8074 31 18.4999C31 18.1924 30.9203 17.8903 30.769 17.6241C30.6176 17.3578 30.3999 17.1367 30.1378 16.983Z"
+                        fill="#772BF2"
+                      />
+                    </svg>
+                  </div>
                 </button>
               </div>
             </div>
@@ -786,7 +803,12 @@ export default function Index() {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 benifits-section-content-holder-in-inventory-management">
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
+            <div
+              className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/24x7-access-icon.webp"
                 alt="24/7 Access"
@@ -801,7 +823,12 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
+            <div
+              className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/customizable-workflows-icon.webp"
                 alt="Customizable Workflows"
@@ -818,7 +845,12 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 actionaable-insights-section-in-inventory-management">
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
+            <div
+              className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/actionaable-insights-icon.webp"
                 alt="Actionable Insights"
@@ -832,7 +864,12 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8">
+            <div
+              className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000] p-8"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/seamless-integraations-icon.webp"
                 alt="Seamless Integrations"
@@ -847,7 +884,12 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000]  p-8">
+            <div
+              className="rounded-3xl benifits-card-in-inventory-management border-[1.5px] border-brand-dark bg-[#F6F5F4] hover:shadow-[8px_8px_0_0_#000]  p-8"
+              style={{
+                border: "2px solid #000",
+              }}
+            >
               <img
                 src="assets/instent-alert-icon.webp"
                 alt="Instant Alerts"
@@ -911,24 +953,34 @@ export default function Index() {
                 />
                 <div className="flex gap-2 testimonial-button-holder-in-inventory-management">
                   <button className="w-16 h-16 circle-button rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg
+                      width="32"
+                      height="13"
+                      viewBox="0 0 32 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
-                        d="M15 18l-6-6 6-6"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.4458 5.01261C3.0509 4.3924 7.98002 3.37939 10.0747 0.962047C11.4532 -0.633661 12.1378 -0.119253 10.914 1.58641C10.0161 2.8338 8.43921 4.07372 6.7947 4.82349C8.70004 4.84838 17.4619 4.73785 28.9835 5.20635C31.2996 5.30477 31.5606 5.49158 31.2531 6.12314C30.8536 6.91175 30.2475 7.31374 29.4565 7.31029C29.4363 7.30916 5.58863 7.00649 5.58126 7.25946C5.57847 7.29985 5.89717 7.53054 6.294 7.80599C9.0074 9.63938 9.98453 11.2037 8.89515 11.9946C8.38215 12.3714 7.47473 11.9967 5.94561 10.7867C5.31083 10.2851 3.80015 9.24838 2.57584 8.47081C-0.522564 6.48425 -0.732556 5.85431 1.4458 5.01261Z"
+                        fill="black"
                       />
                     </svg>
                   </button>
                   <button className="w-16 h-16 circle-button rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg
+                      width="32"
+                      height="13"
+                      viewBox="0 0 32 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
-                        d="M9 18l6-6-6-6"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M29.9121 5.01261C28.307 4.3924 23.3779 3.37939 21.2832 0.962047C19.9047 -0.633661 19.2201 -0.119253 20.4439 1.58641C21.3418 2.8338 22.9187 4.07372 24.5632 4.82349C22.6579 4.84838 13.896 4.73785 2.37445 5.20635C0.0582945 5.30477 -0.202671 5.49158 0.104792 6.12314C0.504279 6.91175 1.1104 7.31374 1.90138 7.31029C1.92159 7.30916 25.7693 7.00649 25.7766 7.25946C25.7794 7.29985 25.4607 7.53054 25.0639 7.80599C22.3505 9.63938 21.3734 11.2037 22.4628 11.9946C22.9758 12.3714 23.8832 11.9967 25.4123 10.7867C26.0471 10.2851 27.5578 9.24838 28.7821 8.47081C31.8805 6.48425 32.0905 5.85431 29.9121 5.01261Z"
+                        fill="black"
                       />
                     </svg>
                   </button>
@@ -1027,11 +1079,11 @@ export default function Index() {
             alt=""
           />
           <div className="flex items-center justify-center gap-6 mb-8 cta-section-button-holder-in-inventory-management">
-            <button className="button2 type2 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+            <button className="button2 type2 black-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
               <span>Book a Free Demo</span>
             </button>
 
-            <button className="button type1 cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
+            <button className="button type1 white-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
               <span>Start a Free Trial</span>
             </button>
           </div>

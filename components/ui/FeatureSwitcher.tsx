@@ -27,18 +27,14 @@ export default function FeatureSwitcher() {
             </button>
           </div>
 
-          {/* CLICKABLE ITEMS */}
-          <div className="space-y-0">
-            {/* Raw Materials Tracking */}
+          <div className="space-y-0 ">
+            {/* Raw Materials Tracking — NO border remove on hover */}
             <div
               onClick={() => setActive(0)}
               className={`
       py-4 hidden lg:block cursor-pointer transition px-4
-      ${
-        active === 0
-          ? "bg-brand-purple/5 border-transparent"
-          : "border-b border-[rgba(10,15,10,0.1)]"
-      }
+      ${" border-[rgba(10,15,10,0.1)] "}
+      group-hover:border-transparent 
     `}
             >
               <h4
@@ -48,94 +44,89 @@ export default function FeatureSwitcher() {
               >
                 Raw Materials Tracking
               </h4>
+
               <p className="text-base font-['Sequel_Sans'] font-normal text-brand-dark/80 row-materials-tracking-subtext-text-in-inventory-management">
                 Get instant low-stock alerts to restock materials before they
                 run out.
               </p>
             </div>
 
-            {/* Production Monitoring */}
-            <div
-              onClick={() => setActive(1)}
-              className={`
+            <div className="group">
+              {/* Production Monitoring */}
+              <div
+                onClick={() => setActive(1)}
+                className={`
       py-4 cursor-pointer transition px-4
-      ${
-        active === 1
-          ? "bg-brand-purple/5 border-transparent"
-          : "border-b border-[rgba(10,15,10,0.1)]"
-      }
-      hover:bg-[#F5F9F5] hover:border-transparent
+      ${"border-b border-t border-[rgba(10,15,10,0.1)]"}
+      hover:bg-[#F5F9F5]
+      group-hover:border-transparent   /* ✅ still here */
     `}
-            >
-              <h4
-                className={`text-lg font-['Sequel_Sans'] font-normal row-materials-options-tracking-heading-in-inventory-management ${
-                  active === 1 ? "text-brand-purple" : "text-brand-dark"
-                }`}
               >
-                Production Monitoring
-              </h4>
-            </div>
+                <h4
+                  className={`text-lg font-['Sequel_Sans'] font-normal ${
+                    active === 1 ? "text-brand-purple" : "text-brand-dark"
+                  }`}
+                >
+                  Production Monitoring
+                </h4>
+              </div>
 
-            {/* Quality Control */}
-            <div
-              onClick={() => setActive(2)}
-              className={`
+              {/* Quality Control */}
+              <div
+                onClick={() => setActive(2)}
+                className={`
       py-4 cursor-pointer transition px-4
-      ${
-        active === 2
-          ? "bg-brand-purple/5 border-b border-[rgba(10,15,10,0.1)]"
-          : "border-b border-[rgba(10,15,10,0.1)]"
-      }
-      hover:bg-[#F5F9F5] hover:border-transparent
+      ${"border-b border-[rgba(10,15,10,0.1)]"}
+      hover:bg-[#F5F9F5]
+      group-hover:border-transparent   /* ✅ still here */
     `}
-            >
-              <h4
-                className={`text-lg font-['Sequel_Sans'] font-normal row-materials-options-tracking-heading-in-inventory-management ${
-                  active === 2 ? "text-brand-purple" : "text-brand-dark"
-                }`}
               >
-                Quality Control & Defect Tracking
-              </h4>
-            </div>
+                <h4
+                  className={`text-lg font-['Sequel_Sans'] font-normal ${
+                    active === 2 ? "text-brand-purple" : "text-brand-dark"
+                  }`}
+                >
+                  Quality Control & Defect Tracking
+                </h4>
+              </div>
 
-            {/* Vendor Management */}
-            <div
-              onClick={() => setActive(3)}
-              className={`
+              {/* Vendor Management */}
+              <div
+                onClick={() => setActive(3)}
+                className={`
       py-4 cursor-pointer transition px-4
-      ${
-        active === 3
-          ? "bg-brand-purple/5 border-transparent"
-          : "border-b border-[rgba(10,15,10,0.1)]"
-      }
-      hover:bg-[#F5F9F5] hover:border-transparent
+      ${"border-b border-[rgba(10,15,10,0.1)]"}
+      hover:bg-[#F5F9F5]
+      group-hover:border-transparent   /* ✅ still here */
     `}
-            >
-              <h4
-                className={`text-lg font-['Sequel_Sans'] font-normal row-materials-options-tracking-heading-in-inventory-management ${
-                  active === 3 ? "text-brand-purple" : "text-brand-dark"
-                }`}
               >
-                Vendor Management
-              </h4>
-            </div>
+                <h4
+                  className={`text-lg font-['Sequel_Sans'] font-normal ${
+                    active === 3 ? "text-brand-purple" : "text-brand-dark"
+                  }`}
+                >
+                  Vendor Management
+                </h4>
+              </div>
 
-            {/* Smart Reports */}
-            <div
-              onClick={() => setActive(4)}
-              className={`
+              {/* Smart Reports */}
+              <div
+                onClick={() => setActive(4)}
+                className={`
       py-4 cursor-pointer transition px-4
       ${active === 4 ? "bg-brand-purple/5 border-transparent" : ""}
-      hover:bg-[#F5F9F5] hover:border-transparent
+      hover:bg-[#F5F9F5]
+      group-hover:border-transparent   /* ✅ still here */
     `}
-            >
-              <h4
-                className={`text-lg font-['Sequel_Sans'] font-normal row-materials-options-tracking-heading-in-inventory-management ${
-                  active === 4 ? "text-brand-purple" : "text-brand-dark"
-                }`}
               >
-                Smart Reports & Analytics
-              </h4>
+                <h4
+                  className={`text-lg font-['Sequel_Sans'] font-normal ${
+                    active === 4 ? "text-brand-purple" : "text-brand-dark"
+                  }`}
+                >
+                  Smart Reports & Analytics
+                </h4>
+              </div>
             </div>
           </div>
         </div>
@@ -150,7 +141,11 @@ export default function FeatureSwitcher() {
             <img
               src={images[active]}
               alt="Dashboard Screenshot"
-              className="w-full shadow-xl transition-all duration-500"
+              className="w-full shadow-xl transition-all duration-500 rounded-tl-[16px]"
+              style={{
+                boxShadow:
+                  "0px -4px 30px rgba(0,0,0,0.2), -4px 0px 30px rgba(0,0,0,0.2)",
+              }}
             />
           </div>
         </div>

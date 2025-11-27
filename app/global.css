@@ -252,7 +252,7 @@
 .nav-links-in-inventory-management-get-in-touch {
   font-family: var(--font-family-sequel-sans-bold-display);
   font-weight: 425;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5rem;
   letter-spacing: 0%;
   cursor: pointer;
@@ -265,7 +265,12 @@
   background: #772bf2;
   border-radius: 2.125rem;
   overflow: hidden;
+  height: 56px;
   z-index: 0;
+}
+
+.button:hover{
+  background: #f5f9f5;
 }
 
 .button:hover span {
@@ -277,7 +282,7 @@
 .button::after {
   content: "";
   background: #f5f9f5;
-  border: 1px solid #0a0f0a;
+  border: 2px solid #0a0f0a;
   border-radius: 2.125rem;
   color: #0a0f0a;
   position: absolute;
@@ -286,26 +291,31 @@
   left: 0;
   right: 0;
   bottom: 0;
-  clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 100%);
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
   z-index: 1; /* visible */
 }
 
 .button:hover::after {
-  clip-path: circle(100% at 50% 50%);
-  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+  clip-path: circle(150% at 50% 100%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 3s;
 }
 .button2 {
+  border: 2px solid #0a0f0a;
   cursor: pointer;
   position: relative;
-  font-size: 1.125rem; /* 18px */
   color: #0a0f0a;
-  border-radius: 2.125rem; /* 34px */
-  background-color: white;
-  border: 1.5px solid #0a0f0a;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  background: #f5f9f5;
+  border-radius: 2.125rem;
   overflow: hidden;
+  height: 56px;
+  z-index: 0;
+}
+
+.button2:hover{
+  border: 2px solid #772bf2;
+  background: #772bf2;
+
 }
 
 .button2:hover span {
@@ -326,14 +336,31 @@
   left: 0;
   right: 0;
   bottom: 0;
-  clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 100%);
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
   z-index: 1; /* visible */
+  border: 2px solid #772bf2;
 }
 
 .button2:hover::after {
-  clip-path: circle(100% at 50% 50%);
-  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+  clip-path: circle(150% at 50% 100%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 3s;
+}
+
+.white-border-remover-in-inventory-management {
+  border: 2px solid #f5f9f5;
+  font-family: var(--font-family-sequel-sans-bold-display) !important;
+  font-weight: 425 !important;
+}
+.white-border-remover-in-inventory-management:hover,
+.white-border-remover-in-inventory-management:hover::after {
+  border: 2px solid #f5f9f5;
+}
+
+.black-border-remover-in-inventory-management {
+  border: 2px solid #f5f9f5 !important;
+  font-family: var(--font-family-sequel-sans-bold-display) !important;
+  font-weight: 425 !important;
 }
 
 .circle-button {
@@ -347,21 +374,20 @@
   border: 1.5px solid #0a0f0a;
 }
 
-
 /* Reveal Animation Layer */
 .circle-button::after {
   content: "";
   background: #772bf2;
   position: absolute;
   inset: 0;
-  clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 100%);
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
   z-index: 1;
 }
 
 /* Hover expands circle */
 .circle-button:hover::after {
-  clip-path: circle(100% at 50% 50%);
+  clip-path: circle(200% at 50% 100%);
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
 }
 
@@ -376,6 +402,9 @@
 /* SVG becomes white */
 .circle-button:hover svg {
   color: white;
+}
+.circle-button:hover svg path {
+  fill: white;
 }
 
 .social-icon-hover {
@@ -394,14 +423,12 @@
 
 .social-icon-hover:hover svg rect {
   stroke: #8b4dff; /* Purple border */
-  fill: #8b4dff;   /* Purple background */
+  fill: #8b4dff; /* Purple background */
 }
 
 .social-icon-hover:hover svg path {
   fill: #ffffff; /* White LinkedIn icon */
 }
-
-
 
 .heading-section-title-in-inventory-management {
   font-family: var(--font-family-sequel-sans-semi-bold-display);
@@ -745,7 +772,7 @@
   background: #0a0f0a;
   position: absolute;
   bottom: -0.5rem;
-  height: 3px;
+  height: 2px;
   left: 0;
   width: 0;
   transition: all cubic-bezier(0.17, 0.54, 0.58, 1.1) 1s;
@@ -754,6 +781,11 @@
 .underline-button:hover::after {
   width: 100%;
   transition: all cubic-bezier(0.17, 0.54, 0.58, 1.1) 1s;
+}
+
+.hero-section-in-inventory-management {
+  height: 100%;
+  min-height: fit-content;
 }
 
 @media (max-width: 767px) {
@@ -1298,5 +1330,11 @@
   .popup-content-holder-in-inventory-management {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .desktop-hide-in-small-desktop {
+    display: none;
   }
 }
