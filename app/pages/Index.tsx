@@ -939,7 +939,7 @@ export default function Index() {
 
       {/* Pricing Section */}
       <section className="py-24 bg-[#f5f9f5] pricing-section-in-inventory-management pt-10 pb-50">
-        <div className="max-w-7xl mx-auto  pricing-section-content-holder-in-inventory-management">
+        <div className="max-w-7xl mx-auto px-16  pricing-section-content-holder-in-inventory-management">
           <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-4">
             Choose a Plan <br />
             That Fits Your Factory
