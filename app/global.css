@@ -336,6 +336,73 @@
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
 }
 
+.circle-button {
+  cursor: pointer;
+  position: relative;
+  color: #f5f9f5;
+  background: #f5f9f5;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+  border: 1.5px solid #0a0f0a;
+}
+
+
+/* Reveal Animation Layer */
+.circle-button::after {
+  content: "";
+  background: #772bf2;
+  position: absolute;
+  inset: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+  z-index: 1;
+}
+
+/* Hover expands circle */
+.circle-button:hover::after {
+  clip-path: circle(100% at 50% 50%);
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+}
+
+/* SVG stays above animation */
+.circle-button svg {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+  color: #0a0f0a;
+}
+
+/* SVG becomes white */
+.circle-button:hover svg {
+  color: white;
+}
+
+.footer-subtext-subhading-in-inventory-management {
+  transition: color 0.3s ease;
+}
+
+.footer-subtext-subhading-in-inventory-management svg rect,
+.footer-subtext-subhading-in-inventory-management svg path {
+  transition: all 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.footer-subtext-subhading-in-inventory-management:hover {
+  color: #8b4dff; /* Purple text */
+}
+
+.footer-subtext-subhading-in-inventory-management:hover svg rect {
+  stroke: #8b4dff; /* Purple border */
+  fill: #8b4dff;   /* Purple background */
+}
+
+.footer-subtext-subhading-in-inventory-management:hover svg path {
+  fill: #ffffff; /* White LinkedIn icon */
+}
+
+
+
 .heading-section-title-in-inventory-management {
   font-family: var(--font-family-sequel-sans-semi-bold-display);
   font-weight: 420;

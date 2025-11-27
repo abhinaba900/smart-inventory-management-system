@@ -908,7 +908,7 @@ export default function Index() {
                   className="h-[55px]"
                 />
                 <div className="flex gap-2 testimonial-button-holder-in-inventory-management">
-                  <button className="w-16 h-16 rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
+                  <button className="w-16 h-16 circle-button rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path
                         d="M15 18l-6-6 6-6"
@@ -919,7 +919,7 @@ export default function Index() {
                       />
                     </svg>
                   </button>
-                  <button className="w-16 h-16 rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
+                  <button className="w-16 h-16 circle-button rounded-full border-[1.5px] border-brand-dark bg-brand-bg flex items-center justify-center hover:bg-brand-dark/5 transition-colors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path
                         d="M9 18l6-6-6-6"
@@ -1151,14 +1151,14 @@ export default function Index() {
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
                     href="#"
-                    className="underline-button flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark "
+                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark "
                   >
                     <svg
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
-                      fill="none"
-                      className="flex-shrink-0"
+                      fill="none" 
+                      className="flex-shrink-0 animated-svg"
                     >
                       <rect
                         x="0.375"
@@ -1182,7 +1182,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
-                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark underline-button"
+                    className="flex footer-subtext-subhading-in-inventory-management items-center gap-2 text-lg font-['Sequel_Sans'] font-normal text-brand-dark"
                   >
                     <svg
                       width="32"
