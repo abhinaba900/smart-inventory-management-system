@@ -61,31 +61,30 @@ export default function Index() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
- useEffect(() => {
-  const handleScroll = () => {
-    const currentScroll = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
 
-    // 👉 If fully at top, always hide
-    if (currentScroll === 0) {
-      setIsScrollingUp(false); // nav-hide
-      setLastScrollY(0);
-      return;
-    }
+      // 👉 If fully at top, always hide
+      if (currentScroll === 0) {
+        setIsScrollingUp(false); // nav-hide
+        setLastScrollY(0);
+        return;
+      }
 
-    // 👉 Detect scroll direction
-    if (currentScroll < lastScrollY) {
-      setIsScrollingUp(true);  // scrolling UP → show
-    } else {
-      setIsScrollingUp(false); // scrolling DOWN → hide
-    }
+      // 👉 Detect scroll direction
+      if (currentScroll < lastScrollY) {
+        setIsScrollingUp(true); // scrolling UP → show
+      } else {
+        setIsScrollingUp(false); // scrolling DOWN → hide
+      }
 
-    setLastScrollY(currentScroll);
-  };
+      setLastScrollY(currentScroll);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [lastScrollY]);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const [open, setOpen] = useState(false);
   return (

@@ -897,15 +897,15 @@ rect {
     border: none !important;
   }
 
-  .button:after{
+  .button:after {
     background: #772bf2 !important;
   }
 
-  .button2:after{
+  .button2:after {
     background: #f5f9f5 !important;
   }
 
-  .black-border-remover-in-inventory-management{
+  .black-border-remover-in-inventory-management {
     border: none !important;
   }
 
@@ -1158,12 +1158,12 @@ rect {
     fill: #772bf2;
   }
 
-  .play-button-in-video-in-inventory-management{
+  .play-button-in-video-in-inventory-management {
     width: 2.75rem; /* 44px */
     height: 2.75rem; /* 44px */
   }
 
-  .play-button-in-video-in-inventory-management svg{
+  .play-button-in-video-in-inventory-management svg {
     width: 14px;
   }
 
@@ -1216,8 +1216,6 @@ rect {
     line-height: 140%;
     margin-bottom: 1.75rem; /* 28px */
   }
-
-  
 
   .cta-section-content-in-inventory-management {
     padding-inline: 0.7rem; /* 11px */
@@ -1367,15 +1365,15 @@ rect {
     border: none !important;
   }
 
-  .button:after{
+  .button:after {
     background: #772bf2 !important;
   }
 
-  .button2:after{
+  .button2:after {
     background: #f5f9f5 !important;
   }
 
-  .black-border-remover-in-inventory-management{
+  .black-border-remover-in-inventory-management {
     border: none !important;
   }
 
@@ -1384,8 +1382,6 @@ rect {
     position: relative;
     z-index: 2;
   }
-
-  
 
   .button:hover::after,
   .button2:hover::after {
@@ -1483,11 +1479,7 @@ rect {
     line-height: 140%;
   }
 }
-@media only screen 
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (orientation: landscape) {
-  
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
   .button::after,
   .button2::after {
     clip-path: none !important;
@@ -1496,15 +1488,15 @@ rect {
     border: none !important;
   }
 
-  .button:after{
+  .button:after {
     background: #772bf2 !important;
   }
 
-  .button2:after{
+  .button2:after {
     background: #f5f9f5 !important;
   }
 
-  .black-border-remover-in-inventory-management{
+  .black-border-remover-in-inventory-management {
     border: none !important;
   }
 
@@ -1513,8 +1505,6 @@ rect {
     position: relative;
     z-index: 2;
   }
-
-  
 
   .button:hover::after,
   .button2:hover::after {
@@ -1544,7 +1534,6 @@ rect {
     clip-path: none !important;
     transition: none !important;
   }
-  
 }
 @media (min-width: 900px) and (max-width: 1200px) {
   .hero-section-in-inventory-management {
@@ -1560,15 +1549,15 @@ rect {
     border: none !important;
   }
 
-  .button:after{
+  .button:after {
     background: #772bf2 !important;
   }
 
-  .button2:after{
+  .button2:after {
     background: #f5f9f5 !important;
   }
 
-  .black-border-remover-in-inventory-management{
+  .black-border-remover-in-inventory-management {
     border: none !important;
   }
 
@@ -1577,8 +1566,6 @@ rect {
     position: relative;
     z-index: 2;
   }
-
-  
 
   .button:hover::after,
   .button2:hover::after {
@@ -1661,5 +1648,10 @@ rect {
 @media (min-width: 1201px) and (max-width: 1400px) {
   .desktop-hide-in-small-desktop {
     display: none;
+  }
+
+  .contact-and-form-holder-in-popup-invite-in-inventory-management {
+    gap: 1rem;
+    grid-template-columns: 0.7fr 1.3fr;
   }
 }
