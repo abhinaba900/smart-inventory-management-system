@@ -798,7 +798,10 @@ export default function Index() {
       </section>
 
       {/* Video Section */}
-      <section className="py-24 bg-[#f5f9f5] video-section-parent-in-inventory-management">
+      <section
+        id="demo"
+        className="py-24 bg-[#f5f9f5] video-section-parent-in-inventory-management"
+      >
         <div className="max-w-7xl mx-auto px-16 text-center video-section-content-holder-in-inventory-management">
           <h2 className="text-[52px] hidden lg:block spradesheet-usage-text-in-inventory-management leading-[62.4px] font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] mb-4">
             See How It Works
@@ -1255,7 +1258,13 @@ export default function Index() {
                 </li>
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
-                    href="#"
+                    href="#demo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("demo")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className="underline-button text-lg  font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Demo
@@ -1264,6 +1273,7 @@ export default function Index() {
                 <li>
                   <a
                     href="#"
+                    onClick={() => setOpen(true)}
                     className="underline-button text-lg  font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Contact
