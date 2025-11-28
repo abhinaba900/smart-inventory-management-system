@@ -698,12 +698,21 @@
 .ready-to-automate-your-factory-heading {
   color: #0a0f0a;
   text-align: center;
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-semi-bold-display);
   font-size: 3.25rem;
   font-style: normal;
   font-weight: 420;
   line-height: 120%;
   letter-spacing: -1.04px;
+}
+
+.border-apply-in-inventory-management{
+  border: 2.5px solid #0a0f0a;
+}
+
+.border-apply-in-inventory-management:hover{
+  border: 2.5px solid #772bf2;
+  background-color: #772bf2;
 }
 
 .popup-section-left-content-heading {
@@ -786,6 +795,11 @@
 .hero-section-in-inventory-management {
   height: 100%;
   min-height: fit-content;
+}
+
+.popup-section-left-content-item-in-inventory-management{
+  margin-bottom: 0;
+  padding-bottom: 32px;
 }
 
 @media (max-width: 767px) {
@@ -1209,6 +1223,7 @@
 
   .popup-section-left-content-item-in-inventory-management {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 

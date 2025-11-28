@@ -68,22 +68,35 @@ export default function Index() {
           <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
             <div className="absolute top-4 right-4 z-10 popup-section-close-button-in-inventory-management">
               <button
-                className="w-10 h-10  md:w-[42px] md:h-[42px] rounded-full border-[1.5px] border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
+                className="w-10 h-10 circle-button md:w-[42px] md:h-[42px] rounded-full border-3 border-apply-in-inventory-management border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
                 aria-label="Close"
                 onClick={() => setOpen(false)}
               >
-                <img
+                {/* <img
                   src="assets/close-icon-in-popup.svg"
                   className="cursor-pointer"
                   alt=""
-                />
+                /> */}
+
+                <svg
+                  width="18"
+                  height="15"
+                  viewBox="0 0 18 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.4925 0.422799C17.2166 0.34228 16.7307 0.249374 16.0049 0.136337C15.0347 -0.0130881 14.6989 -0.00805576 14.5302 0.00742871C14.5275 0.00781582 14.5086 0.00975121 14.5063 0.00975121C14.3149 0.0329779 13.9765 0.118917 13.0449 0.599709C12.3623 0.952755 11.3552 1.64027 9.96693 2.70018C9.39311 3.13839 8.81626 3.60176 8.24775 4.08294C6.86929 3.16974 5.40253 2.28674 3.89445 1.46336C3.87702 1.45484 3.8592 1.44632 3.84139 1.43858C3.61057 1.35148 1.56506 0.589645 0.693719 0.673261C0.209345 0.720101 0.0236309 1.0236 0.0118816 1.29225C-0.0411797 2.43423 0.0816193 3.04819 0.4178 3.34472C0.564477 3.4775 0.933631 3.7446 2.38372 4.47547C3.51847 5.04104 4.64792 5.67319 5.74743 6.35645C4.56037 7.51468 3.39909 8.7488 2.28897 10.0294C2.27646 10.0448 2.26433 10.0599 2.25296 10.0766C1.4741 11.267 0.594039 12.82 0.824098 13.465C0.891562 13.6527 1.03634 13.7917 1.22206 13.8463C1.90503 14.0468 2.40987 14.1289 2.76576 14.0952C2.97308 14.0747 3.13833 14.0166 3.27174 13.9187C3.4332 13.8022 3.77392 13.4967 4.80445 12.2301C5.90433 10.8644 7.14521 9.51954 8.49941 8.22852C8.9762 8.57769 9.38061 8.8839 9.75355 9.1812C12.0613 11.0165 13.8161 12.6989 14.9661 14.1835C15.275 14.6 15.3852 14.7215 15.447 14.7796C15.6278 14.9515 15.812 14.9945 15.9356 14.9995C15.9666 15.0006 15.9958 14.9999 16.0239 14.9968C16.2657 14.9736 16.5545 14.7854 16.5734 14.3313C16.5856 14.0445 16.5624 13.5393 16.501 12.7922C16.4165 11.7679 16.3309 11.4354 16.2736 11.2732C16.2085 11.0885 16.0466 10.7722 15.372 9.95891C14.8778 9.36585 13.9651 8.50066 12.6571 7.38732C12.1235 6.93324 11.5671 6.48497 10.9671 6.02469C10.9777 6.01617 10.9887 6.00766 10.999 5.99914C13.284 4.1321 15.2943 2.78031 16.9722 1.98363C17.4399 1.77382 17.5801 1.69369 17.6491 1.64723C17.8162 1.53187 17.9257 1.38361 17.9746 1.21173C18.0588 0.917528 17.9424 0.55674 17.4925 0.422799Z"
+                    fill="#0A0F0A"
+                  />
+                </svg>
               </button>
             </div>
 
             <div className="container mx-auto px-0  popup-section-left-content-holder-in-inventory-management">
               <div className="max-w-7xl mx-auto">
                 <div className="flex justify-center  relative popup-heading-container-in-inventory-management">
-                  <div className="absolute left-6 -top-5 hidden md:block">
+                  <div className="absolute left-6 -top-2 hidden md:block">
                     <img
                       src="assets/ready-to-automate-your-factory-right-logo.webp"
                       alt="Robot illustration"
@@ -132,7 +145,7 @@ export default function Index() {
 
                 <div className="grid grid-cols-[300px_1fr] lg:grid-cols-[300px_1fr] xl:grid-cols-[350px_1fr] gap-8 lg:gap-12 xl:gap-16 contact-and-form-holder-in-popup-invite-in-inventory-management">
                   <div className="space-y-[48px] md:space-y-8">
-                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management">
+                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management border-b border-[rgba(10,15,10,0.1)]">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
                         <img
                           src="assets/reach-out-to-us-popup-icon.svg"
@@ -152,7 +165,7 @@ export default function Index() {
 
                     <div className="h-px bg-brand-text/10"></div>
 
-                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management">
+                    <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management border-b border-[rgba(10,15,10,0.1)]">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
                         <img
                           src="assets/email-with-us-popup-icon.svg"
@@ -961,8 +974,8 @@ export default function Index() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M1.4458 5.01261C3.0509 4.3924 7.98002 3.37939 10.0747 0.962047C11.4532 -0.633661 12.1378 -0.119253 10.914 1.58641C10.0161 2.8338 8.43921 4.07372 6.7947 4.82349C8.70004 4.84838 17.4619 4.73785 28.9835 5.20635C31.2996 5.30477 31.5606 5.49158 31.2531 6.12314C30.8536 6.91175 30.2475 7.31374 29.4565 7.31029C29.4363 7.30916 5.58863 7.00649 5.58126 7.25946C5.57847 7.29985 5.89717 7.53054 6.294 7.80599C9.0074 9.63938 9.98453 11.2037 8.89515 11.9946C8.38215 12.3714 7.47473 11.9967 5.94561 10.7867C5.31083 10.2851 3.80015 9.24838 2.57584 8.47081C-0.522564 6.48425 -0.732556 5.85431 1.4458 5.01261Z"
                         fill="black"
                       />
@@ -977,8 +990,8 @@ export default function Index() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M29.9121 5.01261C28.307 4.3924 23.3779 3.37939 21.2832 0.962047C19.9047 -0.633661 19.2201 -0.119253 20.4439 1.58641C21.3418 2.8338 22.9187 4.07372 24.5632 4.82349C22.6579 4.84838 13.896 4.73785 2.37445 5.20635C0.0582945 5.30477 -0.202671 5.49158 0.104792 6.12314C0.504279 6.91175 1.1104 7.31374 1.90138 7.31029C1.92159 7.30916 25.7693 7.00649 25.7766 7.25946C25.7794 7.29985 25.4607 7.53054 25.0639 7.80599C22.3505 9.63938 21.3734 11.2037 22.4628 11.9946C22.9758 12.3714 23.8832 11.9967 25.4123 10.7867C26.0471 10.2851 27.5578 9.24838 28.7821 8.47081C31.8805 6.48425 32.0905 5.85431 29.9121 5.01261Z"
                         fill="black"
                       />
