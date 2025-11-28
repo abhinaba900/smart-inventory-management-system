@@ -5,11 +5,34 @@ export default function FeatureSwitcher() {
   const [active, setActive] = useState(0);
 
   const images = [
-    "/assets/Dashboard Screenshot in smart inventory.webp", // Raw Materials Tracking
-    "/assets/Dashboard Screenshot in smart inventory.webp", // Raw Materials Tracking
-    "/assets/Dashboard Screenshot in smart inventory.webp", // Raw Materials Tracking
-    "/assets/Dashboard Screenshot in smart inventory.webp", // Raw Materials Tracking
-    "/assets/Dashboard Screenshot in smart inventory.webp", // Raw Materials Tracking
+    "/assets/Dashboard Screenshot in smart inventory.webp",
+    "/assets/Dashboard Screenshot in smart inventory.webp",
+    "/assets/Dashboard Screenshot in smart inventory.webp",
+    "/assets/Dashboard Screenshot in smart inventory.webp",
+    "/assets/Dashboard Screenshot in smart inventory.webp",
+  ];
+
+  const items = [
+    {
+      title: "Raw Materials Tracking",
+      desc: "Get instant low-stock alerts to restock materials before they run out.",
+    },
+    {
+      title: "Production Monitoring",
+      desc: "Track every production step live and prevent delays.",
+    },
+    {
+      title: "Quality Control & Defect Tracking",
+      desc: "Detect defects quickly and improve overall output quality.",
+    },
+    {
+      title: "Vendor Management",
+      desc: "Manage suppliers, POs, and deliveries with full visibility.",
+    },
+    {
+      title: "Smart Reports & Analytics",
+      desc: "AI-powered insights that optimize factory performance.",
+    },
   ];
 
   return (
@@ -22,112 +45,52 @@ export default function FeatureSwitcher() {
               You make the products. Our system manages the process.
             </h3>
 
-            <button className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+            <button className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               <span>Explore more</span>
             </button>
           </div>
 
-          <div className="space-y-0 ">
-            {/* Raw Materials Tracking — NO border remove on hover */}
-            <div
-              onClick={() => setActive(0)}
-              className={`
-      py-4 hidden lg:block cursor-pointer transition px-4
-      ${" border-[rgba(10,15,10,0.1)] "}
-      group-hover:border-transparent 
-    `}
-            >
-              <h4
-                className={`text-lg font-['Sequel_Sans'] font-normal mb-1 row-materials-tracking-heading-in-inventory-management ${
-                  active === 0 ? "text-brand-purple" : "text-brand-dark"
-                }`}
-              >
-                Raw Materials Tracking
-              </h4>
+          {/* ACCORDION AREA */}
+          <div className="space-y-0 mt-10 group">
+            {items.map((item, index) => {
+              const isLast = index === items.length - 1;
 
-              <p className="text-base font-['Sequel_Sans'] font-normal text-brand-dark/80 row-materials-tracking-subtext-text-in-inventory-management">
-                Get instant low-stock alerts to restock materials before they
-                run out.
-              </p>
-            </div>
-
-            <div className="group">
-              {/* Production Monitoring */}
-              <div
-                onClick={() => setActive(1)}
-                className={`
-      py-4 cursor-pointer transition px-4
-      ${"border-b border-t border-[rgba(10,15,10,0.1)]"}
-      hover:bg-[#F5F9F5]
-      group-hover:border-transparent   /* ✅ still here */
-    `}
-              >
-                <h4
-                  className={`text-lg font-['Sequel_Sans'] font-normal ${
-                    active === 1 ? "text-brand-purple" : "text-brand-dark"
-                  }`}
+              return (
+                <div
+                  key={index}
+                  onClick={() => setActive(index)}
+                  className={`
+          py-4 cursor-pointer transition px-4 
+          hover:bg-[#F5F9F5] hover:rounded-sm
+          group-hover:border-transparent
+          ${!isLast ? "border-b border-[rgba(10,15,10,0.1)]" : ""}
+          ${active === index ? "" : ""}
+        `}
                 >
-                  Production Monitoring
-                </h4>
-              </div>
+                  {/* TITLE */}
+                  <h4
+                    className={`text-lg font-['Sequel_Sans'] spradesheet-usage-subtext-in-inventory-management font-normal ${
+                      active === index ? "text-brand-purple row-materials-tracking-heading-in-inventory-management" : "text-brand-dark"
+                    }`}
+                  >
+                    {item.title}
+                  </h4>
 
-              {/* Quality Control */}
-              <div
-                onClick={() => setActive(2)}
-                className={`
-      py-4 cursor-pointer transition px-4
-      ${"border-b border-[rgba(10,15,10,0.1)]"}
-      hover:bg-[#F5F9F5]
-      group-hover:border-transparent   /* ✅ still here */
-    `}
-              >
-                <h4
-                  className={`text-lg font-['Sequel_Sans'] font-normal ${
-                    active === 2 ? "text-brand-purple" : "text-brand-dark"
-                  }`}
-                >
-                  Quality Control & Defect Tracking
-                </h4>
-              </div>
-
-              {/* Vendor Management */}
-              <div
-                onClick={() => setActive(3)}
-                className={`
-      py-4 cursor-pointer transition px-4
-      ${"border-b border-[rgba(10,15,10,0.1)]"}
-      hover:bg-[#F5F9F5]
-      group-hover:border-transparent   /* ✅ still here */
-    `}
-              >
-                <h4
-                  className={`text-lg font-['Sequel_Sans'] font-normal ${
-                    active === 3 ? "text-brand-purple" : "text-brand-dark"
-                  }`}
-                >
-                  Vendor Management
-                </h4>
-              </div>
-
-              {/* Smart Reports */}
-              <div
-                onClick={() => setActive(4)}
-                className={`
-      py-4 cursor-pointer transition px-4
-      ${active === 4 ? "bg-brand-purple/5 border-transparent" : ""}
-      hover:bg-[#F5F9F5]
-      group-hover:border-transparent   /* ✅ still here */
-    `}
-              >
-                <h4
-                  className={`text-lg font-['Sequel_Sans'] font-normal ${
-                    active === 4 ? "text-brand-purple" : "text-brand-dark"
-                  }`}
-                >
-                  Smart Reports & Analytics
-                </h4>
-              </div>
-            </div>
+                  {/* SUBTEXT (ACCORDION CONTENT) */}
+                  <div
+                    className="overflow-hidden transition-all duration-500"
+                    style={{
+                      maxHeight: active === index ? "160px" : "0px",
+                      opacity: active === index ? 1 : 0,
+                    }}
+                  >
+                    <p className="text-base mt-2 font-['Sequel_Sans'] font-normal text-brand-dark/80 row-materials-tracking-subtext-text-in-inventory-management">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -141,10 +104,10 @@ export default function FeatureSwitcher() {
             <img
               src={images[active]}
               alt="Dashboard Screenshot"
-              className="w-full shadow-xl transition-all duration-500 rounded-tl-[16px]"
+              className="w-full shadow-xl transition-all duration-500 rounded-tl-2xl"
               style={{
                 boxShadow:
-                  "0px -4px 30px rgba(0,0,0,0.2), -4px 0px 30px rgba(0,0,0,0.2)",
+                  "0px -4px 24px rgba(0,0,0,0.10), -4px 0px 24px rgba(0,0,0,0.08)",
               }}
             />
           </div>

@@ -121,6 +121,16 @@
   size-adjust: 98%;
 }
 
+html,
+body,
+svg,
+path,
+rect {
+  -webkit-text-fill-color: initial;
+  -webkit-font-smoothing: antialiased;
+  color-adjust: exact;
+  -webkit-color-adjust: exact;
+}
 @layer base {
   /**
    * Tailwind CSS theme
@@ -269,7 +279,7 @@
   z-index: 0;
 }
 
-.button:hover{
+.button:hover {
   background: #f5f9f5;
 }
 
@@ -312,10 +322,9 @@
   z-index: 0;
 }
 
-.button2:hover{
+.button2:hover {
   border: 2px solid #772bf2;
   background: #772bf2;
-
 }
 
 .button2:hover span {
@@ -706,11 +715,11 @@
   letter-spacing: -1.04px;
 }
 
-.border-apply-in-inventory-management{
+.border-apply-in-inventory-management {
   border: 2.5px solid #0a0f0a;
 }
 
-.border-apply-in-inventory-management:hover{
+.border-apply-in-inventory-management:hover {
   border: 2.5px solid #772bf2;
   background-color: #772bf2;
 }
@@ -797,15 +806,50 @@
   min-height: fit-content;
 }
 
-.popup-section-left-content-item-in-inventory-management{
+.popup-section-left-content-item-in-inventory-management {
   margin-bottom: 0;
   padding-bottom: 32px;
+}
+
+.navigation-section-holder {
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* When scrolling UP → show */
+.nav-show {
+  position: fixed;
+  top: 0;
+  transform: translateY(0);
+  opacity: 1;
+
+  background-color: #f5f9f5;
+}
+
+/* When scrolling DOWN → hide smoothly */
+.nav-hide {
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  opacity: 100%;
 }
 
 @media (max-width: 767px) {
   .heading-section-title-in-inventory-management {
     font-size: 1.5rem; /* 24px */
     line-height: 120%;
+    letter-spacing: 0px;
+  }
+
+  .mobile-position-of-absolute-container-buttons {
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transform: none;
+    justify-content: center;
   }
 
   .hero-section-parennt-in-inventory-management {
@@ -842,6 +886,42 @@
     font-size: 0.875rem; /* 14px */
     line-height: 140%;
     margin-bottom: 1rem;
+  }
+  .button::after,
+  .button2::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .button:hover::after,
+  .button2:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent text color changing on hover */
+  .button:hover,
+  .button2:hover {
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+
+  .button:hover span,
+  .button2:hover span {
+    color: inherit !important;
+  }
+
+  .circle-button::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+
+  .circle-button:hover::after {
+    clip-path: none !important;
+    transition: none !important;
   }
 
   .scroll-of-horizontal-in-inventory-management {
@@ -1042,9 +1122,29 @@
     align-items: center;
   }
 
-  .testimonial-button-holder-in-inventory-management button {
+  .next-prev-button-in-inventory-management {
     width: 2.75rem; /* 44px */
     height: 2.75rem; /* 44px */
+  }
+
+  .next-prev-button-in-inventory-management svg {
+    width: 14px;
+  }
+  .next-prev-button-in-inventory-management:hover svg path {
+    fill: black;
+  }
+
+  .circle-button:hover svg path {
+    fill: #772bf2;
+  }
+
+  .play-button-in-video-in-inventory-management{
+    width: 2.75rem; /* 44px */
+    height: 2.75rem; /* 44px */
+  }
+
+  .play-button-in-video-in-inventory-management svg{
+    width: 14px;
   }
 
   .pricing-section-in-inventory-management {
@@ -1223,11 +1323,55 @@
 
   .popup-section-left-content-item-in-inventory-management {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 32px;
+  }
+
+  .height-fixed-in-inventory-management-for-mobile {
+    margin-bottom: 32px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
+  .mobile-position-of-absolute-container-buttons {
+    right: 30px;
+  }
+
+  .button::after,
+  .button2::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .button:hover::after,
+  .button2:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent text color changing on hover */
+  .button:hover,
+  .button2:hover {
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+
+  .button:hover span,
+  .button2:hover span {
+    color: inherit !important;
+  }
+
+  .circle-button::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+
+  .circle-button:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
   .navbar-section-in-inventory-management,
   .problem-section-content-holder-in-inventory-management,
   .benfits-section-content-holder-in-inventory-management,
@@ -1301,6 +1445,47 @@
   .hero-section-in-inventory-management {
     height: 100%;
     min-height: fit-content;
+  }
+
+  .button::after,
+  .button2::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .button:hover::after,
+  .button2:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent text color changing on hover */
+  .button:hover,
+  .button2:hover {
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+
+  .button:hover span,
+  .button2:hover span {
+    color: inherit !important;
+  }
+
+  .circle-button::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+
+  .circle-button:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .mobile-position-of-absolute-container-buttons {
+    transform: translateY(40%);
   }
   .navbar-section-in-inventory-management,
   .problem-section-content-holder-in-inventory-management,

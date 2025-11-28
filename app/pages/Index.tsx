@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HorizontalScroller from "./ScrollVelocity";
 import { Menu, X } from "lucide-react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import FeatureSwitcher from "@/components/ui/FeatureSwitcher";
+import Link from "next/link";
+import TestimonialSection from "@/components/ui/TestimonialSection";
 type partner = {
   name: string;
   logo: string;
@@ -54,6 +56,35 @@ export default function Index() {
       [e.target.name]: e.target.value,
     });
   };
+
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+ useEffect(() => {
+  const handleScroll = () => {
+    const currentScroll = window.scrollY;
+
+    // 👉 If fully at top, always hide
+    if (currentScroll === 0) {
+      setIsScrollingUp(false); // nav-hide
+      setLastScrollY(0);
+      return;
+    }
+
+    // 👉 Detect scroll direction
+    if (currentScroll < lastScrollY) {
+      setIsScrollingUp(true);  // scrolling UP → show
+    } else {
+      setIsScrollingUp(false); // scrolling DOWN → hide
+    }
+
+    setLastScrollY(currentScroll);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
+
 
   const [open, setOpen] = useState(false);
   return (
@@ -163,7 +194,7 @@ export default function Index() {
                       </div>
                     </div>
 
-                    <div className="h-px bg-brand-text/10"></div>
+                    <div className="h-px bg-brand-text/10 height-fixed-in-inventory-management-for-mobile"></div>
 
                     <div className="flex items-start gap-4 popup-section-left-content-item-in-inventory-management border-b border-[rgba(10,15,10,0.1)]">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
@@ -183,7 +214,7 @@ export default function Index() {
                       </div>
                     </div>
 
-                    <div className="h-px bg-brand-text/10"></div>
+                    <div className="h-px bg-brand-text/10 height-fixed-in-inventory-management-for-mobile"></div>
 
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 md:w-[42px] md:h-[42px] rounded-full bg-brand-purple flex items-center justify-center">
@@ -339,19 +370,13 @@ export default function Index() {
           </div>
         </div>
       </Dialog>
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-brand-bg overflow-hidden hero-section-in-inventory-management">
-        {/* Background Blobs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute w-[1883px] h-[1830px] -right-[900px] top-[179px] opacity-50">
-            <div className="w-full h-full rounded-full bg-brand-pink/50 blur-[254px]" />
-          </div>
-          <div className="absolute w-[1454px] h-[1411px] -left-[800px] top-[585px] opacity-80">
-            <div className="w-full h-full rounded-full bg-brand-purple/80 blur-[273px]" />
-          </div>
-        </div>
 
-        {/* Navigation */}
+      {/* Navigation */}
+      <section
+        className={`navigation-section-holder ${
+          isScrollingUp ? "nav-show" : "nav-hide"
+        }`}
+      >
         <nav className="relative z-10 px-6 max-w-[1520px] mx-auto py-4 lg:px-16 lg:py-6 bg-brand-bg navbar-section-in-inventory-management">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -365,12 +390,20 @@ export default function Index() {
             <div className="hidden lg:flex items-center gap-4">
               {["Solution", "Features", "Benefits", "Customers", "Pricing"].map(
                 (label) => (
-                  <button
+                  <Link
+                    href={`#${label.toLowerCase()}`}
                     key={label}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById(label.toLowerCase())
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className="px-5 py-2.5 rounded-full nav-links-in-inventory-management bg-brand-gray text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-gray/50 transition-colors"
                   >
                     {label}
-                  </button>
+                  </Link>
                 )
               )}
             </div>
@@ -425,19 +458,28 @@ export default function Index() {
                   "Customers",
                   "Pricing",
                 ].map((label, index, arr) => (
-                  <button
+                  <Link
                     key={label}
+                    href={`#${label.toLowerCase()}`}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileOpen(false);
+                      document
+                        .getElementById(label.toLowerCase())
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className={`w-full px-5 py-3 text-left font-['Sequel_Sans'] nav-links-in-inventory-management-get-in-touch text-base font-normal
         text-brand-dark transition-colors
         ${
           index !== arr.length - 1
-            ? "border-b border-brand-[rgba(10,15,10,0.1)] pb-4"
+            ? "border-b border-[rgba(10,15,10,0.1)] pb-4"
             : ""
         }
       `}
                   >
                     {label}
-                  </button>
+                  </Link>
                 ))}
 
                 <button
@@ -447,13 +489,17 @@ export default function Index() {
                 >
                   <span>Get in touch</span>
                 </button>
-                <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+                <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9  py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
                   <span>Book a Free Demo</span>
                 </button>
               </div>
             </div>
           </Dialog>
         </nav>
+      </section>
+      {/* Hero Section */}
+      <section className="relative bg-brand-bg pt-[6.875rem] hero-section-in-inventory-management">
+        {/* Background Blobs */}
 
         {/* Hero Content */}
         <div className="relative  max-w-[1312px] mx-auto px-16 pt-20 text-center hero-section-parennt-in-inventory-management">
@@ -523,7 +569,7 @@ export default function Index() {
             <img
               src="/assets/Dashboard.png"
               alt="Dashboard Preview"
-              className="w-full shadow-2xl"
+              className="w-full "
             />
           </div>
         </div>
@@ -538,7 +584,7 @@ export default function Index() {
             Trusted by 10+ industrial companies
           </p>
 
-          <div className="flex items-center justify-center gap-10 overflow-hidden relative z-3 ">
+          <div className="flex items-center justify-center gap-10 overflow-hidden relative z-1 ">
             <HorizontalScroller
               data={[images]}
               isHoverable={false}
@@ -563,7 +609,10 @@ export default function Index() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-[#f5f9f5] problem-section-parent-in-inventory-management">
+      <section
+        id="solution"
+        className="py-20 bg-[#f5f9f5] problem-section-parent-in-inventory-management"
+      >
         <div className="max-w-7xl mx-auto px-16 problem-section-content-holder-in-inventory-management">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-[5rem] heading-and-subtext-content-holder-in-inventory-management">
             <div>
@@ -650,7 +699,10 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-24 bg-brand-purple overflow-hidden everything-you-need-text-in-inventory-management">
+      <section
+        id="features"
+        className="relative py-24 bg-brand-purple overflow-hidden everything-you-need-text-in-inventory-management"
+      >
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 opacity-30 pointer-events-none">
           <div
@@ -665,7 +717,7 @@ export default function Index() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-16 benfits-section-content-holder-in-inventory-management">
+        <div className="relative z-1 max-w-7xl mx-auto px-16 benfits-section-content-holder-in-inventory-management">
           <div className="text-center mb-[5rem] relative heading-content-holder-in-inventory-management">
             <h2
               style={{ color: "#F5F9F5" }}
@@ -786,7 +838,7 @@ export default function Index() {
                   className="w-full h-full object-cover"
                 />
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-                  <div className="circle-button w-[120px] h-[120px] rounded-full bg-[#F5F9F5] border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform ">
+                  <div className="circle-button w-[120px] h-[120px] play-button-in-video-in-inventory-management rounded-full bg-[#F5F9F5] border-[1.5px] border-brand-dark flex items-center justify-center hover:scale-105 transition-transform ">
                     <svg width="32" height="37" viewBox="0 0 32 37" fill="none">
                       <path
                         fillRule="evenodd"
@@ -804,8 +856,11 @@ export default function Index() {
       </section>
 
       {/* Benefits Section */}
-      <section className="relative py-24 bg-brand-bg overflow-hidden why-manufactures-love-us-in-inventory-management">
-        <div className="relative z-10 max-w-7xl mx-auto px-16  benefits-section-content-holder-in-inventory-management">
+      <section
+        id="benefits"
+        className="relative py-24 bg-brand-bg overflow-hidden why-manufactures-love-us-in-inventory-management"
+      >
+        <div className="relative z-1 max-w-7xl mx-auto px-16  benefits-section-content-holder-in-inventory-management">
           <img
             src="assets/why-manufacturers-love-us-love-icon.svg"
             className="absolute -top-6 right-[20%] w-[70px] h-[70px] in-mobile-not-visible love-icon-in-why-manufacturers-love-us-in-inventory-management"
@@ -921,7 +976,10 @@ export default function Index() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 bg-[#f5f9f5] testimonial-section-in-inventory-management">
+      <section
+        id="customers"
+        className="py-24 bg-[#f5f9f5] testimonial-section-in-inventory-management"
+      >
         <div className="max-w-7xl mx-auto px-16 testimonial-section-content-holder-in-inventory-management">
           <div className="flex justify-between items-center mb-[5rem] testimonial-header-in-inventory-management">
             <h2 className="text-[52px] center-align-text leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] ">
@@ -935,7 +993,7 @@ export default function Index() {
             />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center img-and-content-holder-in-testimonial-in-inventory-management">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center img-and-content-holder-in-testimonial-in-inventory-management">
             <div>
               <img
                 src="assets/space-luggage-main-image.webp"
@@ -1000,12 +1058,16 @@ export default function Index() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <TestimonialSection />
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-[#f5f9f5] pricing-section-in-inventory-management pt-10 pb-50">
+      <section
+        id="pricing"
+        className="py-24 bg-[#f5f9f5] pricing-section-in-inventory-management pt-10 pb-50"
+      >
         <div className="max-w-7xl mx-auto px-0 lg:px-8 2xl:px-0 pricing-section-content-holder-in-inventory-management">
           <h2 className="text-[52px] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark tracking-[-1.04px] text-center mb-4">
             Choose a Plan <br />
@@ -1078,7 +1140,7 @@ export default function Index() {
           className="absolute top-0 in-mobile-not-visible"
           alt=""
         />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-8 cta-section-content-in-inventory-management">
+        <div className="relative z-1 text-center max-w-3xl mx-auto px-8 cta-section-content-in-inventory-management">
           <h2 className="text-[52px] cta-section-title-in-inventory-management text-[#F5F9F5] leading-[62.4px] spradesheet-usage-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-bg tracking-[-1.04px] mb-6">
             Ready to take control of Your Inventory?
           </h2>
@@ -1139,7 +1201,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-16 footer-section-container-in-inventory-management">
+        <div className="relative z-1 max-w-7xl mx-auto px-16 footer-section-container-in-inventory-management">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-0 lg:gap-12 mb-[5rem] footer-social-links-container-in-inventory-management">
             <div className="footer-section-logo-and-paragraph-holder">
               <div className="flex items-center gap-4 mb-6 -mt-8 third-eye-logo-in-inventory-management">
