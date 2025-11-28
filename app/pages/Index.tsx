@@ -96,7 +96,7 @@ export default function Index() {
           className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
         />
 
-        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-[24px] pb-[24px] popup-content-holder-in-inventory-management">
+        <div className="fixed max-w-[70%] mx-auto bg-[#F5F9F5] inset-0 z-10  overflow-y-auto p-6 pb-6 px-10 popup-content-holder-in-inventory-management">
           <div className="min-h-screen bg-brand-bg font-sequel relative overflow-hidden">
             <div className="absolute top-4 right-4 z-10 popup-section-close-button-in-inventory-management">
               <button
