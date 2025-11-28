@@ -5,6 +5,7 @@ import { Toaster } from "@/app/components/ui/toaster";
 import { Toaster as Sonner } from "@/app/components/ui/sonner";
 import { TooltipProvider } from "@/app/components/ui/tooltip";
 import Index from "./pages/Index";
+import ScrollProgressButton from "@/components/ui/ScrollProgressButton";
 
 
 const page = () => (
@@ -12,6 +13,7 @@ const page = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <ScrollProgressButton />
       <Index />
     </TooltipProvider>
   </div>
