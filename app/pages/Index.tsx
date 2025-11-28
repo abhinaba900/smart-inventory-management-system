@@ -1227,7 +1227,13 @@ export default function Index() {
               <ul className="space-y-4 footer-subtext-list-in-inventory-management">
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
-                    href="#"
+                    href="#features"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("features")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className="underline-button text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark  footer-subtext-subhading-in-inventory-management"
                   >
                     Features
@@ -1235,7 +1241,13 @@ export default function Index() {
                 </li>
                 <li className="footer-subtext-list-text-in-inventory-management">
                   <a
-                    href="#"
+                    href="#pricing"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("pricing")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className="underline-button text-lg footer-subtext-list-text-in-inventory-management font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management"
                   >
                     Pricing
