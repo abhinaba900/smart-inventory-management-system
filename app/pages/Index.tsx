@@ -7,6 +7,7 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import FeatureSwitcher from "@/components/ui/FeatureSwitcher";
 import Link from "next/link";
 import TestimonialSection from "@/components/ui/TestimonialSection";
+import Image from "next/image";
 type partner = {
   name: string;
   logo: string;
@@ -941,7 +942,7 @@ export default function Index() {
               <img
                 src="assets/seamless-integraations-icon.webp"
                 alt="Seamless Integrations"
-                className="w-[98px] h-[102px] mb-6 benifits-icon-in-inventory-management"
+                className="w-[94px] h-[98px] mb-6 benifits-icon-in-inventory-management"
               />
               <h3 className="text-[28px] benifits-header-in-inventory-management leading-[33.6px] font-['Sequel_Sans'] why-manufacturers-love-us-header-in-inventory-management font-normal text-brand-dark tracking-[-0.56px] mb-4">
                 Seamless Integrations
@@ -1158,7 +1159,7 @@ export default function Index() {
               <span>Book a Free Demo</span>
             </button>
 
-            <button className="button type1 white-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-white/10 transition-colors">
+            <button className="button type1 white-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px]  text-brand-bg font-['Sequel_Sans'] text-base font-norma ">
               <span>Start a Free Trial</span>
             </button>
           </div>
@@ -1202,10 +1203,12 @@ export default function Index() {
         </div>
 
         <div className="relative z-1 max-w-7xl mx-auto px-16 footer-section-container-in-inventory-management">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 lg:gap-12 mb-[5rem] footer-social-links-container-in-inventory-management">
-            <div className="footer-section-logo-and-paragraph-holder">
+          <div className="flex justify-between grid-cols-1 md:grid-cols-4 gap-0 lg:gap-12 mb-[5rem] footer-social-links-container-in-inventory-management">
+            <div className="footer-section-logo-and-paragraph-holder w-[351px]">
               <div className="flex items-center gap-4 mb-6 -mt-8 third-eye-logo-in-inventory-management">
-                <img
+                <Image
+                  width={239}
+                  height={123}
                   src="assets/footer-thired-eye-logo.svg"
                   alt="Third Eye Logo"
                   className="w-[239px] h-[123px] "

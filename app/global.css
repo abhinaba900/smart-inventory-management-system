@@ -355,7 +355,9 @@ rect {
   clip-path: circle(150% at 50% 100%);
   transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 3s;
 }
-
+.white-border-remover-in-inventory-management::after {
+  border: none !important;
+}
 .white-border-remover-in-inventory-management {
   border: 2px solid #f5f9f5;
   font-family: var(--font-family-sequel-sans-bold-display) !important;
@@ -895,6 +897,24 @@ rect {
     border: none !important;
   }
 
+  .button:after{
+    background: #772bf2 !important;
+  }
+
+  .button2:after{
+    background: #f5f9f5 !important;
+  }
+
+  .black-border-remover-in-inventory-management{
+    border: none !important;
+  }
+
+  .button span,
+  .button2 span {
+    position: relative;
+    z-index: 2;
+  }
+
   .button:hover::after,
   .button2:hover::after {
     clip-path: none !important;
@@ -1197,6 +1217,8 @@ rect {
     margin-bottom: 1.75rem; /* 28px */
   }
 
+  
+
   .cta-section-content-in-inventory-management {
     padding-inline: 0.7rem; /* 11px */
   }
@@ -1266,6 +1288,7 @@ rect {
 
   .footer-social-links-container-in-inventory-management {
     margin-bottom: 2.5rem; /* 40px */
+    flex-direction: column;
   }
 
   .footer-copyright-in-inventory-management {
@@ -1343,6 +1366,26 @@ rect {
     background: transparent !important;
     border: none !important;
   }
+
+  .button:after{
+    background: #772bf2 !important;
+  }
+
+  .button2:after{
+    background: #f5f9f5 !important;
+  }
+
+  .black-border-remover-in-inventory-management{
+    border: none !important;
+  }
+
+  .button span,
+  .button2 span {
+    position: relative;
+    z-index: 2;
+  }
+
+  
 
   .button:hover::after,
   .button2:hover::after {
@@ -1440,7 +1483,69 @@ rect {
     line-height: 140%;
   }
 }
+@media only screen 
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape) {
+  
+  .button::after,
+  .button2::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
 
+  .button:after{
+    background: #772bf2 !important;
+  }
+
+  .button2:after{
+    background: #f5f9f5 !important;
+  }
+
+  .black-border-remover-in-inventory-management{
+    border: none !important;
+  }
+
+  .button span,
+  .button2 span {
+    position: relative;
+    z-index: 2;
+  }
+
+  
+
+  .button:hover::after,
+  .button2:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent text color changing on hover */
+  .button:hover,
+  .button2:hover {
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+
+  .button:hover span,
+  .button2:hover span {
+    color: inherit !important;
+  }
+
+  .circle-button::after {
+    clip-path: none !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+
+  .circle-button:hover::after {
+    clip-path: none !important;
+    transition: none !important;
+  }
+  
+}
 @media (min-width: 900px) and (max-width: 1200px) {
   .hero-section-in-inventory-management {
     height: 100%;
@@ -1454,6 +1559,26 @@ rect {
     background: transparent !important;
     border: none !important;
   }
+
+  .button:after{
+    background: #772bf2 !important;
+  }
+
+  .button2:after{
+    background: #f5f9f5 !important;
+  }
+
+  .black-border-remover-in-inventory-management{
+    border: none !important;
+  }
+
+  .button span,
+  .button2 span {
+    position: relative;
+    z-index: 2;
+  }
+
+  
 
   .button:hover::after,
   .button2:hover::after {
