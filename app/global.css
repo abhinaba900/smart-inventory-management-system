@@ -1515,7 +1515,17 @@ rect {
     line-height: 140%;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+/* Added (hover: none) and (pointer: coarse) 
+   This tells the browser: "Only do this if the user is using a touch screen 
+   and cannot hover with a mouse."
+*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1366px) 
+  and (orientation: landscape) 
+  and (hover: none) 
+  and (pointer: coarse) {
+
   .button::after,
   .button2::after {
     clip-path: none !important;
@@ -1523,9 +1533,11 @@ rect {
     background: transparent !important;
     border: none !important;
   }
+
   .underline-button::after {
     display: none !important;
   }
+
   .border-apply-in-inventory-management:hover {
     background: transparent;
     border: 1.5px solid #0a0f0a;
@@ -1535,6 +1547,7 @@ rect {
   .circle-button:hover svg {
     color: black;
   }
+  
   .circle-button:hover svg path {
     fill: black;
   }
