@@ -1519,13 +1519,8 @@ rect {
    This tells the browser: "Only do this if the user is using a touch screen 
    and cannot hover with a mouse."
 */
-@media only screen 
-  and (min-width: 1024px) 
-  and (max-width: 1366px) 
-  and (orientation: landscape) 
-  and (hover: none) 
-  and (pointer: coarse) {
-
+/*
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) and (pointer: coarse) {
   .button::after,
   .button2::after {
     clip-path: none !important;
@@ -1543,11 +1538,11 @@ rect {
     border: 1.5px solid #0a0f0a;
   }
 
-  /* SVG becomes white */
+ 
   .circle-button:hover svg {
     color: black;
   }
-  
+
   .circle-button:hover svg path {
     fill: black;
   }
@@ -1576,7 +1571,7 @@ rect {
     transition: none !important;
   }
 
-  /* Prevent text color changing on hover */
+ 
   .button:hover,
   .button2:hover {
     background: inherit !important;
@@ -1599,6 +1594,89 @@ rect {
     transition: none !important;
   }
 }
+
+*/
+
+/* =========================================
+   TABLET-SPECIFIC OVERRIDES
+   Targeting: body.is-tablet (Server Detected)
+   ========================================= */
+
+/* 1. Reset Button Animations */
+body.is-tablet .button::after,
+body.is-tablet .button2::after {
+  clip-path: none !important;
+  transition: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+body.is-tablet .underline-button::after {
+  display: none !important;
+}
+
+/* 2. Inventory Management Hovers */
+body.is-tablet .border-apply-in-inventory-management:hover {
+  background: transparent;
+  border: 1.5px solid #0a0f0a;
+}
+
+body.is-tablet .black-border-remover-in-inventory-management {
+  border: none !important;
+}
+
+/* 3. SVG & Icon Fixes */
+body.is-tablet .circle-button:hover svg {
+  color: black;
+}
+
+body.is-tablet .circle-button:hover svg path {
+  fill: black;
+}
+
+/* 4. Specific Button Background Colors */
+body.is-tablet .button:after {
+  background: #772bf2 !important;
+}
+
+body.is-tablet .button2:after {
+  background: #f5f9f5 !important;
+}
+
+/* 5. Text & Spans Z-Index */
+body.is-tablet .button span,
+body.is-tablet .button2 span {
+  position: relative;
+  z-index: 2;
+}
+
+/* 6. Disable Hover Transitions Completely */
+body.is-tablet .button:hover::after,
+body.is-tablet .button2:hover::after,
+body.is-tablet .circle-button:hover::after {
+  clip-path: none !important;
+  transition: none !important;
+}
+
+/* 7. Reset Hover Backgrounds & Colors (Prevent Sticky Hover) */
+body.is-tablet .button:hover,
+body.is-tablet .button2:hover {
+  background: inherit !important;
+  border-color: inherit !important;
+}
+
+body.is-tablet .button:hover span,
+body.is-tablet .button2:hover span {
+  color: inherit !important;
+}
+
+/* 8. Circle Button Reset */
+body.is-tablet .circle-button::after {
+  clip-path: none !important;
+  transition: none !important;
+  background: transparent !important;
+}
+
 @media (min-width: 900px) and (max-width: 1200px) {
   .hero-section-in-inventory-management {
     height: 100%;
