@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HorizontalScroller from "./ScrollVelocity";
 import { Menu, X } from "lucide-react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
@@ -8,6 +8,161 @@ import FeatureSwitcher from "@/components/ui/FeatureSwitcher";
 import Link from "next/link";
 import TestimonialSection from "@/components/ui/TestimonialSection";
 import Image from "next/image";
+
+// --- 1. TypeScript Augmentation ---
+declare module "react" {
+  interface InputHTMLAttributes<T> {
+    checktype?: string;
+    phoneFormat?: string;
+    valType?: string;
+    phoneFormatType?: string;
+    isCountryCodeEnabled?: string;
+  }
+  interface TextareaHTMLAttributes<T> {
+    checktype?: string;
+  }
+}
+
+declare global {
+  interface Window {
+    zf_ValidateAndSubmit?: () => boolean;
+  }
+}
+
+// --- 2. Zoho Validation Script Component ---
+const ZohoValidationScript: React.FC = () => {
+  useEffect(() => {
+    // UPDATED: Fields specific to your Contact Form
+    const zf_MandArray = [
+      "Name_First",
+      "Name_Last",
+      "Email",
+      "PhoneNumber_countrycode",
+      "MultiLine", // Usually the name for "Message" in Zoho
+    ];
+    const zf_FieldArray = [
+      "Name_First",
+      "Name_Last",
+      "Email",
+      "PhoneNumber_countrycode",
+      "MultiLine",
+    ];
+    const isSalesIQIntegrationEnabled = false;
+
+    // --- Validation Logic (Minified/Standard Zoho Logic) ---
+    function zf_ValidateAndSubmit() {
+      if (zf_CheckMandatory()) {
+        if (zf_ValidCheck()) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return false;
+      }
+    }
+
+    function zf_CheckMandatory() {
+      for (let i = 0; i < zf_MandArray.length; i++) {
+        const fieldObj = document.forms["contact_form"][zf_MandArray[i]];
+        if (fieldObj) {
+          if (fieldObj.value.replace(/^\s+|\s+$/g, "").length === 0) {
+            fieldObj.focus();
+            zf_ShowErrorMsg(zf_MandArray[i]);
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    function zf_ValidCheck() {
+      let isValid = true;
+      for (let ind = 0; ind < zf_FieldArray.length; ind++) {
+        const fieldObj = document.forms["contact_form"][zf_FieldArray[ind]];
+        if (fieldObj) {
+          const checkType = fieldObj.getAttribute("checktype");
+          if (checkType === "c1") {
+            // Text
+            if (fieldObj.value.replace(/^\s+|\s+$/g, "").length === 0) {
+              isValid = false;
+              fieldObj.focus();
+              zf_ShowErrorMsg(zf_FieldArray[ind]);
+              return false;
+            }
+          } else if (checkType === "c5") {
+            // Email
+            if (!zf_ValidateEmailID(fieldObj)) {
+              isValid = false;
+              fieldObj.focus();
+              zf_ShowErrorMsg(zf_FieldArray[ind]);
+              return false;
+            }
+          } else if (checkType === "c7") {
+            // Phone
+            if (!zf_ValidatePhone(fieldObj)) {
+              isValid = false;
+              fieldObj.focus();
+              zf_ShowErrorMsg(zf_FieldArray[ind]);
+              return false;
+            }
+          }
+        }
+      }
+      return isValid;
+    }
+
+    function zf_ShowErrorMsg(uniqName: string) {
+      let fldLinkName;
+      for (let errInd = 0; errInd < zf_FieldArray.length; errInd++) {
+        fldLinkName = zf_FieldArray[errInd].split("_")[0];
+        const errorElement = document.getElementById(fldLinkName + "_error");
+        if (errorElement) {
+          errorElement.style.display = "none";
+        }
+      }
+      const linkName = uniqName.split("_")[0];
+      const linkErrorElement = document.getElementById(linkName + "_error");
+      if (linkErrorElement) {
+        linkErrorElement.style.display = "block";
+      }
+    }
+
+    function zf_ValidateEmailID(elem: HTMLInputElement) {
+      let check = 0;
+      const emailValue = elem.value;
+      if (emailValue != null && emailValue !== "") {
+        const emailArray = emailValue.split(",");
+        for (let i = 0; i < emailArray.length; i++) {
+          const emailExp =
+            /^[\w]([\w\-.+&']*)@([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,22}$/;
+          if (!emailExp.test(emailArray[i].replace(/^\s+|\s+$/g, ""))) {
+            check = 1;
+          }
+        }
+        if (check === 0) return true;
+        else return false;
+      }
+      return true;
+    }
+
+    function zf_ValidatePhone(inpElem: HTMLInputElement) {
+      // Simplified Phone Regex for generic use
+      const phoneRegex = /^[+]{0,1}[()0-9-. ]+$/;
+      const fieldInpVal = inpElem.value.replace(/^\s+|\s+$/g, "");
+      if (fieldInpVal !== "" && !phoneRegex.test(fieldInpVal)) {
+        return false;
+      }
+      return true;
+    }
+
+    if (typeof window !== "undefined") {
+      window.zf_ValidateAndSubmit = zf_ValidateAndSubmit;
+    }
+  }, []);
+
+  return null;
+};
 type partner = {
   name: string;
   logo: string;
@@ -33,30 +188,62 @@ export default function Index() {
     },
   ];
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    contactNumber: "",
-    factoryType: "",
-    message: "",
-  });
+  const ZOHO_ACTION_URL =
+    "https://forms.zohopublic.in/thirdeyecreative1/form/JobApplication/formperma/f5DRM3GnMpr5ebcjgRPnlI2nKpggSkc0q7PC5ula4pw/htmlRecords/submit";
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    Name_First: "",
+    Name_Last: "",
+    Email: "",
+    PhoneNumber_countrycode: "",
+    MultiLine: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    // Hide error message on change
+    const namePart = e.target.name.split("_")[0];
+    const errorEl = document.getElementById(`${namePart}_error`);
+    if (errorEl) errorEl.style.display = "none";
   };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // 1. Prevent Default React Submission
+    e.preventDefault();
+
+    // 2. Run Zoho Validation
+    if (typeof window.zf_ValidateAndSubmit === "function") {
+      const isValid = window.zf_ValidateAndSubmit();
+
+      if (isValid) {
+        // 3. If Valid: Submit the form programmatically
+        // We use the Ref to submit the native HTML form so it hits the 'action' URL
+        if (formRef.current) {
+          formRef.current.submit();
+        }
+
+        // 4. Update UI State
+        // We use a small timeout to allow the submission to fire to the iframe first
+        setTimeout(() => {
+          setIsSubmitted(true);
+          setFormData({
+            Name_First: "",
+            Name_Last: "",
+            Email: "",
+            PhoneNumber_countrycode: "",
+            MultiLine: "",
+          });
+        }, 100);
+      }
+    }
+  };
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -101,7 +288,18 @@ export default function Index() {
               <button
                 className="w-10 h-10 circle-button md:w-[42px] md:h-[42px] rounded-full border-3 border-apply-in-inventory-management border-brand-text flex items-center justify-center hover:bg-brand-text/5 transition-colors"
                 aria-label="Close"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  setMobileOpen(false);
+                  setIsSubmitted(false);
+                  setFormData({
+                    Name_First: "",
+                    Name_Last: "",
+                    Email: "",
+                    PhoneNumber_countrycode: "",
+                    MultiLine: "",
+                  });
+                }}
               >
                 {/* <img
                   src="assets/close-icon-in-popup.svg"
@@ -248,119 +446,218 @@ export default function Index() {
                         <p className="mb-[28px] success-massage-after-submiting-popup">
                           Your message has been sent!
                         </p>
-                        <button className="button2 type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
-                          See How It Works
+                        <button
+                          onClick={() => {
+                            setIsSubmitted(false);
+                            setOpen(false);
+                          }}
+                          className="button2 nav-links-in-inventory-management-get-in-touch type2 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors"
+                        >
+                          <span>See How It Works</span>
                         </button>
                       </div>
                     ) : (
                       <>
-                        <p className="text-base font-[405] text-brand-text mb-8 leading-[140%] popup-section-right-content-subtext">
-                          Fill in the form below and we will get back to you as
-                          soon as possible.
-                        </p>
+                        <ZohoValidationScript />
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                              <label
-                                htmlFor="name"
-                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                              >
-                                Name
-                              </label>
-                              <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder="Enter your full name"
-                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                              />
-                            </div>
-
-                            <div>
-                              <label
-                                htmlFor="email"
-                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                              >
-                                Email Address
-                              </label>
-                              <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="example@gmail.com"
-                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                              />
-                            </div>
-                          </div>
-
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                              <label
-                                htmlFor="contactNumber"
-                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                              >
-                                Contact Number
-                              </label>
-                              <input
-                                type="tel"
-                                id="contactNumber"
-                                name="contactNumber"
-                                value={formData.contactNumber}
-                                onChange={handleChange}
-                                placeholder="+91 9876543210"
-                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                              />
-                            </div>
-
-                            <div>
-                              <label
-                                htmlFor="factoryType"
-                                className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
-                              >
-                                Type of factory
-                              </label>
-                              <input
-                                type="text"
-                                id="factoryType"
-                                name="factoryType"
-                                value={formData.factoryType}
-                                onChange={handleChange}
-                                placeholder="Clothing"
-                                className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            <label
-                              htmlFor="message"
-                              className="block text-base font-[415]  text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                        {/* Success Message View */}
+                        {isSubmitted ? (
+                          <div className="text-center py-16 animate-fade-in">
+                            <h3 className="text-2xl font-bold text-brand-purple mb-4">
+                              Thank You!
+                            </h3>
+                            <p className="text-brand-text text-lg">
+                              We have received your message and will get back to
+                              you shortly.
+                            </p>
+                            <button
+                              onClick={() => setIsSubmitted(false)}
+                              className="mt-8 text-brand-purple hover:underline"
                             >
-                              Your Message
-                            </label>
-                            <textarea
-                              id="message"
-                              name="message"
-                              value={formData.message}
-                              onChange={handleChange}
-                              placeholder="Write your message here..."
-                              rows={5}
-                              className="w-full popup-section-right-content-subtext-input px-4 py-3.5 rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
-                            />
+                              Send another message
+                            </button>
                           </div>
+                        ) : (
+                          /* Form View */
+                          <>
+                            <p className="text-base font-[405] text-brand-text mb-8 leading-[140%] popup-section-right-content-subtext">
+                              Fill in the form below and we will get back to you
+                              as soon as possible.
+                            </p>
 
-                          <button
-                            type="submit"
-                            className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple  px-9 py-4 bg-brand-purple text-brand-bg rounded-full text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
-                          >
-                            <span>Send Message</span>
-                          </button>
-                        </form>
+                            <iframe
+                              name="hidden_iframe"
+                              id="hidden_iframe"
+                              style={{ display: "none" }}
+                            ></iframe>
+
+                            <form
+                              ref={formRef}
+                              action={ZOHO_ACTION_URL}
+                              method="POST"
+                              target="hidden_iframe" // Keeps user on the page
+                              onSubmit={handleSubmit}
+                              id="contact_form"
+                              name="contact_form" // Required for script
+                              className="space-y-6"
+                              encType="multipart/form-data"
+                            >
+                              {/* Hidden Fields for Zoho */}
+                              <input
+                                type="hidden"
+                                name="zf_referrer_name"
+                                value=""
+                              />
+                              <input
+                                type="hidden"
+                                name="zf_redirect_url"
+                                value=""
+                              />
+                              <input type="hidden" name="zc_gad" value="" />
+
+                              <div className="grid md:grid-cols-2 gap-6">
+                                {/* First Name */}
+                                <div>
+                                  <label
+                                    htmlFor="Name_First"
+                                    className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                                  >
+                                    First Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="Name_First"
+                                    name="Name_First" // Zoho Name
+                                    checktype="c1"
+                                    value={formData.Name_First}
+                                    onChange={handleChange}
+                                    placeholder="Enter your First name"
+                                    className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                                  />
+                                  <p
+                                    id="Name_error"
+                                    className="text-red-500 text-xs mt-1"
+                                    style={{ display: "none" }}
+                                  >
+                                    Invalid value
+                                  </p>
+                                </div>
+
+                                {/* Last Name */}
+                                <div>
+                                  <label
+                                    htmlFor="Name_Last"
+                                    className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                                  >
+                                    Last Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="Name_Last"
+                                    name="Name_Last" // Zoho Name
+                                    checktype="c1"
+                                    value={formData.Name_Last}
+                                    onChange={handleChange}
+                                    placeholder="Enter your Last name"
+                                    className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                                  />
+                                </div>
+                                {/* Note: Zoho often groups first/last name errors under "Name_error" or handles them separately. 
+                    I placed the error under First Name for layout purposes, or you can duplicate for Last Name. */}
+
+                                {/* Email */}
+                                <div>
+                                  <label
+                                    htmlFor="Email"
+                                    className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                                  >
+                                    Email Address
+                                  </label>
+                                  <input
+                                    type="email"
+                                    id="Email"
+                                    name="Email" // Zoho Name
+                                    checktype="c5"
+                                    value={formData.Email}
+                                    onChange={handleChange}
+                                    placeholder="example@gmail.com"
+                                    className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                                  />
+                                  <p
+                                    id="Email_error"
+                                    className="text-red-500 text-xs mt-1"
+                                    style={{ display: "none" }}
+                                  >
+                                    Invalid value
+                                  </p>
+                                </div>
+
+                                {/* Contact Number */}
+                                <div>
+                                  <label
+                                    htmlFor="PhoneNumber_countrycode"
+                                    className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                                  >
+                                    Contact Number
+                                  </label>
+                                  <input
+                                    type="tel"
+                                    id="PhoneNumber_countrycode"
+                                    name="PhoneNumber_countrycode" // Zoho Name
+                                    checktype="c7"
+                                    phoneFormat="1"
+                                    isCountryCodeEnabled="false"
+                                    value={formData.PhoneNumber_countrycode}
+                                    onChange={handleChange}
+                                    placeholder="+91 9876543210"
+                                    className="w-full px-4 py-3.5 popup-section-right-content-subtext-input rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                                  />
+                                  <p
+                                    id="PhoneNumber_error"
+                                    className="text-red-500 text-xs mt-1"
+                                    style={{ display: "none" }}
+                                  >
+                                    Invalid value
+                                  </p>
+                                </div>
+                              </div>
+
+                              {/* Message */}
+                              <div>
+                                <label
+                                  htmlFor="MultiLine"
+                                  className="block text-base font-[415] text-brand-text mb-2 leading-[140%] popup-section-right-content-subtext-label"
+                                >
+                                  Your Message
+                                </label>
+                                <textarea
+                                  id="MultiLine"
+                                  name="MultiLine" // Zoho Name for Text Area
+                                  checktype="c1"
+                                  value={formData.MultiLine}
+                                  onChange={handleChange}
+                                  placeholder="Write your message here..."
+                                  rows={5}
+                                  className="w-full popup-section-right-content-subtext-input px-4 py-3.5 rounded-lg bg-white text-brand-text placeholder:text-brand-text/20 font-[405] text-base leading-[140%] focus:outline-none focus:ring-2 focus:ring-brand-purple/20"
+                                />
+                                <p
+                                  id="MultiLine_error"
+                                  className="text-red-500 text-xs mt-1"
+                                  style={{ display: "none" }}
+                                >
+                                  Required
+                                </p>
+                              </div>
+
+                              <button
+                                type="submit"
+                                className="nav-links-in-inventory-management-get-in-touch button px-9 py-4 rounded-full bg-brand-purple text-brand-bg text-base font-[425] leading-[140%] hover:bg-brand-purple/90 transition-colors"
+                              >
+                                <span>Send Message</span>
+                              </button>
+                            </form>
+                          </>
+                        )}
                       </>
                     )}
                   </div>
