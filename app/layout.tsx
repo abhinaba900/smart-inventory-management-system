@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { UAParser } from 'ua-parser-js';
+import {isMobile,isTablet} from 'react-device-detect';
 import { headers } from 'next/headers';
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,19 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
- // 2. Add 'await' before headers()
-  const headersList = await headers(); 
   
-  // Now .get() works because the promise is resolved
-  const userAgent = headersList.get('user-agent') || '';
-
-  const parser = new UAParser(userAgent);
-  const device = parser.getDevice();
-  console.log(device);
-  
-  
-  const isTablet = device.type === 'tablet';
-  const isMobile = device.type === 'mobile';
   
   const deviceClass = isTablet ? 'is-tablet' : (isMobile ? 'is-mobile' : 'is-desktop');
   console.log(deviceClass);
