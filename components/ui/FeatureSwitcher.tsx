@@ -1,7 +1,7 @@
 ﻿"use client";
 import { useState } from "react";
 
-export default function FeatureSwitcher() {
+export default function FeatureSwitcher({setOpen}: any) {
   const [active, setActive] = useState(0);
 
   const images = [
@@ -45,7 +45,7 @@ export default function FeatureSwitcher() {
               You make the products. Our system manages the process.
             </h3>
 
-            <button className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+            <button onClick={() => setOpen(true)} className="button explore-more-in-features-section-in-inventory-management nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               <span>Explore more</span>
             </button>
           </div>

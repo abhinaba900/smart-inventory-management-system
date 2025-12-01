@@ -33,7 +33,7 @@ const testimonials: TestimonialItem[] = [
     author: "Production Manager",
     company: "Nova Industries",
     image: "assets/space-luggage-main-image.webp",
-    logo: "assets/space-luggage-icon.svg",
+    logo: "/assets/brand-image1.webp",
   },
   {
     id: 3,
@@ -97,7 +97,7 @@ export default function TestimonialSection() {
                     alt="Company Logo"
                     width={55}
                     height={55}
-                    className="h-[55px] w-auto"
+                    className="h-20 w-45 object-contain"
                   />
                 </div>
               </div>

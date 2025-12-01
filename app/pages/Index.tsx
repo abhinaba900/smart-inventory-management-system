@@ -407,7 +407,7 @@ export default function Index() {
                           Email us at
                         </h2>
                         <p className="text-lg md:text-xl font-[405] text-brand-text tracking-[-0.02em] popup-section-left-content-subtext">
-                          hi@thirdeyegfx.com
+                          hi@thirdeyegfx.in
                         </p>
                       </div>
                     </div>
@@ -786,7 +786,7 @@ export default function Index() {
                 >
                   <span>Get in touch</span>
                 </button>
-                <button className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9  py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+                <button type="button" onClick={() => setOpen(true)} className="button2 type2 nav-links-in-inventory-management-get-in-touch px-9  py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
                   <span>Book a Free Demo</span>
                 </button>
               </div>
@@ -812,7 +812,7 @@ export default function Index() {
 
           {/* CTA Buttons */}
           <div className="relative flex items-center justify-center gap-5 mb-[5rem] button-content-holder-in-inventory-management">
-            <button className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+            <button onClick={() => setOpen(true)} className="button nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
               <span>Book a Free Demo</span>
             </button>
             <button className="button2 type2 px-9 py-4 nav-links-in-inventory-management-get-in-touch rounded-full bg-brand-purple  text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
@@ -1090,7 +1090,7 @@ export default function Index() {
               </div>
             </div>
           </div> */}
-          <FeatureSwitcher />
+          <FeatureSwitcher setOpen={setOpen} />
         </div>
       </section>
 
@@ -1114,7 +1114,7 @@ export default function Index() {
             See how our software streamlines your workflow
           </p>
 
-          <button className="button video-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-[5rem] hover:bg-brand-purple/90 transition-colors">
+          <button onClick={() => setOpen(true)} className="button video-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch nav-links-in-inventory-management-get-in-touch type1 px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal mb-[5rem] hover:bg-brand-purple/90 transition-colors">
             <span>Schedule a Live Demo</span>
           </button>
 
@@ -1390,7 +1390,7 @@ export default function Index() {
                 core inventory tools.
               </p>
 
-              <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
+              <button onClick={() => setOpen(true)} className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
                 {" "}
                 <span>Get Basic</span>
               </button>
@@ -1408,7 +1408,7 @@ export default function Index() {
                 streamline every production stage.
               </p>
 
-              <button className="button w-full nav-links-in-inventory-management-get-in-touch px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
+              <button onClick={() => setOpen(true)} className="button w-full nav-links-in-inventory-management-get-in-touch px-9 py-4 rounded-full bg-brand-purple text-brand-bg font-['Sequel_Sans'] text-base font-normal hover:bg-brand-purple/90 transition-colors">
                 <span>Get Pro</span>
               </button>
             </div>
@@ -1425,7 +1425,7 @@ export default function Index() {
                 and system integrations built for scale.
               </p>
 
-              <button className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
+              <button onClick={() => setOpen(true)} className="button2 type2 nav-links-in-inventory-management-get-in-touch w-full px-9 py-4 rounded-full border-[1.5px] border-brand-dark bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-dark/5 transition-colors">
                 <span>Get Enterprise</span>
               </button>
             </div>
@@ -1454,11 +1454,11 @@ export default function Index() {
             alt=""
           />
           <div className="flex items-center justify-center gap-6 mb-8 cta-section-button-holder-in-inventory-management">
-            <button className="button2 type2 black-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
+            <button onClick={() => setOpen(true)} className="button2 type2 black-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px] border-brand-bg bg-brand-bg text-brand-dark font-['Sequel_Sans'] text-base font-normal hover:bg-brand-bg/90 transition-colors">
               <span>Book a Free Demo</span>
             </button>
 
-            <button className="button type1 white-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px]  text-brand-bg font-['Sequel_Sans'] text-base font-norma ">
+            <button onClick={() => setOpen(true)} className="button type1 white-border-remover-in-inventory-management cta-section-button-in-inventory-management nav-links-in-inventory-management-get-in-touch px-9 bullets-ready-to-take-control-in-inventory-management py-4 rounded-full border-[1.5px]  text-brand-bg font-['Sequel_Sans'] text-base font-norma ">
               <span>Start a Free Trial</span>
             </button>
           </div>
@@ -1585,7 +1585,7 @@ export default function Index() {
               </h4>
               <ul className="space-y-4">
                 <li className="underline-button text-lg font-['Sequel_Sans'] footer-subtext-list-text-in-inventory-management font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
-                  Email: hi@thirdeyegfx.com
+                  Email: hi@thirdeyegfx.in
                 </li>
                 <li className="underline-button text-lg font-['Sequel_Sans'] font-normal text-brand-dark footer-subtext-subhading-in-inventory-management">
                   Phone: +91 8041479167
