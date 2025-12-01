@@ -1211,7 +1211,7 @@ export default function Index() {
                 <Image
                   width={239}
                   height={123}
-                  src="assets/footer-thired-eye-logo.svg"
+                  src="/assets/footer-thired-eye-logo.png"
                   alt="Third Eye Logo"
                   className="w-[239px] h-[123px] "
                 />

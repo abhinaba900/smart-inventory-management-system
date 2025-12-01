@@ -320,6 +320,7 @@ rect {
   overflow: hidden;
   height: 56px;
   z-index: 0;
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.3s;
 }
 
 .button2:hover {
@@ -362,6 +363,8 @@ rect {
   border: 2px solid #f5f9f5;
   font-family: var(--font-family-sequel-sans-bold-display) !important;
   font-weight: 425 !important;
+
+  transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.3s;
 }
 .white-border-remover-in-inventory-management:hover,
 .white-border-remover-in-inventory-management:hover::after {
@@ -845,6 +848,23 @@ rect {
     letter-spacing: 0px;
   }
 
+  .underline-button::after {
+    display: none !important;
+  }
+
+  .border-apply-in-inventory-management:hover {
+    background: transparent;
+    border: 1.5px solid #0a0f0a;
+  }
+
+  /* SVG becomes white */
+  .circle-button:hover svg {
+    color: black;
+  }
+  .circle-button:hover svg path {
+    fill: black;
+  }
+
   .mobile-position-of-absolute-container-buttons {
     bottom: 50px;
     left: 0;
@@ -1089,6 +1109,7 @@ rect {
 
   .testimonial-section-in-inventory-management {
     padding-block: 4.375rem; /* 70px */
+    padding-bottom: 6.5rem;
   }
 
   .testimonial-section-content-holder-in-inventory-management {
@@ -1356,6 +1377,13 @@ rect {
   .mobile-position-of-absolute-container-buttons {
     right: 30px;
   }
+  .underline-button::after {
+    display: none !important;
+  }
+  .border-apply-in-inventory-management:hover {
+    background: transparent;
+    border: 1.5px solid #0a0f0a;
+  }
 
   .button::after,
   .button2::after {
@@ -1381,6 +1409,14 @@ rect {
   .button2 span {
     position: relative;
     z-index: 2;
+  }
+
+  /* SVG becomes white */
+  .circle-button:hover svg {
+    color: black;
+  }
+  .circle-button:hover svg path {
+    fill: black;
   }
 
   .button:hover::after,
@@ -1487,6 +1523,21 @@ rect {
     background: transparent !important;
     border: none !important;
   }
+  .underline-button::after {
+    display: none !important;
+  }
+  .border-apply-in-inventory-management:hover {
+    background: transparent;
+    border: 1.5px solid #0a0f0a;
+  }
+
+  /* SVG becomes white */
+  .circle-button:hover svg {
+    color: black;
+  }
+  .circle-button:hover svg path {
+    fill: black;
+  }
 
   .button:after {
     background: #772bf2 !important;
@@ -1539,6 +1590,22 @@ rect {
   .hero-section-in-inventory-management {
     height: 100%;
     min-height: fit-content;
+  }
+  .underline-button::after {
+    display: none !important;
+  }
+
+  .border-apply-in-inventory-management:hover {
+    background: transparent;
+    border: 1.5px solid #0a0f0a;
+  }
+
+  /* SVG becomes white */
+  .circle-button:hover svg {
+    color: black;
+  }
+  .circle-button:hover svg path {
+    fill: black;
   }
 
   .button::after,
@@ -1653,5 +1720,10 @@ rect {
   .contact-and-form-holder-in-popup-invite-in-inventory-management {
     gap: 1rem;
     grid-template-columns: 0.7fr 1.3fr;
+  }
+
+  .popup-content-holder-in-inventory-management {
+    width: 90%;
+    max-width: 90%;
   }
 }
