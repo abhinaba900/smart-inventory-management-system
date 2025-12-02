@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "Third Eye Creative",
     images: [
       {
-        url: "/assets/Website.webp", // Path to your image in public folder
+        url: "/assets/social-share.webp", // Path to your image in public folder
         width: 1200,
         height: 630,
         alt: "Third Eye Creative Dashboard Preview",
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Smart Inventory Management Software",
     description: "Improve manufacturing efficiency with Third Eye Creative.",
-    images: ["/assets/Website.webp"], // Same image path
+    images: ["/assets/social-share.webp"], // Same image path
   },
 
   // 4. Base URL (Required for relative image paths to work in production)
