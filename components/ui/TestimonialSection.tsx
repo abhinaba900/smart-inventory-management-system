@@ -27,11 +27,11 @@ const testimonials: TestimonialItem[] = [
   },
   {
     id: 2,
-    title: "Inventory chaos is now fully under control.",
+    title: "A game changer for high-volume inventory.",
     message:
-      "We reduced stock wastage by 40% with Third Eye's inventory tool. The live tracking system gave us complete control over raw materials and production flow — we've never been this efficient.",
-    author: "Production Manager",
-    company: "Nova Industries",
+      "Managing multiple shades and finishes was complex. Third Eye Creative gave us real-time stock visibility and automated alerts now production is faster and far more accurate.",
+    author: "Operations Head",
+    company: "Banna Spray Paints",
     image: "assets/space-luggage-main-image.webp",
     logo: "/assets/brand-image1.webp",
   },
