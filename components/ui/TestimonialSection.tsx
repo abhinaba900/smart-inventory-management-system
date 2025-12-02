@@ -23,7 +23,7 @@ const testimonials: TestimonialItem[] = [
     author: "Operations Head",
     company: "Space Luggage",
     image: "assets/space-luggage-main-image.webp",
-    logo: "assets/space-luggage-icon.svg",
+    logo: "assets/space-luggage-icon.webp",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const testimonials: TestimonialItem[] = [
     author: "Operations Head",
     company: "Banna Spray Paints",
     image: "assets/space-luggage-main-image.webp",
-    logo: "/assets/brand-image1.webp",
+    logo: "assets/brand-image1.webp",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const testimonials: TestimonialItem[] = [
     author: "Plant Supervisor",
     company: "HyperTech",
     image: "assets/space-luggage-main-image.webp",
-    logo: "assets/space-luggage-icon.svg",
+    logo: "assets/space-luggage-icon.webp",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function TestimonialSection() {
                 </p>
 
                 <div className="flex items-center justify-between gap-4 mb-8">
-                  <Image
+                  <img
                     src={item.logo}
                     alt="Company Logo"
                     width={55}
