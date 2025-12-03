@@ -35,16 +35,7 @@ const testimonials: TestimonialItem[] = [
     image: "assets/space-luggage-main-image.webp",
     logo: "assets/brand-image1.webp",
   },
-  {
-    id: 3,
-    title: "Best investment we made for our factory.",
-    message:
-      "We reduced stock wastage by 40% with Third Eye's inventory tool. The live tracking system gave us complete control over raw materials and production flow — we've never been this efficient.",
-    author: "Plant Supervisor",
-    company: "HyperTech",
-    image: "assets/space-luggage-main-image.webp",
-    logo: "assets/space-luggage-icon.webp",
-  },
+ 
 ];
 
 export default function TestimonialSection() {
