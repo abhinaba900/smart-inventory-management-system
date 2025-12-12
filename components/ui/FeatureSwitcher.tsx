@@ -5,11 +5,11 @@ export default function FeatureSwitcher({setOpen}: any) {
   const [active, setActive] = useState(0);
 
   const images = [
-    "/assets/Dashboard Screenshot in smart inventory.webp",
-    "/assets/Dashboard Screenshot in smart inventory.webp",
-    "/assets/Dashboard Screenshot in smart inventory.webp",
-    "/assets/Dashboard Screenshot in smart inventory.webp",
-    "/assets/Dashboard Screenshot in smart inventory.webp",
+    "/assets/Raw Materials Tracking.webp",
+    "/assets/Production Monitoring.webp",
+    "/assets/Quality Control & Defect Tracking.webp",
+    "/assets/Vendor Management.webp",
+    "/assets/Smart Reports & Analytics.webp",
   ];
 
   const items = [
