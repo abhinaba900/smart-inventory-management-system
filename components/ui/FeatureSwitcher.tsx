@@ -5,11 +5,11 @@ export default function FeatureSwitcher({setOpen}: any) {
   const [active, setActive] = useState(0);
 
   const images = [
-    "/assets/Raw Materials Tracking.webp",
-    "/assets/Production Monitoring.webp",
-    "/assets/Quality Control & Defect Tracking.webp",
-    "/assets/Vendor Management.webp",
-    "/assets/Smart Reports & Analytics.webp",
+    "https://thirdeyesite.b-cdn.net/smart-inventory/Raw%20Materials%20Tracking.webp",
+    "https://thirdeyesite.b-cdn.net/smart-inventory/Production%20Monitoring.webp",
+    "https://thirdeyesite.b-cdn.net/smart-inventory/Quality%20Control%20%26%20Defect%20Tracking.webp",
+    "https://thirdeyesite.b-cdn.net/smart-inventory/Vendor%20Management.webp",
+    "https://thirdeyesite.b-cdn.net/smart-inventory/Smart%20Reports%20%26%20Analytics.webp",
   ];
 
   const items = [
